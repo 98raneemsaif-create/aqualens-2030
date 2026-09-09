@@ -1,0 +1,62 @@
+Captured UTC: 2026-09-09T06:11:10.998615+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "src.ingestion.consumer", "--manifest", "storage/ingestion/0c7cd058-960e-47c9-a661-5f133533e617/producer_manifest.json"]
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0001", "raw_partition": 0, "raw_offset": 57}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0002", "raw_partition": 0, "raw_offset": 58}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0003", "raw_partition": 0, "raw_offset": 59}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0004", "raw_partition": 0, "raw_offset": 60}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0005", "raw_partition": 0, "raw_offset": 61}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0006", "raw_partition": 0, "raw_offset": 62}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0007", "raw_partition": 0, "raw_offset": 63}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0008", "raw_partition": 0, "raw_offset": 64}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0009", "raw_partition": 0, "raw_offset": 65}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0010", "raw_partition": 0, "raw_offset": 66}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0011", "raw_partition": 0, "raw_offset": 67}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0012", "raw_partition": 0, "raw_offset": 68}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0013", "raw_partition": 0, "raw_offset": 69}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0014", "raw_partition": 0, "raw_offset": 70}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0015", "raw_partition": 0, "raw_offset": 71}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0016", "raw_partition": 0, "raw_offset": 72}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0017", "raw_partition": 0, "raw_offset": 73}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0018", "raw_partition": 0, "raw_offset": 74}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0019", "raw_partition": 0, "raw_offset": 75}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0020", "raw_partition": 0, "raw_offset": 76}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0021", "raw_partition": 0, "raw_offset": 77}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0022", "raw_partition": 0, "raw_offset": 78}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0023", "raw_partition": 0, "raw_offset": 79}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0024", "raw_partition": 0, "raw_offset": 80}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0025", "raw_partition": 0, "raw_offset": 81}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0026", "raw_partition": 0, "raw_offset": 82}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0027", "raw_partition": 0, "raw_offset": 83}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0028", "raw_partition": 0, "raw_offset": 84}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0029", "raw_partition": 0, "raw_offset": 85}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0030", "raw_partition": 0, "raw_offset": 86}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0031", "raw_partition": 0, "raw_offset": 87}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0032", "raw_partition": 0, "raw_offset": 88}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0033", "raw_partition": 0, "raw_offset": 89}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0034", "raw_partition": 0, "raw_offset": 90}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0035", "raw_partition": 0, "raw_offset": 91}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0036", "raw_partition": 0, "raw_offset": 92}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0037", "raw_partition": 0, "raw_offset": 93}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0038", "raw_partition": 0, "raw_offset": 94}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0039", "raw_partition": 0, "raw_offset": 95}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0040", "raw_partition": 0, "raw_offset": 96}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0041", "raw_partition": 0, "raw_offset": 97}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0042", "raw_partition": 0, "raw_offset": 98}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0043", "raw_partition": 0, "raw_offset": 99}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0044", "raw_partition": 0, "raw_offset": 100}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0045", "raw_partition": 0, "raw_offset": 101}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0046", "raw_partition": 0, "raw_offset": 102}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0047", "raw_partition": 0, "raw_offset": 103}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0048", "raw_partition": 0, "raw_offset": 104}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0049", "raw_partition": 0, "raw_offset": 105}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0050", "raw_partition": 0, "raw_offset": 106}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0051", "raw_partition": 0, "raw_offset": 107}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0052", "raw_partition": 0, "raw_offset": 108}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0053", "raw_partition": 0, "raw_offset": 109}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0054", "raw_partition": 0, "raw_offset": 110}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0055", "raw_partition": 0, "raw_offset": 111}
+{"action": "accepted", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "event_id": "source-0056", "raw_partition": 0, "raw_offset": 112}
+{"action": "quarantined", "original_payload": "{\"year\": 2024, \"region\": \"TEST FIXTURE ONLY\", \"source\": \"TEST FIXTURE ONLY\", \"volume_m3\": \"not-a-number\", \"run_id\": \"0c7cd058-960e-47c9-a661-5f133533e617\", \"event_id\": \"fixture-malformed-volume\", \"record_kind\": \"test_fixture\"}", "original_payload_base64": "eyJ5ZWFyIjogMjAyNCwgInJlZ2lvbiI6ICJURVNUIEZJWFRVUkUgT05MWSIsICJzb3VyY2UiOiAiVEVTVCBGSVhUVVJFIE9OTFkiLCAidm9sdW1lX20zIjogIm5vdC1hLW51bWJlciIsICJydW5faWQiOiAiMGM3Y2QwNTgtOTYwZS00N2M5LWE2NjEtNWYxMzM1MzNlNjE3IiwgImV2ZW50X2lkIjogImZpeHR1cmUtbWFsZm9ybWVkLXZvbHVtZSIsICJyZWNvcmRfa2luZCI6ICJ0ZXN0X2ZpeHR1cmUifQ==", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "rejection_reason": "1 validation error for WaterEvent\nvolume_m3\n  Input should be a valid number [type=float_type, input_value='not-a-number', input_type=str]\n    For further information visit https://errors.pydantic.dev/2.13/v/float_type", "rejected_at": "2026-09-09T06:11:10.903483+00:00", "raw_topic": "aqualens.water.raw.v1", "raw_partition": 0, "raw_offset": 113, "dlq_delivery": {"topic": "aqualens.water.quarantine.v1", "partition": 0, "offset": 1, "key": "0c7cd058-960e-47c9-a661-5f133533e617:0"}}
+{"action": "consumer_complete", "run_id": "0c7cd058-960e-47c9-a661-5f133533e617", "produced_count": 57, "accepted_count": 56, "quarantined_count": 1, "accepted_path": "storage/ingestion/0c7cd058-960e-47c9-a661-5f133533e617/accepted.jsonl", "quarantine_deliveries": [{"topic": "aqualens.water.quarantine.v1", "partition": 0, "offset": 1, "key": "0c7cd058-960e-47c9-a661-5f133533e617:0"}]}
+
+Exit code: 0

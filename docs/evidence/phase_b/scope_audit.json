@@ -1,0 +1,9 @@
+{
+  "source_sha256": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c",
+  "scored_ingestion_verified_rows": 5,
+  "other_scored_not_implemented_rows": 23,
+  "ingestion_evidence_verified_rows": 4,
+  "project_dag_files": 0,
+  "lineage_events_created": 0,
+  "delta_tables_created": 0
+}

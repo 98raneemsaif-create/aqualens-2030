@@ -1,0 +1,193 @@
+[
+  {
+    "evidence": "isolation\\consumer.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.consumer",
+      "--manifest",
+      "storage/ingestion/0c7cd058-960e-47c9-a661-5f133533e617/producer_manifest.json"
+    ]
+  },
+  {
+    "evidence": "isolation\\producer.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.producer",
+      "--malformed-fixture",
+      "tests/fixtures/malformed_water_event.json"
+    ]
+  },
+  {
+    "evidence": "isolation\\quarantine_verification.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.verify",
+      "--manifest",
+      "storage/ingestion/0c7cd058-960e-47c9-a661-5f133533e617/producer_manifest.json"
+    ]
+  },
+  {
+    "evidence": "kafka_logs.log",
+    "argv": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "80",
+      "kafka"
+    ]
+  },
+  {
+    "evidence": "proof\\consumer.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.consumer",
+      "--manifest",
+      "storage/ingestion/ea8464c0-722b-4c8a-a83c-252fff68ee33/producer_manifest.json"
+    ]
+  },
+  {
+    "evidence": "proof\\producer.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.producer",
+      "--malformed-fixture",
+      "tests/fixtures/malformed_water_event.json"
+    ]
+  },
+  {
+    "evidence": "proof\\quarantine_verification.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.verify",
+      "--manifest",
+      "storage/ingestion/ea8464c0-722b-4c8a-a83c-252fff68ee33/producer_manifest.json"
+    ]
+  },
+  {
+    "evidence": "quarantine_verification_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "src.ingestion.verify",
+      "--manifest",
+      "storage/ingestion/0c7cd058-960e-47c9-a661-5f133533e617/producer_manifest.json"
+    ]
+  },
+  {
+    "evidence": "service_status.log",
+    "argv": [
+      "docker",
+      "compose",
+      "ps"
+    ]
+  },
+  {
+    "evidence": "topic_details.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "kafka",
+      "/opt/kafka/bin/kafka-topics.sh",
+      "--bootstrap-server",
+      "localhost:29092",
+      "--describe"
+    ]
+  },
+  {
+    "evidence": "topic_list.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "kafka",
+      "/opt/kafka/bin/kafka-topics.sh",
+      "--bootstrap-server",
+      "localhost:29092",
+      "--list"
+    ]
+  },
+  {
+    "evidence": "unit_tests.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_ingestion.py",
+      "-v"
+    ]
+  },
+  {
+    "evidence": "unit_tests_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "tests",
+      "-p",
+      "test_ingestion.py",
+      "-v"
+    ]
+  }
+]

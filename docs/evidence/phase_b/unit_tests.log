@@ -1,0 +1,18 @@
+Started UTC: 2026-09-09T06:09:52.063336+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_ingestion.py", "-v"]
+test_incomplete_run_times_out_instead_of_hanging (test_ingestion.IngestionTests.test_incomplete_run_times_out_instead_of_hanging) ... ok
+test_invalid_json_run_id_recovered_from_header (test_ingestion.IngestionTests.test_invalid_json_run_id_recovered_from_header) ... ok
+test_malformed_numeric_field_rejected (test_ingestion.IngestionTests.test_malformed_numeric_field_rejected) ... ok
+test_negative_numeric_value_structurally_accepted (test_ingestion.IngestionTests.test_negative_numeric_value_structurally_accepted) ... ok
+test_quarantine_reason_and_original_bytes (test_ingestion.IngestionTests.test_quarantine_reason_and_original_bytes) ... NEGATIVE STRUCTURAL PROOF: {"year":2024,"region":"Grand Total","source":"Groundwater","volume_m3":-1.0,"run_id":"unit-test-run","event_id":"unit-test-event","record_kind":"test_fixture"}
+ok
+test_required_field_and_strict_types (test_ingestion.IngestionTests.test_required_field_and_strict_types) ... ok
+test_run_filters_old_offsets_and_other_runs (test_ingestion.IngestionTests.test_run_filters_old_offsets_and_other_runs) ... ok
+test_valid_event_zero_and_grand_total_accepted (test_ingestion.IngestionTests.test_valid_event_zero_and_grand_total_accepted) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 0.013s
+
+OK
+Exit code: 0
+Finished UTC: 2026-09-09T06:09:52.989462+00:00

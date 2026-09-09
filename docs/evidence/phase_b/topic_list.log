@@ -1,0 +1,7 @@
+Started UTC: 2026-09-09T06:11:11.842504+00:00
+Command argv: ["docker", "compose", "exec", "-T", "kafka", "/opt/kafka/bin/kafka-topics.sh", "--bootstrap-server", "localhost:29092", "--list"]
+__consumer_offsets
+aqualens.water.quarantine.v1
+aqualens.water.raw.v1
+Exit code: 0
+Finished UTC: 2026-09-09T06:11:20.305805+00:00

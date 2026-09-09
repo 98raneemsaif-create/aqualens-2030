@@ -1,0 +1,19 @@
+{
+  "first_run_id": "ea8464c0-722b-4c8a-a83c-252fff68ee33",
+  "second_run_id": "0c7cd058-960e-47c9-a661-5f133533e617",
+  "first_raw_offset_range": [
+    0,
+    56
+  ],
+  "second_raw_offset_range": [
+    57,
+    113
+  ],
+  "raw_offsets_disjoint": true,
+  "each_run_counts": {
+    "produced": 57,
+    "accepted": 56,
+    "quarantined": 1
+  },
+  "source_sha256_after": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c"
+}
