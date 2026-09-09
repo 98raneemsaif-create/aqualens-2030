@@ -1,0 +1,78 @@
+{
+  "result": "PASS",
+  "negative_accepted_record": {
+    "year": 2024,
+    "region": "Quality Gate Fixture",
+    "source": "Groundwater",
+    "volume_m3": -1.0,
+    "run_id": "41bc4cee-ba71-463e-832a-07a5ca0fea84",
+    "event_id": "fixture-negative-volume",
+    "record_kind": "test_fixture"
+  },
+  "accepted_count": 57,
+  "gx_failure_file": "docs\\evidence\\quality\\failure_41bc4cee-ba71-463e-832a-07a5ca0fea84.json",
+  "failed_expectation": {
+    "success": false,
+    "expectation_config": {
+      "type": "expect_column_values_to_be_between",
+      "kwargs": {
+        "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+        "column": "volume_m3",
+        "min_value": 0.0
+      },
+      "meta": {},
+      "id": "45521e93-957d-4257-9ad0-208359105843",
+      "severity": "critical"
+    },
+    "result": {
+      "element_count": 57,
+      "unexpected_count": 1,
+      "unexpected_percent": 1.7543859649122806,
+      "partial_unexpected_list": [
+        -1.0
+      ],
+      "missing_count": 0,
+      "missing_percent": 0.0,
+      "unexpected_percent_total": 1.7543859649122806,
+      "unexpected_percent_nonmissing": 1.7543859649122806,
+      "partial_unexpected_counts": [
+        {
+          "value": -1.0,
+          "count": 1
+        }
+      ],
+      "partial_unexpected_index_list": [
+        52
+      ]
+    },
+    "meta": {},
+    "exception_info": {
+      "raised_exception": false,
+      "exception_traceback": null,
+      "exception_message": null
+    }
+  },
+  "blocked_tasks": [
+    "gold_build",
+    "rag_chunk_and_index",
+    "rag_grounded_answer_smoke_test"
+  ],
+  "blocked_try_numbers_zero": true,
+  "blocked_task_logs_absent": true,
+  "downstream_outputs_absent": true,
+  "lineage_stage_counts": {
+    "success": {
+      "START": 12,
+      "COMPLETE": 9,
+      "FAIL": 3
+    },
+    "failure": {
+      "START": 6,
+      "COMPLETE": 5,
+      "FAIL": 1
+    }
+  },
+  "citations_verified": 3,
+  "successful_upstream_tasks_not_rerun": true,
+  "source_sha256": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c"
+}

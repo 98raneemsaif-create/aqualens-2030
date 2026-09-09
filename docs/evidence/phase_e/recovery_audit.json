@@ -1,0 +1,39 @@
+{
+  "eight_successful_tasks_unchanged": true,
+  "final_dag_state": "failed",
+  "final_task_attempt": 3,
+  "retries": [
+    {
+      "timestamp": "2026-09-09T15:29:09.276331Z",
+      "action": "gemini_retry",
+      "model": "gemini-3.5-flash",
+      "http_status": 503,
+      "attempt": 1,
+      "retry_delay": 5
+    },
+    {
+      "timestamp": "2026-09-09T15:29:26.992696Z",
+      "action": "gemini_retry",
+      "model": "gemini-3.5-flash",
+      "http_status": 503,
+      "attempt": 2,
+      "retry_delay": 15
+    },
+    {
+      "timestamp": "2026-09-09T15:29:53.276315Z",
+      "action": "gemini_retry",
+      "model": "gemini-3.5-flash",
+      "http_status": 503,
+      "attempt": 3,
+      "retry_delay": 30
+    }
+  ],
+  "final_request_status": 503,
+  "total_requests": 4,
+  "task_stage_lineage_counts": {
+    "START": 11,
+    "COMPLETE": 8,
+    "FAIL": 3
+  },
+  "quality_failure_run_triggered": false
+}

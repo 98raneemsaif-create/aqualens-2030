@@ -1,0 +1,249 @@
+{
+  "success": true,
+  "results": [
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_table_row_count_to_be_between",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "min_value": 1
+        },
+        "meta": {},
+        "id": "2fbabaf7-5500-4030-bc3a-590961c9b57a",
+        "severity": "critical"
+      },
+      "result": {
+        "observed_value": 56
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_compound_columns_to_be_unique",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column_list": [
+            "year",
+            "region",
+            "source"
+          ]
+        },
+        "meta": {},
+        "id": "53412435-c6f4-47b4-9d83-23a3a4a293d4",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column": "year"
+        },
+        "meta": {},
+        "id": "e0a71dd0-b0f1-4b3a-b4a9-d9a92e1fad20",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column": "region"
+        },
+        "meta": {},
+        "id": "2309b8bc-1194-454d-9d93-492909f9d0d7",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column": "source"
+        },
+        "meta": {},
+        "id": "03ae50f8-f9c4-4da8-af85-e08ee795a78c",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_not_be_null",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column": "volume_m3"
+        },
+        "meta": {},
+        "id": "b2c0d98d-a715-4f63-90b2-66a747679458",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    },
+    {
+      "success": true,
+      "expectation_config": {
+        "type": "expect_column_values_to_be_between",
+        "kwargs": {
+          "batch_id": "aqualens_silver_dataframe-aqualens_silver_water_distribution",
+          "column": "volume_m3",
+          "min_value": 0.0
+        },
+        "meta": {},
+        "id": "27218f16-53a1-4d54-8ced-8dad92711146",
+        "severity": "critical"
+      },
+      "result": {
+        "element_count": 56,
+        "unexpected_count": 0,
+        "unexpected_percent": 0.0,
+        "partial_unexpected_list": [],
+        "missing_count": 0,
+        "missing_percent": 0.0,
+        "unexpected_percent_total": 0.0,
+        "unexpected_percent_nonmissing": 0.0,
+        "partial_unexpected_counts": [],
+        "partial_unexpected_index_list": []
+      },
+      "meta": {},
+      "exception_info": {
+        "raised_exception": false,
+        "exception_traceback": null,
+        "exception_message": null
+      }
+    }
+  ],
+  "suite_name": "aqualens_silver_quality_suite",
+  "suite_parameters": {},
+  "statistics": {
+    "evaluated_expectations": 7,
+    "successful_expectations": 7,
+    "unsuccessful_expectations": 0,
+    "success_percent": 100.0
+  },
+  "meta": {
+    "great_expectations_version": "1.22.0",
+    "batch_spec": {
+      "batch_data": "PandasDataFrame"
+    },
+    "batch_markers": {
+      "ge_load_time": "20260909T140418.019288Z",
+      "pandas_data_fingerprint": "eec318b0d8bb0f059845bd5e404336cf"
+    },
+    "active_batch_definition": {
+      "datasource_name": "aqualens_silver_dataframe",
+      "data_connector_name": "fluent",
+      "data_asset_name": "aqualens_silver_water_distribution",
+      "batch_identifiers": {
+        "dataframe": "<DATAFRAME>"
+      }
+    },
+    "validation_id": "42b0dba6-375e-4cda-bd91-058a03b32348",
+    "checkpoint_id": null,
+    "run_id": {
+      "run_name": null,
+      "run_time": "2026-09-09T14:04:18.111200+00:00"
+    },
+    "validation_time": "2026-09-09T14:04:18.111200+00:00",
+    "batch_parameters": {
+      "dataframe": "<DATAFRAME>"
+    }
+  },
+  "id": null,
+  "aqualens": {
+    "silver_path": "storage/delta/airflow/be770adc-2479-456e-aa2f-2715eac4f484/silver",
+    "row_count": 56,
+    "business_key": [
+      "year",
+      "region",
+      "source"
+    ],
+    "gate_success": true
+  }
+}

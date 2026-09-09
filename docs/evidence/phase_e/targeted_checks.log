@@ -1,0 +1,8 @@
+Started UTC: 2026-09-09T15:25:39.288179+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-c", "from pathlib import Path; compile(Path('src/rag/generation.py').read_text(), 'src/rag/generation.py', 'exec'); from airflow.models.dagbag import DagBag; b=DagBag(dag_folder='dags',include_examples=False); assert not b.import_errors,b.import_errors; assert 'aqualens_2030_pipeline' in b.dags; print('Syntax and DAG parse PASS'); from google.genai import types; print('Default SDK retry options:',types.HttpOptions().retry_options)"]
+2026-09-09T15:25:41.363503Z [warning  ] Importing DagBag from airflow.models.dagbag is deprecated and will be removed in a future release. Please import from airflow.dag_processing.dagbag instead. [py.warnings] category=DeprecatedImportWarning filename=<string> lineno=1
+Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+TypeError: DagBag.__init__() got an unexpected keyword argument 'include_examples'
+Exit code: 1
+Finished UTC: 2026-09-09T15:25:42.135934+00:00

@@ -1,0 +1,5 @@
+Started UTC: 2026-09-09T15:28:27.411498+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "tests/phase_e_recovery.py", "clear"]
+{"action": "clear_failed_only", "run_id": "phase_e_success", "task_id": "rag_grounded_answer_smoke_test"}
+Exit code: 0
+Finished UTC: 2026-09-09T15:28:31.407544+00:00

@@ -1,0 +1,7 @@
+Started UTC: 2026-09-09T15:57:39.685929+00:00
+Command argv: ["docker", "compose", "ps"]
+NAME                     IMAGE                                                                                        COMMAND                  SERVICE   CREATED        STATUS                 PORTS
+aqualens2030-airflow-1   aqualens2030-airflow:phase-a                                                                 "/usr/bin/dumb-init …"   airflow   4 hours ago    Up 4 hours (healthy)   127.0.0.1:8080->8080/tcp
+aqualens2030-kafka-1     apache/kafka:4.2.1@sha256:2d2f77837385f202b1947fc3ed62421de344f0ced47dde360ca5afdad11b51fa   "/__cacert_entrypoin…"   kafka     23 hours ago   Up 3 hours (healthy)   127.0.0.1:9092->9092/tcp
+Exit code: 0
+Finished UTC: 2026-09-09T15:57:39.844911+00:00

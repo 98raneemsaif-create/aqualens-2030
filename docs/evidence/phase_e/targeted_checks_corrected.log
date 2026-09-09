@@ -1,0 +1,7 @@
+Started UTC: 2026-09-09T15:26:32.945295+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-c", "from pathlib import Path; compile(Path('src/rag/generation.py').read_text(), 'src/rag/generation.py', 'exec'); from airflow.dag_processing.dagbag import DagBag; b=DagBag(dag_folder='dags'); assert not b.import_errors,b.import_errors; assert 'aqualens_2030_pipeline' in b.dags; print('Syntax and DAG parse PASS'); from google.genai import types; print('Default SDK retry options:',types.HttpOptions().retry_options)"]
+2026-09-09T15:26:35.585542Z [info     ] Filling up the DagBag from dags [airflow.dag_processing.dagbag.DagBag] loc=dagbag.py:460
+Syntax and DAG parse PASS
+Default SDK retry options: None
+Exit code: 0
+Finished UTC: 2026-09-09T15:26:38.478768+00:00

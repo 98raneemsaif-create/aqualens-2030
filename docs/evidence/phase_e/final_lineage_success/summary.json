@@ -1,0 +1,298 @@
+{
+  "run_id": "phase_e_success",
+  "counts": {
+    "START": 16,
+    "COMPLETE": 10,
+    "FAIL": 6
+  },
+  "records": [
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140355.930409.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-74b0-a103-dc9d802db251",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T14:03:55.809255+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140403.612263.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.produce_events",
+      "lineage_run_id": "01a0867b-791f-74bc-afe4-4eb0ce4250f3",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:03.375270+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140405.351984.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.produce_events",
+      "lineage_run_id": "01a0867b-791f-74bc-afe4-4eb0ce4250f3",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:05.330652+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140406.068103.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.consume_and_validate",
+      "lineage_run_id": "01a0867b-791f-7584-ab06-ec5080267080",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:05.796770+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140406.657761.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.consume_and_validate",
+      "lineage_run_id": "01a0867b-791f-7584-ab06-ec5080267080",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:06.644128+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140407.518774.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.bronze_load",
+      "lineage_run_id": "01a0867b-791f-70a5-b77f-e99b418b9a23",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:07.010833+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140408.843724.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.bronze_load",
+      "lineage_run_id": "01a0867b-791f-70a5-b77f-e99b418b9a23",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:08.826378+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140409.751342.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.silver_merge",
+      "lineage_run_id": "01a0867b-791f-719f-a80b-b6e65aec4e59",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:09.612290+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140411.494245.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.silver_merge",
+      "lineage_run_id": "01a0867b-791f-719f-a80b-b6e65aec4e59",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:11.468328+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140412.084293.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.schema_enforcement_proof",
+      "lineage_run_id": "01a0867b-791f-7f79-9d59-5f96aecdf7c4",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:11.737973+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140414.270150.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.schema_enforcement_proof",
+      "lineage_run_id": "01a0867b-791f-7f79-9d59-5f96aecdf7c4",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:14.259180+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140414.516561.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.quality_gate",
+      "lineage_run_id": "01a0867b-791f-7a62-9271-c46272e0c129",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:14.399186+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140418.453046.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.quality_gate",
+      "lineage_run_id": "01a0867b-791f-7a62-9271-c46272e0c129",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:18.439562+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140419.019985.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.gold_build",
+      "lineage_run_id": "01a0867b-791f-7992-ae47-02aec3cfdba7",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:18.698808+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140420.959529.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.gold_build",
+      "lineage_run_id": "01a0867b-791f-7992-ae47-02aec3cfdba7",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:20.950183+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140422.191297.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_chunk_and_index",
+      "lineage_run_id": "01a0867b-791f-7022-b317-b81ce0d43c75",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:04:22.038334+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140539.459602.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.rag_chunk_and_index",
+      "lineage_run_id": "01a0867b-791f-7022-b317-b81ce0d43c75",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:05:39.445719+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140544.911990.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7efe-8ea3-f074fc1a517d",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:05:44.673863+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140612.786660.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7efe-8ea3-f074fc1a517d",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:06:12.765524+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140618.273016.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-74b0-a103-dc9d802db251",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T14:06:18.201983+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141818.521181.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7c69-b0f1-39384199c0e9",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T14:18:18.497177+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141818.757569.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7782-a495-8af1c038df33",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 2,
+      "event_time": "2026-09-09T14:18:18.601445+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141858.041817.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7782-a495-8af1c038df33",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 2,
+      "event_time": "2026-09-09T14:18:58.023425+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141903.684543.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7c69-b0f1-39384199c0e9",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T14:19:03.666005+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-152831.272062.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7cf7-a95d-71789020653b",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T15:28:31.254358+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-152831.660522.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-75d4-b839-75ab7a8eca7e",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 3,
+      "event_time": "2026-09-09T15:28:31.436890+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153030.433511.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-75d4-b839-75ab7a8eca7e",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 3,
+      "event_time": "2026-09-09T15:30:30.397929+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153035.708163.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7cf7-a95d-71789020653b",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T15:30:35.628810+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153614.739689.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7185-983a-f92412378403",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T15:36:14.696439+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153614.983394.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7394-875c-9a97fd25af28",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 4,
+      "event_time": "2026-09-09T15:36:14.854054+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153651.976081.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7394-875c-9a97fd25af28",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 4,
+      "event_time": "2026-09-09T15:36:51.964357+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153652.585859.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a0867b-791f-7185-983a-f92412378403",
+      "airflow_run_id": "phase_e_success",
+      "attempt": null,
+      "event_time": "2026-09-09T15:36:52.484593+00:00"
+    }
+  ]
+}

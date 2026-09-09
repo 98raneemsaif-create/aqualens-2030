@@ -1,0 +1,136 @@
+{
+  "run_id": "phase_e_quality_failure",
+  "counts": {
+    "START": 7,
+    "COMPLETE": 5,
+    "FAIL": 2
+  },
+  "records": [
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154401.173151.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a086d7-1e34-76c1-9b9d-0b30611573e2",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": null,
+      "event_time": "2026-09-09T15:44:01.118446+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154401.382807.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.produce_events",
+      "lineage_run_id": "01a086d7-1e34-7533-b133-256565637708",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:01.235855+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154402.310673.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.produce_events",
+      "lineage_run_id": "01a086d7-1e34-7533-b133-256565637708",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:02.293722+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154402.582108.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.consume_and_validate",
+      "lineage_run_id": "01a086d7-1e34-7322-9216-2fc6dc3ef785",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:02.379953+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154402.985303.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.consume_and_validate",
+      "lineage_run_id": "01a086d7-1e34-7322-9216-2fc6dc3ef785",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:02.976719+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154403.690963.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.bronze_load",
+      "lineage_run_id": "01a086d7-1e34-7a57-9e6f-fbddbadaebf3",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:03.528164+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154404.960090.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.bronze_load",
+      "lineage_run_id": "01a086d7-1e34-7a57-9e6f-fbddbadaebf3",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:04.945494+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154405.969146.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.silver_merge",
+      "lineage_run_id": "01a086d7-1e34-7daf-9a39-074b754000b1",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:05.793486+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154407.486533.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.silver_merge",
+      "lineage_run_id": "01a086d7-1e34-7daf-9a39-074b754000b1",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:07.473498+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154408.309572.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.schema_enforcement_proof",
+      "lineage_run_id": "01a086d7-1e34-7b15-9013-841102c7145e",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:08.135880+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154409.706180.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.schema_enforcement_proof",
+      "lineage_run_id": "01a086d7-1e34-7b15-9013-841102c7145e",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:09.696888+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154410.635105.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.quality_gate",
+      "lineage_run_id": "01a086d7-1e34-7f43-a9bc-42240029ba03",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:10.394547+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154415.240710.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.quality_gate",
+      "lineage_run_id": "01a086d7-1e34-7f43-a9bc-42240029ba03",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": 1,
+      "event_time": "2026-09-09T15:44:15.186635+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-154419.030237.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline",
+      "lineage_run_id": "01a086d7-1e34-76c1-9b9d-0b30611573e2",
+      "airflow_run_id": "phase_e_quality_failure",
+      "attempt": null,
+      "event_time": "2026-09-09T15:44:19.010953+00:00"
+    }
+  ]
+}

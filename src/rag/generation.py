@@ -1,6 +1,7 @@
 """Grounded Gemini generation with citations restricted to retrieved chunks."""
 import json
 import os
+import time
 
 from google import genai
 from google.genai import types
@@ -57,10 +58,22 @@ def generate(query, chunks):
         raise RuntimeError("Gemini key unavailable")
     prompt = json.dumps(dict(query=query, retrieved_context=chunks), ensure_ascii=False)
     try:
-        with genai.Client(api_key=key, vertexai=False, http_options=types.HttpOptions(timeout=90000)) as client:
-            response = client.models.generate_content(model=MODEL, contents=prompt,
-                config=types.GenerateContentConfig(temperature=0, system_instruction=SYSTEM,
-                    response_mime_type="application/json", response_schema=Answer))
+        with genai.Client(api_key=key, vertexai=False, http_options=types.HttpOptions(
+                timeout=90000, retry_options=types.HttpRetryOptions(attempts=1))) as client:
+            for attempt in range(1, 5):
+                try:
+                    response = client.models.generate_content(model=MODEL, contents=prompt,
+                        config=types.GenerateContentConfig(temperature=0, system_instruction=SYSTEM,
+                            response_mime_type="application/json", response_schema=Answer))
+                    break
+                except Exception as error:
+                    status = getattr(error, "code", None)
+                    if status not in {429, 500, 502, 503, 504} or attempt == 4:
+                        raise
+                    delay = (5, 15, 30)[attempt - 1]
+                    print(json.dumps({"action": "gemini_retry", "model": MODEL,
+                        "http_status": status, "attempt": attempt, "retry_delay": delay}), flush=True)
+                    time.sleep(delay)
     except Exception as error:
         # Do not expose SDK exception details, request headers, or credentials.
         code = getattr(error, 'code', None)
