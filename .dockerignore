@@ -1,0 +1,5 @@
+# Allow only build inputs; never send datasets, evidence, credentials, or models.
+**
+!Dockerfile
+!requirements/
+!requirements/**

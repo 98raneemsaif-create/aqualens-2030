@@ -1,0 +1,4 @@
+Started UTC: 2026-09-08T17:19:30.398228+00:00
+Command argv: ["docker", "compose", "config", "--quiet"]
+Exit code: 0
+Finished UTC: 2026-09-08T17:19:30.759464+00:00

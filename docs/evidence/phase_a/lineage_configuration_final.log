@@ -1,0 +1,18 @@
+Started UTC: 2026-09-09T05:12:18.939978+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "/opt/airflow/tests/phase_a_smoke.py", "lineage_configuration"]
+
+CHECK: lineage_configuration
+OpenLineage provider: 2.20.0
+Plugin import errors: {}
+Loaded plugins: ['OpenLineageProviderPlugin']
+2026-09-09T05:12:23.372581Z [info     ] OpenLineageClient will use `file` transport [openlineage.client.client] loc=client.py:136
+OpenLineage transport: FileTransport
+OpenLineage append: False
+OpenLineage file prefix: /opt/airflow/docs/evidence/lineage/raw/event
+OpenLineage namespace: aqualens2030
+Lineage directory create/write/read/delete succeeded; no events emitted.
+PASS: lineage_configuration
+
+PASS: Phase A runtime smoke checks. No scored pipeline behavior tested.
+Exit code: 0
+Finished UTC: 2026-09-09T05:12:24.139967+00:00

@@ -1,0 +1,5 @@
+Started UTC: 2026-09-08T17:21:06.753110+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "pip", "check"]
+No broken requirements found.
+Exit code: 0
+Finished UTC: 2026-09-08T17:21:16.854758+00:00

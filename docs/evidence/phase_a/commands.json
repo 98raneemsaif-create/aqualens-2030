@@ -1,0 +1,229 @@
+[
+  {
+    "evidence": "airflow_logs.log",
+    "argv": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "100",
+      "airflow"
+    ]
+  },
+  {
+    "evidence": "airflow_logs_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "120",
+      "airflow"
+    ]
+  },
+  {
+    "evidence": "airflow_start.log",
+    "argv": [
+      "docker",
+      "compose",
+      "up",
+      "-d",
+      "--wait",
+      "--wait-timeout",
+      "300"
+    ]
+  },
+  {
+    "evidence": "airflow_version.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "airflow",
+      "version"
+    ]
+  },
+  {
+    "evidence": "compose_validation.log",
+    "argv": [
+      "docker",
+      "compose",
+      "config",
+      "--quiet"
+    ]
+  },
+  {
+    "evidence": "compose_version.log",
+    "argv": [
+      "docker",
+      "compose",
+      "version"
+    ]
+  },
+  {
+    "evidence": "docker_storage.log",
+    "argv": [
+      "docker",
+      "system",
+      "df"
+    ]
+  },
+  {
+    "evidence": "docker_versions.log",
+    "argv": [
+      "docker",
+      "version"
+    ]
+  },
+  {
+    "evidence": "gitignore.log",
+    "argv": [
+      "git",
+      "check-ignore",
+      ".env",
+      "secrets/example.key",
+      "storage/delta/example.parquet",
+      "storage/chroma/chroma.sqlite3",
+      "src/__pycache__/example.pyc",
+      ".pytest_cache/example",
+      ".cache/huggingface/example",
+      "airflow.db",
+      "airflow.db-wal",
+      "simple_auth_manager_passwords.json.generated"
+    ]
+  },
+  {
+    "evidence": "host_audit.log",
+    "argv": [
+      "python",
+      "tests/phase_a_host_audit.py"
+    ]
+  },
+  {
+    "evidence": "kafka_logs.log",
+    "argv": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "150",
+      "kafka"
+    ]
+  },
+  {
+    "evidence": "kafka_logs_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "logs",
+      "--no-color",
+      "--tail",
+      "60",
+      "kafka"
+    ]
+  },
+  {
+    "evidence": "kafka_pull.log",
+    "argv": [
+      "docker",
+      "compose",
+      "pull",
+      "kafka"
+    ]
+  },
+  {
+    "evidence": "kafka_start.log",
+    "argv": [
+      "docker",
+      "compose",
+      "up",
+      "-d",
+      "--wait",
+      "--wait-timeout",
+      "180",
+      "kafka"
+    ]
+  },
+  {
+    "evidence": "kafka_version.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "kafka",
+      "/opt/kafka/bin/kafka-topics.sh",
+      "--version"
+    ]
+  },
+  {
+    "evidence": "lineage_configuration_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "/opt/airflow/tests/phase_a_smoke.py",
+      "lineage_configuration"
+    ]
+  },
+  {
+    "evidence": "pip_check.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "airflow",
+      "python",
+      "-m",
+      "pip",
+      "check"
+    ]
+  },
+  {
+    "evidence": "resources_final.log",
+    "argv": [
+      "docker",
+      "stats",
+      "--no-stream"
+    ]
+  },
+  {
+    "evidence": "resources_idle.log",
+    "argv": [
+      "docker",
+      "stats",
+      "--no-stream"
+    ]
+  },
+  {
+    "evidence": "runtime_smoke.log",
+    "argv": [
+      "docker",
+      "compose",
+      "exec",
+      "-T",
+      "-e",
+      "HF_HUB_OFFLINE=1",
+      "airflow",
+      "python",
+      "/opt/airflow/tests/phase_a_smoke.py"
+    ]
+  },
+  {
+    "evidence": "service_status_final.log",
+    "argv": [
+      "docker",
+      "compose",
+      "ps"
+    ]
+  }
+]

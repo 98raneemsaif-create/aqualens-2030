@@ -1,0 +1,124 @@
+Started UTC: 2026-09-09T05:10:48.295809+00:00
+Command argv: ["docker", "compose", "logs", "--no-color", "--tail", "120", "airflow"]
+airflow-1  | triggerer  | 2026-09-08T18:35:05.728251Z [info     ] 0 watchers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | dag-processor | 2026-09-08T18:35:09.129490Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:15.200468Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:20.231604Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:24.247963Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-08T18:35:25.255708Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:30.285429Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:35.322071Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:40.350431Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:45.375808Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:50.407239Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:35:54.428328Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-08T18:35:55.435870Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T18:36:00.470980Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-08T19:35:49.741892Z [info     ] Heartbeat recovered after 3588.27 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | dag-processor | 2026-09-08T19:35:49.744409Z [info     ] Refreshing bundle dags-folder  [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:882
+airflow-1  | dag-processor | 2026-09-08T19:35:49.816834Z [info     ] Searching for files in dags-folder at /opt/airflow/dags [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:950
+airflow-1  | scheduler  | 2026-09-08T19:35:49.977759Z [info     ] Heartbeat recovered after 3588.14 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | dag-processor | 2026-09-08T19:35:50.040717Z [info     ] Found 0 files for bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:952
+airflow-1  | triggerer  | 2026-09-08T19:35:50.067286Z [info     ] Heartbeat recovered after 3586.17 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | triggerer  | 2026-09-08T19:35:50.872741Z [info     ] 0 triggers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | triggerer  | 2026-09-08T19:35:50.872987Z [info     ] 0 watchers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | scheduler  | 2026-09-08T19:45:23.885758Z [info     ] Heartbeat recovered after 574.23 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | triggerer  | 2026-09-09T05:07:35.858131Z [info     ] Heartbeat recovered after 34305.87 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | dag-processor | 2026-09-09T05:07:35.909658Z [info     ] Heartbeat recovered after 34306.33 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | scheduler  | 2026-09-09T05:07:36.838209Z [info     ] Heartbeat recovered after 33733.18 seconds [airflow.jobs.job.Job] loc=job.py:239
+airflow-1  | dag-processor | 2026-09-09T05:07:36.901183Z [info     ] Refreshing bundle dags-folder  [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:882
+airflow-1  | dag-processor | 2026-09-09T05:07:36.938277Z [info     ] Searching for files in dags-folder at /opt/airflow/dags [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:950
+airflow-1  | dag-processor | 2026-09-09T05:07:37.312754Z [info     ] Found 0 files for bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:952
+airflow-1  | triggerer  | 2026-09-09T05:07:38.472382Z [info     ] Triggerer's async thread was blocked for 0.27 seconds, exceeding the configured warning threshold of 0.20 seconds. This is likely caused by a badly-written trigger. Set PYTHONASYNCIODEBUG=1 to get more information on overrunning coroutines. [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | dag-processor | 2026-09-09T05:07:41.903774Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:07:46.928323Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:07:49.946422Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:07:51.959713Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:07:56.986352Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:02.014009Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:07.035304Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:12.059010Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:17.085637Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:19.972601Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:08:22.107932Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:27.132404Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:32.156935Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | triggerer  | 2026-09-09T05:08:32.775835Z [info     ] 0 triggers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | triggerer  | 2026-09-09T05:08:32.776793Z [info     ] 0 watchers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | dag-processor | 2026-09-09T05:08:37.322656Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:42.349386Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:47.380748Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:50.396371Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:08:52.410055Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:08:57.443338Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:02.471588Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:07.498524Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:12.527374Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:17.554613Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | scheduler  | 2026-09-09T05:09:18.545638Z [info     ] Adopting or resetting orphaned tasks for active dag runs [airflow.jobs.scheduler_job_runner.SchedulerJobRunner] loc=scheduler_job_runner.py:3252
+airflow-1  | dag-processor | 2026-09-09T05:09:20.616728Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:09:22.631397Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:27.667245Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:32.697096Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | triggerer  | 2026-09-09T05:09:32.963380Z [info     ] 0 triggers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | triggerer  | 2026-09-09T05:09:32.963695Z [info     ] 0 watchers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | dag-processor | 2026-09-09T05:09:37.727707Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:42.766593Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:47.801207Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:50.817740Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:09:52.832398Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:09:57.871413Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:02.913253Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:07.948674Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:12.981169Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:18.015057Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:21.034364Z [info     ]
+airflow-1  | dag-processor | ================================================================================
+airflow-1  | dag-processor | DAG File Processing Stats
+airflow-1  | dag-processor | Bundle    File Path    PID    Current Duration    # DAGs    # Errors    Last Duration    Last Run At
+airflow-1  | dag-processor | --------  -----------  -----  ------------------  --------  ----------  ---------------  -------------
+airflow-1  | dag-processor | ================================================================================ [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:1159
+airflow-1  | dag-processor | 2026-09-09T05:10:23.048548Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:28.086010Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:33.108287Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | triggerer  | 2026-09-09T05:10:33.108742Z [info     ] 0 triggers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | triggerer  | 2026-09-09T05:10:33.108936Z [info     ] 0 watchers currently running   [airflow.jobs.triggerer_job_runner] loc=triggerer_job_runner.py:1036
+airflow-1  | dag-processor | 2026-09-09T05:10:38.136751Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+airflow-1  | dag-processor | 2026-09-09T05:10:43.177011Z [info     ] Not time to refresh bundle dags-folder [airflow.dag_processing.manager.DagFileProcessorManager] loc=manager.py:879
+Exit code: 0
+Finished UTC: 2026-09-09T05:10:48.603611+00:00

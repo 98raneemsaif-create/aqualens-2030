@@ -1,0 +1,16 @@
+# Frozen direct dependencies from docs/preflight_report.md.
+apache-airflow==3.3.1
+apache-airflow-providers-openlineage==2.20.0
+openlineage-python==1.52.0
+great-expectations==1.22.0
+deltalake==1.6.3
+confluent-kafka==2.15.0
+pydantic==2.13.4
+chromadb==1.5.9
+sentence-transformers==6.0.1
+rank-bm25==0.2.2
+google-genai==2.17.0
+torch==2.14.0+cpu
+transformers==5.16.1
+sentencepiece==0.2.1
+pyarrow==25.0.0

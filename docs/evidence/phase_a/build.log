@@ -1,0 +1,809 @@
+docker :  Image aqualens2030-airflow:phase-a Building 
+At line:2 char:32
++ ... ig --quiet; docker compose --progress plain build airflow 2>&1 | Tee- ...
++                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: ( Image aqualens...ase-a Building :String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+#1 [internal] load local bake definitions
+#1 reading from stdin 581B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.12kB 0.0s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#3 DONE 2.3s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 33B
+#4 transferring context: 171B done
+#4 DONE 0.2s
+
+#5 [internal] load build context
+#5 DONE 0.0s
+
+#6 [1/7] FROM docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#6 resolve docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f 0.1s done
+#6 DONE 0.1s
+
+#6 [1/7] FROM docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#6 ...
+
+#5 [internal] load build context
+#5 transferring context: 23.16kB 0.1s done
+#5 DONE 0.4s
+
+#6 [1/7] FROM docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#6 DONE 2.0s
+
+#7 [2/7] RUN mkdir -p /opt/aqualens /opt/airflow/runtime     && chown airflow:root /opt/aqualens /opt/airflow/runtime
+#7 DONE 0.6s
+
+#8 [3/7] RUN python -m venv /opt/aqualens/venv
+#8 DONE 5.4s
+
+#9 [4/7] COPY --chown=airflow:root requirements/ /opt/aqualens/requirements/
+#9 DONE 0.3s
+
+#10 [5/7] RUN python -m pip install --no-cache-dir --no-deps     --index-url https://download.pytorch.org/whl/cpu 'torch==2.14.0+cpu'
+#10 0.940 Looking in indexes: https://download.pytorch.org/whl/cpu
+#10 1.679 Collecting torch==2.14.0+cpu
+#10 1.913   Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 2.262 Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl (196.2 MB)
+#10 14.01    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.2/196.2 MB 16.7 MB/s eta 0:00:00
+#10 14.44 Installing collected packages: torch
+#10 32.58 Successfully installed torch-2.14.0+cpu
+#10 DONE 33.2s
+
+#11 [6/7] RUN python -m pip install --no-cache-dir     --index-url https://pypi.org/simple     --constraint /opt/aqualens/requirements/airflow-3.3.1-python3.11.constraints.txt     --requirement /opt/aqualens/requirements/runtime.lock     && python -m pip check
+#11 2.329 Collecting a2wsgi==1.10.10 (from -r /opt/aqualens/requirements/runtime.lock (line 1))
+#11 2.713   Downloading a2wsgi-1.10.10-py3-none-any.whl.metadata (4.0 kB)
+#11 2.887 Collecting aiohappyeyeballs==2.7.1 (from -r /opt/aqualens/requirements/runtime.lock (line 2))
+#11 2.985   Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl.metadata (5.9 kB)
+#11 4.825 Collecting aiohttp==3.14.3 (from -r /opt/aqualens/requirements/runtime.lock (line 3))
+#11 4.930   Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (8.3 kB)
+#11 5.050 Collecting aiosignal==1.4.0 (from -r /opt/aqualens/requirements/runtime.lock (line 4))
+#11 5.144   Downloading aiosignal-1.4.0-py3-none-any.whl.metadata (3.7 kB)
+#11 5.290 Collecting aiosmtplib==5.1.2 (from -r /opt/aqualens/requirements/runtime.lock (line 5))
+#11 5.391   Downloading aiosmtplib-5.1.2-py3-none-any.whl.metadata (3.6 kB)
+#11 5.520 Collecting aiosqlite==0.22.1 (from -r /opt/aqualens/requirements/runtime.lock (line 6))
+#11 5.625   Downloading aiosqlite-0.22.1-py3-none-any.whl.metadata (4.3 kB)
+#11 5.846 Collecting alembic==1.19.0 (from -r /opt/aqualens/requirements/runtime.lock (line 7))
+#11 5.948   Downloading alembic-1.19.0-py3-none-any.whl.metadata (7.3 kB)
+#11 6.119 Collecting altair==6.2.2 (from -r /opt/aqualens/requirements/runtime.lock (line 8))
+#11 6.216   Downloading altair-6.2.2-py3-none-any.whl.metadata (11 kB)
+#11 6.405 Collecting annotated-doc==0.0.5 (from -r /opt/aqualens/requirements/runtime.lock (line 9))
+#11 6.622   Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+#11 6.772 Collecting annotated-types==0.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 10))
+#11 6.864   Downloading annotated_types-0.8.0-py3-none-any.whl.metadata (15 kB)
+#11 7.032 Collecting anyio==4.14.2 (from -r /opt/aqualens/requirements/runtime.lock (line 11))
+#11 7.179   Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+#11 7.536 Collecting apache-airflow==3.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 12))
+#11 7.646   Downloading apache_airflow-3.3.1-py3-none-any.whl.metadata (37 kB)
+#11 7.903 Collecting apache-airflow-core==3.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 13))
+#11 7.998   Downloading apache_airflow_core-3.3.1-py3-none-any.whl.metadata (6.7 kB)
+#11 8.220 Collecting apache-airflow-providers-common-compat==1.18.0 (from -r /opt/aqualens/requirements/runtime.lock (line 14))
+#11 8.384   Downloading apache_airflow_providers_common_compat-1.18.0-py3-none-any.whl.metadata (5.9 kB)
+#11 8.640 Collecting apache-airflow-providers-common-io==1.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 15))
+#11 8.767   Downloading apache_airflow_providers_common_io-1.8.0-py3-none-any.whl.metadata (5.6 kB)
+#11 9.114 Collecting apache-airflow-providers-common-sql==2.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 16))
+#11 9.222   Downloading apache_airflow_providers_common_sql-2.1.0-py3-none-any.whl.metadata (7.9 kB)
+#11 9.447 Collecting apache-airflow-providers-openlineage==2.20.0 (from -r /opt/aqualens/requirements/runtime.lock (line 17))
+#11 9.551   Downloading apache_airflow_providers_openlineage-2.20.0-py3-none-any.whl.metadata (5.0 kB)
+#11 9.842 Collecting apache-airflow-providers-smtp==3.0.3 (from -r /opt/aqualens/requirements/runtime.lock (line 18))
+#11 9.975   Downloading apache_airflow_providers_smtp-3.0.3-py3-none-any.whl.metadata (4.2 kB)
+#11 10.15 Collecting apache-airflow-providers-standard==1.17.0 (from -r /opt/aqualens/requirements/runtime.lock (line 19))
+#11 10.25   Downloading apache_airflow_providers_standard-1.17.0-py3-none-any.whl.metadata (5.6 kB)
+#11 10.45 Collecting apache-airflow-task-sdk==1.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 20))
+#11 10.59   Downloading apache_airflow_task_sdk-1.3.1-py3-none-any.whl.metadata (5.1 kB)
+#11 10.76 Collecting argcomplete==3.7.2 (from -r /opt/aqualens/requirements/runtime.lock (line 21))
+#11 10.86   Downloading argcomplete-3.7.2-py3-none-any.whl.metadata (16 kB)
+#11 11.28 Collecting arro3-core==0.8.2 (from -r /opt/aqualens/requirements/runtime.lock (line 22))
+#11 11.37   Downloading arro3_core-0.8.2-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (515 bytes)
+#11 11.52 Collecting arrow==1.4.0 (from -r /opt/aqualens/requirements/runtime.lock (line 23))
+#11 11.62   Downloading arrow-1.4.0-py3-none-any.whl.metadata (7.7 kB)
+#11 11.80 Collecting asgiref==3.12.1 (from -r /opt/aqualens/requirements/runtime.lock (line 24))
+#11 11.91   Downloading asgiref-3.12.1-py3-none-any.whl.metadata (9.4 kB)
+#11 12.11 Collecting attrs==26.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 25))
+#11 12.21   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+#11 12.41 Collecting babel==2.18.0 (from -r /opt/aqualens/requirements/runtime.lock (line 26))
+#11 12.50   Downloading babel-2.18.0-py3-none-any.whl.metadata (2.2 kB)
+#11 12.73 Collecting bcrypt==5.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 27))
+#11 12.82   Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl.metadata (10 kB)
+#11 13.02 Collecting build==1.6.0 (from -r /opt/aqualens/requirements/runtime.lock (line 28))
+#11 13.13   Downloading build-1.6.0-py3-none-any.whl.metadata (5.6 kB)
+#11 13.29 Collecting cachetools==6.2.6 (from -r /opt/aqualens/requirements/runtime.lock (line 29))
+#11 13.44   Downloading cachetools-6.2.6-py3-none-any.whl.metadata (5.6 kB)
+#11 13.70 Collecting cadwyn==7.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 30))
+#11 13.80   Downloading cadwyn-7.0.0-py3-none-any.whl.metadata (4.5 kB)
+#11 13.97 Collecting certifi==2026.7.22 (from -r /opt/aqualens/requirements/runtime.lock (line 31))
+#11 14.07   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+#11 14.51 Collecting cffi==2.1.1 (from -r /opt/aqualens/requirements/runtime.lock (line 32))
+#11 14.61   Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.5 kB)
+#11 15.17 Collecting charset-normalizer==3.4.9 (from -r /opt/aqualens/requirements/runtime.lock (line 33))
+#11 15.28   Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (41 kB)
+#11 15.29      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/41.7 kB 4.4 MB/s eta 0:00:00
+#11 15.53 Collecting chromadb==1.5.9 (from -r /opt/aqualens/requirements/runtime.lock (line 34))
+#11 15.63   Downloading chromadb-1.5.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.0 kB)
+#11 15.84 Collecting click==8.4.2 (from -r /opt/aqualens/requirements/runtime.lock (line 35))
+#11 15.98   Downloading click-8.4.2-py3-none-any.whl.metadata (2.6 kB)
+#11 16.19 Collecting colorlog==6.12.0 (from -r /opt/aqualens/requirements/runtime.lock (line 36))
+#11 16.29   Downloading colorlog-6.12.0-py3-none-any.whl.metadata (11 kB)
+#11 16.83 Collecting confluent-kafka==2.15.0 (from -r /opt/aqualens/requirements/runtime.lock (line 37))
+#11 16.98   Downloading confluent_kafka-2.15.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (33 kB)
+#11 17.16 Collecting cron-descriptor==2.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 38))
+#11 17.27   Downloading cron_descriptor-2.1.0-py3-none-any.whl.metadata (8.1 kB)
+#11 17.49 Collecting croniter==6.2.4 (from -r /opt/aqualens/requirements/runtime.lock (line 39))
+#11 17.60   Downloading croniter-6.2.4-py3-none-any.whl.metadata (23 kB)
+#11 18.28 Collecting cryptography==50.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 40))
+#11 18.38   Downloading cryptography-50.0.0-cp311-abi3-manylinux_2_34_x86_64.whl.metadata (4.3 kB)
+#11 18.72 Collecting deltalake==1.6.3 (from -r /opt/aqualens/requirements/runtime.lock (line 41))
+#11 18.82   Downloading deltalake-1.6.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (5.4 kB)
+#11 19.01 Collecting deprecated==1.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 42))
+#11 19.11   Downloading deprecated-1.3.1-py2.py3-none-any.whl.metadata (5.9 kB)
+#11 19.27 Collecting dill==0.4.1 (from -r /opt/aqualens/requirements/runtime.lock (line 43))
+#11 19.38   Downloading dill-0.4.1-py3-none-any.whl.metadata (10 kB)
+#11 19.49 Collecting distro==1.9.0 (from -r /opt/aqualens/requirements/runtime.lock (line 44))
+#11 19.58   Downloading distro-1.9.0-py3-none-any.whl.metadata (6.8 kB)
+#11 19.70 Collecting dnspython==2.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 45))
+#11 19.79   Downloading dnspython-2.8.0-py3-none-any.whl.metadata (5.7 kB)
+#11 19.89 Collecting durationpy==0.10 (from -r /opt/aqualens/requirements/runtime.lock (line 46))
+#11 20.00   Downloading durationpy-0.10-py3-none-any.whl.metadata (340 bytes)
+#11 20.12 Collecting email-validator==2.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 47))
+#11 20.22   Downloading email_validator-2.3.0-py3-none-any.whl.metadata (26 kB)
+#11 20.52 Collecting fastapi==0.136.3 (from -r /opt/aqualens/requirements/runtime.lock (line 48))
+#11 20.62   Downloading fastapi-0.136.3-py3-none-any.whl.metadata (27 kB)
+#11 20.77 Collecting fastapi-cli==0.0.32 (from -r /opt/aqualens/requirements/runtime.lock (line 49))
+#11 20.86   Downloading fastapi_cli-0.0.32-py3-none-any.whl.metadata (6.7 kB)
+#11 21.02 Collecting filelock==3.32.2 (from -r /opt/aqualens/requirements/runtime.lock (line 50))
+#11 21.12   Downloading filelock-3.32.2-py3-none-any.whl.metadata (2.0 kB)
+#11 21.24 Collecting flatbuffers==25.12.19 (from -r /opt/aqualens/requirements/runtime.lock (line 51))
+#11 21.33   Downloading flatbuffers-25.12.19-py2.py3-none-any.whl.metadata (1.0 kB)
+#11 21.56 Collecting frozenlist==1.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 52))
+#11 21.65   Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (20 kB)
+#11 21.83 Collecting fsspec==2026.7.0 (from -r /opt/aqualens/requirements/runtime.lock (line 53))
+#11 21.93   Downloading fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+#11 22.23 Collecting google-auth==2.56.3 (from -r /opt/aqualens/requirements/runtime.lock (line 54))
+#11 22.34   Downloading google_auth-2.56.3-py3-none-any.whl.metadata (6.0 kB)
+#11 22.51 Collecting google-genai==2.17.0 (from -r /opt/aqualens/requirements/runtime.lock (line 55))
+#11 22.60   Downloading google_genai-2.17.0-py3-none-any.whl.metadata (56 kB)
+#11 22.63      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.5/56.5 kB 3.2 MB/s eta 0:00:00
+#11 22.81 Collecting googleapis-common-protos==1.75.1 (from -r /opt/aqualens/requirements/runtime.lock (line 56))
+#11 22.91   Downloading googleapis_common_protos-1.75.1-py3-none-any.whl.metadata (8.5 kB)
+#11 23.24 Collecting great-expectations==1.22.0 (from -r /opt/aqualens/requirements/runtime.lock (line 57))
+#11 23.33   Downloading great_expectations-1.22.0-py3-none-any.whl.metadata (9.9 kB)
+#11 23.45 Collecting greenback==1.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 58))
+#11 23.55   Downloading greenback-1.3.0-py3-none-any.whl.metadata (9.8 kB)
+#11 24.11 Collecting greenlet==3.5.4 (from -r /opt/aqualens/requirements/runtime.lock (line 59))
+#11 24.23   Downloading greenlet-3.5.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+#11 25.48 Collecting grpcio==1.83.0 (from -r /opt/aqualens/requirements/runtime.lock (line 60))
+#11 25.57   Downloading grpcio-1.83.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+#11 25.70 Collecting h11==0.16.0 (from -r /opt/aqualens/requirements/runtime.lock (line 61))
+#11 25.80   Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+#11 26.07 Collecting hf-xet==1.6.0 (from -r /opt/aqualens/requirements/runtime.lock (line 62))
+#11 26.17   Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+#11 26.33 Collecting httpcore==1.0.9 (from -r /opt/aqualens/requirements/runtime.lock (line 63))
+#11 26.43   Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+#11 26.66 Collecting httptools==0.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 64))
+#11 26.76   Downloading httptools-0.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (3.5 kB)
+#11 27.10 Collecting httpx==0.28.1 (from -r /opt/aqualens/requirements/runtime.lock (line 65))
+#11 27.20   Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+#11 27.48 Collecting huggingface-hub==1.27.0 (from -r /opt/aqualens/requirements/runtime.lock (line 66))
+#11 27.58   Downloading huggingface_hub-1.27.0-py3-none-any.whl.metadata (16 kB)
+#11 27.74 Collecting idna==3.18 (from -r /opt/aqualens/requirements/runtime.lock (line 67))
+#11 27.84   Downloading idna-3.18-py3-none-any.whl.metadata (6.1 kB)
+#11 28.09 Collecting importlib-metadata==8.9.0 (from -r /opt/aqualens/requirements/runtime.lock (line 68))
+#11 28.18   Downloading importlib_metadata-8.9.0-py3-none-any.whl.metadata (4.5 kB)
+#11 28.41 Collecting importlib-resources==7.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 69))
+#11 28.51   Downloading importlib_resources-7.1.0-py3-none-any.whl.metadata (4.0 kB)
+#11 28.63 Collecting isoduration==20.11.0 (from -r /opt/aqualens/requirements/runtime.lock (line 70))
+#11 28.73   Downloading isoduration-20.11.0-py3-none-any.whl.metadata (5.7 kB)
+#11 28.85 Collecting itsdangerous==2.2.0 (from -r /opt/aqualens/requirements/runtime.lock (line 71))
+#11 28.95   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB)
+#11 29.12 Collecting jinja2==3.1.6 (from -r /opt/aqualens/requirements/runtime.lock (line 72))
+#11 29.21   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+#11 29.38 Collecting joblib==1.5.3 (from -r /opt/aqualens/requirements/runtime.lock (line 73))
+#11 29.48   Downloading joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+#11 29.68 Collecting jsonschema==4.26.0 (from -r /opt/aqualens/requirements/runtime.lock (line 74))
+#11 29.77   Downloading jsonschema-4.26.0-py3-none-any.whl.metadata (7.6 kB)
+#11 29.91 Collecting jsonschema-specifications==2025.9.1 (from -r /opt/aqualens/requirements/runtime.lock (line 75))
+#11 30.00   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+#11 30.16 Collecting kubernetes==36.0.3 (from -r /opt/aqualens/requirements/runtime.lock (line 76))
+#11 30.26   Downloading kubernetes-36.0.3-py2.py3-none-any.whl.metadata (1.8 kB)
+#11 30.41 Collecting lazy-object-proxy==1.12.0 (from -r /opt/aqualens/requirements/runtime.lock (line 77))
+#11 30.51   Downloading lazy_object_proxy-1.12.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (5.1 kB)
+#11 30.80 Collecting libcst==1.9.0 (from -r /opt/aqualens/requirements/runtime.lock (line 78))
+#11 30.90   Downloading libcst-1.9.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (15 kB)
+#11 31.04 Collecting linkify-it-py==2.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 79))
+#11 31.15   Downloading linkify_it_py-2.1.0-py3-none-any.whl.metadata (8.5 kB)
+#11 31.30 Collecting lockfile==0.12.2 (from -r /opt/aqualens/requirements/runtime.lock (line 80))
+#11 31.45   Downloading lockfile-0.12.2-py2.py3-none-any.whl.metadata (2.4 kB)
+#11 31.62 Collecting mako==1.4.1 (from -r /opt/aqualens/requirements/runtime.lock (line 81))
+#11 31.72   Downloading mako-1.4.1-py3-none-any.whl.metadata (2.9 kB)
+#11 31.85 Collecting markdown-it-py==4.2.0 (from -r /opt/aqualens/requirements/runtime.lock (line 82))
+#11 31.94   Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+#11 32.26 Collecting markupsafe==3.0.3 (from -r /opt/aqualens/requirements/runtime.lock (line 83))
+#11 32.37   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+#11 32.62 Collecting marshmallow==4.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 84))
+#11 32.73   Downloading marshmallow-4.3.0-py3-none-any.whl.metadata (6.8 kB)
+#11 32.85 Collecting mdurl==0.1.2 (from -r /opt/aqualens/requirements/runtime.lock (line 85))
+#11 32.94   Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+#11 33.06 Collecting methodtools==0.4.7 (from -r /opt/aqualens/requirements/runtime.lock (line 86))
+#11 33.16   Downloading methodtools-0.4.7-py2.py3-none-any.whl.metadata (3.0 kB)
+#11 33.33 Collecting mistune==3.3.4 (from -r /opt/aqualens/requirements/runtime.lock (line 87))
+#11 33.42   Downloading mistune-3.3.4-py3-none-any.whl.metadata (1.9 kB)
+#11 33.75 Collecting mmh3==5.2.1 (from -r /opt/aqualens/requirements/runtime.lock (line 88))
+#11 33.85   Downloading mmh3-5.2.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (14 kB)
+#11 34.02 Collecting more-itertools==11.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 89))
+#11 34.12   Downloading more_itertools-11.1.0-py3-none-any.whl.metadata (41 kB)
+#11 34.15      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.4/41.4 kB 4.5 MB/s eta 0:00:00
+#11 34.30 Collecting mpmath==1.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 90))
+#11 34.39   Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+#11 34.69 Collecting msgspec==0.21.1 (from -r /opt/aqualens/requirements/runtime.lock (line 91))
+#11 34.78   Downloading msgspec-0.21.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.8 kB)
+#11 35.49 Collecting multidict==6.7.1 (from -r /opt/aqualens/requirements/runtime.lock (line 92))
+#11 35.59   Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (5.3 kB)
+#11 36.00 Collecting narwhals==2.24.0 (from -r /opt/aqualens/requirements/runtime.lock (line 93))
+#11 36.10   Downloading narwhals-2.24.0-py3-none-any.whl.metadata (15 kB)
+#11 36.23 Collecting natsort==8.4.0 (from -r /opt/aqualens/requirements/runtime.lock (line 94))
+#11 36.32   Downloading natsort-8.4.0-py3-none-any.whl.metadata (21 kB)
+#11 36.48 Collecting networkx==3.6.1 (from -r /opt/aqualens/requirements/runtime.lock (line 95))
+#11 36.58   Downloading networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+#11 37.30 Collecting numpy==2.4.6 (from -r /opt/aqualens/requirements/runtime.lock (line 96))
+#11 37.39   Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+#11 37.51 Collecting oauthlib==3.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 97))
+#11 37.61   Downloading oauthlib-3.3.1-py3-none-any.whl.metadata (7.9 kB)
+#11 37.85 Collecting onnxruntime==1.29.0 (from -r /opt/aqualens/requirements/runtime.lock (line 98))
+#11 37.95   Downloading onnxruntime-1.29.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (5.6 kB)
+#11 38.18 Collecting openlineage-integration-common==1.52.0 (from -r /opt/aqualens/requirements/runtime.lock (line 99))
+#11 38.28   Downloading openlineage_integration_common-1.52.0-py3-none-any.whl.metadata (3.8 kB)
+#11 38.51 Collecting openlineage-python==1.52.0 (from -r /opt/aqualens/requirements/runtime.lock (line 100))
+#11 38.61   Downloading openlineage_python-1.52.0-py3-none-any.whl.metadata (2.6 kB)
+#11 38.83 Collecting openlineage-sql==1.52.0 (from -r /opt/aqualens/requirements/runtime.lock (line 101))
+#11 38.93   Downloading openlineage_sql-1.52.0-cp310-abi3-manylinux_2_28_x86_64.whl.metadata (847 bytes)
+#11 39.12 Collecting opentelemetry-api==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 102))
+#11 39.23   Downloading opentelemetry_api-1.44.0-py3-none-any.whl.metadata (1.4 kB)
+#11 39.36 Collecting opentelemetry-exporter-otlp==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 103))
+#11 39.45   Downloading opentelemetry_exporter_otlp-1.44.0-py3-none-any.whl.metadata (2.4 kB)
+#11 39.57 Collecting opentelemetry-exporter-otlp-proto-common==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 104))
+#11 39.66   Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl.metadata (1.8 kB)
+#11 39.85 Collecting opentelemetry-exporter-otlp-proto-grpc==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 105))
+#11 39.95   Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl.metadata (2.6 kB)
+#11 40.10 Collecting opentelemetry-exporter-otlp-proto-http==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 106))
+#11 40.20   Downloading opentelemetry_exporter_otlp_proto_http-1.44.0-py3-none-any.whl.metadata (2.4 kB)
+#11 40.37 Collecting opentelemetry-proto==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 107))
+#11 40.46   Downloading opentelemetry_proto-1.44.0-py3-none-any.whl.metadata (2.3 kB)
+#11 40.68 Collecting opentelemetry-sdk==1.44.0 (from -r /opt/aqualens/requirements/runtime.lock (line 108))
+#11 40.79   Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl.metadata (1.6 kB)
+#11 40.98 Collecting opentelemetry-semantic-conventions==0.65b0 (from -r /opt/aqualens/requirements/runtime.lock (line 109))
+#11 41.08   Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl.metadata (2.4 kB)
+#11 41.91 Collecting orjson==3.11.9 (from -r /opt/aqualens/requirements/runtime.lock (line 110))
+#11 42.01   Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (41 kB)
+#11 42.03      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.0/42.0 kB 3.6 MB/s eta 0:00:00
+#11 42.16 Collecting outcome==1.3.0.post0 (from -r /opt/aqualens/requirements/runtime.lock (line 111))
+#11 42.27   Downloading outcome-1.3.0.post0-py2.py3-none-any.whl.metadata (2.6 kB)
+#11 42.41 Collecting overrides==7.7.0 (from -r /opt/aqualens/requirements/runtime.lock (line 112))
+#11 42.51   Downloading overrides-7.7.0-py3-none-any.whl.metadata (5.8 kB)
+#11 42.65 Collecting packaging==26.3 (from -r /opt/aqualens/requirements/runtime.lock (line 113))
+#11 42.75   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+#11 43.40 Collecting pandas==3.0.5 (from -r /opt/aqualens/requirements/runtime.lock (line 114))
+#11 43.50   Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+#11 43.53      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 3.1 MB/s eta 0:00:00
+#11 43.70 Collecting pathlib-abc==0.5.2 (from -r /opt/aqualens/requirements/runtime.lock (line 115))
+#11 43.80   Downloading pathlib_abc-0.5.2-py3-none-any.whl.metadata (4.6 kB)
+#11 43.99 Collecting pathspec==1.1.1 (from -r /opt/aqualens/requirements/runtime.lock (line 116))
+#11 44.16   Downloading pathspec-1.1.1-py3-none-any.whl.metadata (14 kB)
+#11 44.35 Collecting pendulum==3.2.0 (from -r /opt/aqualens/requirements/runtime.lock (line 117))
+#11 44.45   Downloading pendulum-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)
+#11 44.58 Collecting pluggy==1.6.0 (from -r /opt/aqualens/requirements/runtime.lock (line 118))
+#11 44.68   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+#11 44.89 Collecting propcache==0.5.2 (from -r /opt/aqualens/requirements/runtime.lock (line 119))
+#11 44.99   Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (16 kB)
+#11 45.56 Collecting protobuf==6.33.6 (from -r /opt/aqualens/requirements/runtime.lock (line 120))
+#11 45.66   Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl.metadata (593 bytes)
+#11 46.09 Collecting psutil==7.2.2 (from -r /opt/aqualens/requirements/runtime.lock (line 121))
+#11 46.18   Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl.metadata (22 kB)
+#11 46.49 Collecting pyarrow==25.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 122))
+#11 46.59   Downloading pyarrow-25.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.0 kB)
+#11 46.76 Collecting pyasn1==0.6.4 (from -r /opt/aqualens/requirements/runtime.lock (line 123))
+#11 46.86   Downloading pyasn1-0.6.4-py3-none-any.whl.metadata (8.4 kB)
+#11 46.99 Collecting pyasn1-modules==0.4.2 (from -r /opt/aqualens/requirements/runtime.lock (line 124))
+#11 47.09   Downloading pyasn1_modules-0.4.2-py3-none-any.whl.metadata (3.5 kB)
+#11 47.55 Collecting pybase64==1.5.0 (from -r /opt/aqualens/requirements/runtime.lock (line 125))
+#11 47.69   Downloading pybase64-1.5.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl.metadata (11 kB)
+#11 47.83 Collecting pycparser==3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 126))
+#11 47.93   Downloading pycparser-3.0-py3-none-any.whl.metadata (8.2 kB)
+#11 48.39 Collecting pydantic==2.13.4 (from -r /opt/aqualens/requirements/runtime.lock (line 127))
+#11 48.48   Downloading pydantic-2.13.4-py3-none-any.whl.metadata (109 kB)
+#11 48.51      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 109.4/109.4 kB 4.8 MB/s eta 0:00:00
+#11 51.04 Collecting pydantic-core==2.46.4 (from -r /opt/aqualens/requirements/runtime.lock (line 128))
+#11 51.14   Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.6 kB)
+#11 51.28 Collecting pydantic-extra-types==2.11.1 (from -r /opt/aqualens/requirements/runtime.lock (line 129))
+#11 51.38   Downloading pydantic_extra_types-2.11.1-py3-none-any.whl.metadata (4.2 kB)
+#11 51.54 Collecting pydantic-settings==2.15.0 (from -r /opt/aqualens/requirements/runtime.lock (line 130))
+#11 51.71   Downloading pydantic_settings-2.15.0-py3-none-any.whl.metadata (3.9 kB)
+#11 51.87 Collecting pygments==2.20.0 (from -r /opt/aqualens/requirements/runtime.lock (line 131))
+#11 51.96   Downloading pygments-2.20.0-py3-none-any.whl.metadata (2.5 kB)
+#11 52.09 Collecting pygtrie==2.5.0 (from -r /opt/aqualens/requirements/runtime.lock (line 132))
+#11 52.19   Downloading pygtrie-2.5.0-py3-none-any.whl.metadata (7.5 kB)
+#11 52.35 Collecting pyjwt==2.13.0 (from -r /opt/aqualens/requirements/runtime.lock (line 133))
+#11 52.45   Downloading pyjwt-2.13.0-py3-none-any.whl.metadata (3.4 kB)
+#11 52.69 Collecting pyparsing==3.3.2 (from -r /opt/aqualens/requirements/runtime.lock (line 134))
+#11 52.79   Downloading pyparsing-3.3.2-py3-none-any.whl.metadata (5.8 kB)
+#11 52.99 Collecting pypika==0.51.1 (from -r /opt/aqualens/requirements/runtime.lock (line 135))
+#11 53.10   Downloading pypika-0.51.1-py2.py3-none-any.whl.metadata (51 kB)
+#11 53.11      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 52.0/52.0 kB 6.4 MB/s eta 0:00:00
+#11 53.26 Collecting pyproject-hooks==1.2.0 (from -r /opt/aqualens/requirements/runtime.lock (line 136))
+#11 53.40   Downloading pyproject_hooks-1.2.0-py3-none-any.whl.metadata (1.3 kB)
+#11 53.53 Collecting python-daemon==3.1.2 (from -r /opt/aqualens/requirements/runtime.lock (line 137))
+#11 53.62   Downloading python_daemon-3.1.2-py3-none-any.whl.metadata (4.8 kB)
+#11 53.75 Collecting python-dateutil==2.9.0.post0 (from -r /opt/aqualens/requirements/runtime.lock (line 138))
+#11 53.86   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+#11 54.00 Collecting python-dotenv==1.2.2 (from -r /opt/aqualens/requirements/runtime.lock (line 139))
+#11 54.09   Downloading python_dotenv-1.2.2-py3-none-any.whl.metadata (27 kB)
+#11 54.21 Collecting python-multipart==0.0.32 (from -r /opt/aqualens/requirements/runtime.lock (line 140))
+#11 54.30   Downloading python_multipart-0.0.32-py3-none-any.whl.metadata (2.1 kB)
+#11 54.42 Collecting python-slugify==8.0.4 (from -r /opt/aqualens/requirements/runtime.lock (line 141))
+#11 54.52   Downloading python_slugify-8.0.4-py2.py3-none-any.whl.metadata (8.5 kB)
+#11 54.74 Collecting pyyaml==6.0.3 (from -r /opt/aqualens/requirements/runtime.lock (line 142))
+#11 54.83   Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+#11 54.96 Collecting rank-bm25==0.2.2 (from -r /opt/aqualens/requirements/runtime.lock (line 143))
+#11 55.06   Downloading rank_bm25-0.2.2-py3-none-any.whl.metadata (3.2 kB)
+#11 55.25 Collecting referencing==0.37.0 (from -r /opt/aqualens/requirements/runtime.lock (line 144))
+#11 55.34   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+#11 56.20 Collecting regex==2026.7.19 (from -r /opt/aqualens/requirements/runtime.lock (line 145))
+#11 56.30   Downloading regex-2026.7.19-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+#11 56.31      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.5/40.5 kB 9.1 MB/s eta 0:00:00
+#11 56.53 Collecting requests==2.34.2 (from -r /opt/aqualens/requirements/runtime.lock (line 146))
+#11 56.63   Downloading requests-2.34.2-py3-none-any.whl.metadata (4.8 kB)
+#11 56.77 Collecting requests-oauthlib==2.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 147))
+#11 56.87   Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl.metadata (11 kB)
+#11 57.10 Collecting rich==14.3.4 (from -r /opt/aqualens/requirements/runtime.lock (line 148))
+#11 57.22   Downloading rich-14.3.4-py3-none-any.whl.metadata (18 kB)
+#11 57.37 Collecting rich-argparse==1.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 149))
+#11 57.47   Downloading rich_argparse-1.8.0-py3-none-any.whl.metadata (15 kB)
+#11 57.67 Collecting rich-toolkit==0.20.3 (from -r /opt/aqualens/requirements/runtime.lock (line 150))
+#11 57.77   Downloading rich_toolkit-0.20.3-py3-none-any.whl.metadata (1.0 kB)
+#11 58.47 Collecting rpds-py==2026.6.3 (from -r /opt/aqualens/requirements/runtime.lock (line 151))
+#11 58.57   Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+#11 59.15 Collecting ruamel-yaml==0.19.1 (from -r /opt/aqualens/requirements/runtime.lock (line 152))
+#11 59.25   Downloading ruamel_yaml-0.19.1-py3-none-any.whl.metadata (16 kB)
+#11 59.61 Collecting safetensors==0.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 153))
+#11 59.72   Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+#11 60.06 Collecting scikit-learn==1.9.0 (from -r /opt/aqualens/requirements/runtime.lock (line 154))
+#11 60.17   Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+#11 60.62 Collecting scipy==1.17.1 (from -r /opt/aqualens/requirements/runtime.lock (line 155))
+#11 60.72   Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+#11 60.74      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.1/62.1 kB 12.4 MB/s eta 0:00:00
+#11 60.92 Collecting sentence-transformers==6.0.1 (from -r /opt/aqualens/requirements/runtime.lock (line 156))
+#11 61.02   Downloading sentence_transformers-6.0.1-py3-none-any.whl.metadata (20 kB)
+#11 61.23 Collecting sentencepiece==0.2.1 (from -r /opt/aqualens/requirements/runtime.lock (line 157))
+#11 61.32   Downloading sentencepiece-0.2.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (10 kB)
+#11 61.58 Collecting setproctitle==1.3.7 (from -r /opt/aqualens/requirements/runtime.lock (line 158))
+#11 61.68   Downloading setproctitle-1.3.7-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (10 kB)
+#11 62.25 Collecting setuptools==84.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 159))
+#11 62.35   Downloading setuptools-84.0.0-py3-none-any.whl.metadata (6.6 kB)
+#11 62.53 Collecting shellingham==1.5.4 (from -r /opt/aqualens/requirements/runtime.lock (line 160))
+#11 62.63   Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+#11 62.77 Collecting six==1.17.0 (from -r /opt/aqualens/requirements/runtime.lock (line 161))
+#11 62.86   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+#11 62.99 Collecting sniffio==1.3.1 (from -r /opt/aqualens/requirements/runtime.lock (line 162))
+#11 63.10   Downloading sniffio-1.3.1-py3-none-any.whl.metadata (3.9 kB)
+#11 64.06 Collecting sqlalchemy==2.0.51 (from -r /opt/aqualens/requirements/runtime.lock (line 163))
+#11 64.16   Downloading sqlalchemy-2.0.51-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (9.5 kB)
+#11 64.32 Collecting sqlparse==0.5.5 (from -r /opt/aqualens/requirements/runtime.lock (line 164))
+#11 64.41   Downloading sqlparse-0.5.5-py3-none-any.whl.metadata (4.7 kB)
+#11 64.65 Collecting starlette==1.5.0 (from -r /opt/aqualens/requirements/runtime.lock (line 165))
+#11 64.76   Downloading starlette-1.5.0-py3-none-any.whl.metadata (6.4 kB)
+#11 64.92 Collecting structlog==26.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 166))
+#11 65.02   Downloading structlog-26.1.0-py3-none-any.whl.metadata (9.7 kB)
+#11 65.18 Collecting svcs==26.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 167))
+#11 65.28   Downloading svcs-26.1.0-py3-none-any.whl.metadata (7.7 kB)
+#11 65.44 Collecting sympy==1.14.0 (from -r /opt/aqualens/requirements/runtime.lock (line 168))
+#11 65.54   Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+#11 65.68 Collecting tabulate==0.10.0 (from -r /opt/aqualens/requirements/runtime.lock (line 169))
+#11 65.78   Downloading tabulate-0.10.0-py3-none-any.whl.metadata (40 kB)
+#11 65.85      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 40.8/40.8 kB 517.0 kB/s eta 0:00:00
+#11 66.02 Collecting tenacity==9.1.4 (from -r /opt/aqualens/requirements/runtime.lock (line 170))
+#11 66.12   Downloading tenacity-9.1.4-py3-none-any.whl.metadata (1.2 kB)
+#11 66.25 Collecting termcolor==3.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 171))
+#11 66.36   Downloading termcolor-3.3.0-py3-none-any.whl.metadata (6.5 kB)
+#11 66.48 Collecting text-unidecode==1.3 (from -r /opt/aqualens/requirements/runtime.lock (line 172))
+#11 66.58   Downloading text_unidecode-1.3-py2.py3-none-any.whl.metadata (2.4 kB)
+#11 66.71 Collecting threadpoolctl==3.6.0 (from -r /opt/aqualens/requirements/runtime.lock (line 173))
+#11 66.81   Downloading threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+#11 67.51 Collecting tokenizers==0.23.1 (from -r /opt/aqualens/requirements/runtime.lock (line 174))
+#11 67.62   Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+#11 67.64 Requirement already satisfied: torch==2.14.0+cpu in /opt/aqualens/venv/lib/python3.11/site-packages (from -r /opt/aqualens/requirements/runtime.lock (line 175)) (2.14.0+cpu)
+#11 67.93 Collecting tqdm==4.70.0 (from -r /opt/aqualens/requirements/runtime.lock (line 176))
+#11 68.03   Downloading tqdm-4.70.0-py3-none-any.whl.metadata (57 kB)
+#11 68.05      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 3.1 MB/s eta 0:00:00
+#11 68.39 Collecting transformers==5.16.1 (from -r /opt/aqualens/requirements/runtime.lock (line 177))
+#11 68.50   Downloading transformers-5.16.1-py3-none-any.whl.metadata (32 kB)
+#11 68.72 Collecting typer==0.27.1 (from -r /opt/aqualens/requirements/runtime.lock (line 178))
+#11 68.82   Downloading typer-0.27.1-py3-none-any.whl.metadata (16 kB)
+#11 69.17 Collecting typing-extensions==4.16.0 (from -r /opt/aqualens/requirements/runtime.lock (line 179))
+#11 69.26   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+#11 69.39 Collecting typing-inspection==0.4.2 (from -r /opt/aqualens/requirements/runtime.lock (line 180))
+#11 69.49   Downloading typing_inspection-0.4.2-py3-none-any.whl.metadata (2.6 kB)
+#11 69.61 Collecting tzdata==2026.3 (from -r /opt/aqualens/requirements/runtime.lock (line 181))
+#11 69.70   Downloading tzdata-2026.3-py2.py3-none-any.whl.metadata (1.4 kB)
+#11 69.82 Collecting tzlocal==5.4.4 (from -r /opt/aqualens/requirements/runtime.lock (line 182))
+#11 69.93   Downloading tzlocal-5.4.4-py3-none-any.whl.metadata (7.7 kB)
+#11 70.06 Collecting uc-micro-py==2.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 183))
+#11 70.15   Downloading uc_micro_py-2.0.0-py3-none-any.whl.metadata (2.2 kB)
+#11 70.31 Collecting universal-pathlib==0.3.10 (from -r /opt/aqualens/requirements/runtime.lock (line 184))
+#11 70.41   Downloading universal_pathlib-0.3.10-py3-none-any.whl.metadata (39 kB)
+#11 70.64 Collecting urllib3==2.7.0 (from -r /opt/aqualens/requirements/runtime.lock (line 185))
+#11 70.74   Downloading urllib3-2.7.0-py3-none-any.whl.metadata (6.9 kB)
+#11 70.87 Collecting uuid6==2025.0.1 (from -r /opt/aqualens/requirements/runtime.lock (line 186))
+#11 70.98   Downloading uuid6-2025.0.1-py3-none-any.whl.metadata (10 kB)
+#11 71.15 Collecting uvicorn==0.52.1 (from -r /opt/aqualens/requirements/runtime.lock (line 187))
+#11 71.25   Downloading uvicorn-0.52.1-py3-none-any.whl.metadata (6.6 kB)
+#11 71.44 Collecting uvloop==0.22.1 (from -r /opt/aqualens/requirements/runtime.lock (line 188))
+#11 71.53   Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (4.9 kB)
+#11 71.85 Collecting watchfiles==1.2.0 (from -r /opt/aqualens/requirements/runtime.lock (line 189))
+#11 71.95   Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.9 kB)
+#11 72.07 Collecting websocket-client==1.8.0 (from -r /opt/aqualens/requirements/runtime.lock (line 190))
+#11 72.16   Downloading websocket_client-1.8.0-py3-none-any.whl.metadata (8.0 kB)
+#11 73.01 Collecting websockets==16.1.1 (from -r /opt/aqualens/requirements/runtime.lock (line 191))
+#11 73.11   Downloading websockets-16.1.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (6.8 kB)
+#11 73.23 Collecting wirerope==1.0.0 (from -r /opt/aqualens/requirements/runtime.lock (line 192))
+#11 73.34   Downloading wirerope-1.0.0-py2.py3-none-any.whl.metadata (3.3 kB)
+#11 74.05 Collecting wrapt==2.3.0 (from -r /opt/aqualens/requirements/runtime.lock (line 193))
+#11 74.15   Downloading wrapt-2.3.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl.metadata (7.4 kB)
+#11 74.99 Collecting yarl==1.24.5 (from -r /opt/aqualens/requirements/runtime.lock (line 194))
+#11 75.08   Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (103 kB)
+#11 75.11      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 104.0/104.0 kB 4.5 MB/s eta 0:00:00
+#11 75.32 Collecting zipp==4.1.0 (from -r /opt/aqualens/requirements/runtime.lock (line 195))
+#11 75.42   Downloading zipp-4.1.0-py3-none-any.whl.metadata (3.6 kB)
+#11 88.18 Downloading a2wsgi-1.10.10-py3-none-any.whl (17 kB)
+#11 88.27 Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+#11 88.37 Downloading aiohttp-3.14.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.8 MB)
+#11 88.72    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 5.2 MB/s eta 0:00:00
+#11 88.81 Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+#11 88.91 Downloading aiosmtplib-5.1.2-py3-none-any.whl (28 kB)
+#11 89.01 Downloading aiosqlite-0.22.1-py3-none-any.whl (17 kB)
+#11 89.12 Downloading alembic-1.19.0-py3-none-any.whl (265 kB)
+#11 89.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 265.7/265.7 kB 5.3 MB/s eta 0:00:00
+#11 89.27 Downloading altair-6.2.2-py3-none-any.whl (797 kB)
+#11 89.34    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 797.6/797.6 kB 13.2 MB/s eta 0:00:00
+#11 89.43 Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+#11 89.53 Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+#11 89.63 Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+#11 89.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 125.8/125.8 kB 32.2 MB/s eta 0:00:00
+#11 89.73 Downloading apache_airflow-3.3.1-py3-none-any.whl (13 kB)
+#11 89.84 Downloading apache_airflow_core-3.3.1-py3-none-any.whl (6.9 MB)
+#11 90.25    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 16.9 MB/s eta 0:00:00
+#11 90.37 Downloading apache_airflow_providers_common_compat-1.18.0-py3-none-any.whl (45 kB)
+#11 90.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.0/45.0 kB 4.8 MB/s eta 0:00:00
+#11 90.49 Downloading apache_airflow_providers_common_io-1.8.0-py3-none-any.whl (23 kB)
+#11 90.59 Downloading apache_airflow_providers_common_sql-2.1.0-py3-none-any.whl (97 kB)
+#11 90.63    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 97.4/97.4 kB 3.6 MB/s eta 0:00:00
+#11 90.75 Downloading apache_airflow_providers_openlineage-2.20.0-py3-none-any.whl (118 kB)
+#11 90.77    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.5/118.5 kB 7.0 MB/s eta 0:00:00
+#11 90.86 Downloading apache_airflow_providers_smtp-3.0.3-py3-none-any.whl (25 kB)
+#11 90.97 Downloading apache_airflow_providers_standard-1.17.0-py3-none-any.whl (161 kB)
+#11 91.00    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.9/161.9 kB 6.8 MB/s eta 0:00:00
+#11 91.10 Downloading apache_airflow_task_sdk-1.3.1-py3-none-any.whl (604 kB)
+#11 91.17    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 604.5/604.5 kB 9.9 MB/s eta 0:00:00
+#11 91.27 Downloading argcomplete-3.7.2-py3-none-any.whl (43 kB)
+#11 91.28    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 43.3/43.3 kB 22.5 MB/s eta 0:00:00
+#11 91.38 Downloading arro3_core-0.8.2-cp311-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)
+#11 91.55    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 19.6 MB/s eta 0:00:00
+#11 91.66 Downloading arrow-1.4.0-py3-none-any.whl (68 kB)
+#11 91.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 kB 8.9 MB/s eta 0:00:00
+#11 91.77 Downloading asgiref-3.12.1-py3-none-any.whl (25 kB)
+#11 91.87 Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+#11 91.89    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 5.1 MB/s eta 0:00:00
+#11 92.00 Downloading babel-2.18.0-py3-none-any.whl (10.2 MB)
+#11 92.80    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 12.8 MB/s eta 0:00:00
+#11 92.90 Downloading bcrypt-5.0.0-cp39-abi3-manylinux_2_34_x86_64.whl (278 kB)
+#11 92.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 278.2/278.2 kB 8.6 MB/s eta 0:00:00
+#11 93.04 Downloading build-1.6.0-py3-none-any.whl (31 kB)
+#11 93.14 Downloading cachetools-6.2.6-py3-none-any.whl (11 kB)
+#11 93.24 Downloading cadwyn-7.0.0-py3-none-any.whl (61 kB)
+#11 93.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 61.2/61.2 kB 8.9 MB/s eta 0:00:00
+#11 93.36 Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+#11 93.39    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.0/137.0 kB 5.4 MB/s eta 0:00:00
+#11 93.49 Downloading cffi-2.1.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (217 kB)
+#11 93.53    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 217.8/217.8 kB 8.2 MB/s eta 0:00:00
+#11 93.64 Downloading charset_normalizer-3.4.9-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (221 kB)
+#11 93.67    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 221.3/221.3 kB 8.4 MB/s eta 0:00:00
+#11 93.80 Downloading chromadb-1.5.9-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (23.3 MB)
+#11 95.26    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.3/23.3 MB 17.1 MB/s eta 0:00:00
+#11 95.36 Downloading click-8.4.2-py3-none-any.whl (119 kB)
+#11 95.38    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 119.2/119.2 kB 6.4 MB/s eta 0:00:00
+#11 95.48 Downloading colorlog-6.12.0-py3-none-any.whl (12 kB)
+#11 95.67 Downloading confluent_kafka-2.15.0-cp311-cp311-manylinux_2_28_x86_64.whl (4.8 MB)
+#11 95.94    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 18.6 MB/s eta 0:00:00
+#11 96.04 Downloading cron_descriptor-2.1.0-py3-none-any.whl (74 kB)
+#11 96.06    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.7/74.7 kB 9.9 MB/s eta 0:00:00
+#11 96.16 Downloading croniter-6.2.4-py3-none-any.whl (46 kB)
+#11 96.18    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.7/46.7 kB 4.1 MB/s eta 0:00:00
+#11 96.28 Downloading cryptography-50.0.0-cp311-abi3-manylinux_2_34_x86_64.whl (4.7 MB)
+#11 96.64    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.7/4.7 MB 13.3 MB/s eta 0:00:00
+#11 96.75 Downloading deltalake-1.6.3-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (51.9 MB)
+#11 99.41    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 51.9/51.9 MB 25.0 MB/s eta 0:00:00
+#11 99.50 Downloading deprecated-1.3.1-py2.py3-none-any.whl (11 kB)
+#11 99.61 Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+#11 99.62    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.0/120.0 kB 11.2 MB/s eta 0:00:00
+#11 99.72 Downloading distro-1.9.0-py3-none-any.whl (20 kB)
+#11 99.81 Downloading dnspython-2.8.0-py3-none-any.whl (331 kB)
+#11 99.85    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 331.1/331.1 kB 10.1 MB/s eta 0:00:00
+#11 99.94 Downloading durationpy-0.10-py3-none-any.whl (3.9 kB)
+#11 100.1 Downloading email_validator-2.3.0-py3-none-any.whl (35 kB)
+#11 100.1 Downloading fastapi-0.136.3-py3-none-any.whl (117 kB)
+#11 100.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 117.5/117.5 kB 4.5 MB/s eta 0:00:00
+#11 100.3 Downloading fastapi_cli-0.0.32-py3-none-any.whl (14 kB)
+#11 100.4 Downloading filelock-3.32.2-py3-none-any.whl (98 kB)
+#11 100.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 98.8/98.8 kB 14.3 MB/s eta 0:00:00
+#11 100.5 Downloading flatbuffers-25.12.19-py2.py3-none-any.whl (26 kB)
+#11 100.6 Downloading frozenlist-1.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (231 kB)
+#11 100.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 231.1/231.1 kB 15.1 MB/s eta 0:00:00
+#11 100.7 Downloading fsspec-2026.7.0-py3-none-any.whl (206 kB)
+#11 100.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 206.6/206.6 kB 8.6 MB/s eta 0:00:00
+#11 100.9 Downloading google_auth-2.56.3-py3-none-any.whl (259 kB)
+#11 100.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 259.1/259.1 kB 10.3 MB/s eta 0:00:00
+#11 101.0 Downloading google_genai-2.17.0-py3-none-any.whl (1.0 MB)
+#11 101.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.0/1.0 MB 8.9 MB/s eta 0:00:00
+#11 101.2 Downloading googleapis_common_protos-1.75.1-py3-none-any.whl (300 kB)
+#11 101.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 300.6/300.6 kB 9.2 MB/s eta 0:00:00
+#11 101.4 Downloading great_expectations-1.22.0-py3-none-any.whl (5.7 MB)
+#11 101.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.7/5.7 MB 17.9 MB/s eta 0:00:00
+#11 101.8 Downloading greenback-1.3.0-py3-none-any.whl (29 kB)
+#11 101.9 Downloading greenlet-3.5.4-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (624 kB)
+#11 102.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 624.7/624.7 kB 8.2 MB/s eta 0:00:00
+#11 102.1 Downloading grpcio-1.83.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.1 MB)
+#11 102.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.1/7.1 MB 18.1 MB/s eta 0:00:00
+#11 102.6 Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+#11 102.7 Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+#11 103.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 16.4 MB/s eta 0:00:00
+#11 103.1 Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+#11 103.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.8/78.8 kB 10.5 MB/s eta 0:00:00
+#11 103.2 Downloading httptools-0.8.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (464 kB)
+#11 103.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 464.7/464.7 kB 16.6 MB/s eta 0:00:00
+#11 103.4 Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+#11 103.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.5/73.5 kB 5.3 MB/s eta 0:00:00
+#11 103.5 Downloading huggingface_hub-1.27.0-py3-none-any.whl (784 kB)
+#11 103.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 784.9/784.9 kB 19.0 MB/s eta 0:00:00
+#11 103.6 Downloading idna-3.18-py3-none-any.whl (65 kB)
+#11 103.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 65.5/65.5 kB 5.1 MB/s eta 0:00:00
+#11 103.7 Downloading importlib_metadata-8.9.0-py3-none-any.whl (27 kB)
+#11 103.8 Downloading importlib_resources-7.1.0-py3-none-any.whl (37 kB)
+#11 103.9 Downloading isoduration-20.11.0-py3-none-any.whl (11 kB)
+#11 104.0 Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB)
+#11 104.1 Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+#11 104.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 8.6 MB/s eta 0:00:00
+#11 104.3 Downloading joblib-1.5.3-py3-none-any.whl (309 kB)
+#11 104.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 309.1/309.1 kB 6.3 MB/s eta 0:00:00
+#11 104.4 Downloading jsonschema-4.26.0-py3-none-any.whl (90 kB)
+#11 104.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 90.6/90.6 kB 8.2 MB/s eta 0:00:00
+#11 104.6 Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+#11 104.7 Downloading kubernetes-36.0.3-py2.py3-none-any.whl (4.6 MB)
+#11 105.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 14.3 MB/s eta 0:00:00
+#11 105.1 Downloading lazy_object_proxy-1.12.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (68 kB)
+#11 105.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 68.8/68.8 kB 7.3 MB/s eta 0:00:00
+#11 105.2 Downloading libcst-1.9.0-cp311-cp311-manylinux_2_28_x86_64.whl (2.3 MB)
+#11 105.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 9.2 MB/s eta 0:00:00
+#11 105.6 Downloading linkify_it_py-2.1.0-py3-none-any.whl (19 kB)
+#11 105.7 Downloading lockfile-0.12.2-py2.py3-none-any.whl (13 kB)
+#11 105.8 Downloading mako-1.4.1-py3-none-any.whl (80 kB)
+#11 105.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.0/80.0 kB 8.8 MB/s eta 0:00:00
+#11 105.9 Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+#11 105.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 91.7/91.7 kB 5.3 MB/s eta 0:00:00
+#11 106.0 Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+#11 106.1 Downloading marshmallow-4.3.0-py3-none-any.whl (49 kB)
+#11 106.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 49.1/49.1 kB 6.2 MB/s eta 0:00:00
+#11 106.3 Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+#11 106.5 Downloading methodtools-0.4.7-py2.py3-none-any.whl (4.0 kB)
+#11 106.6 Downloading mistune-3.3.4-py3-none-any.whl (66 kB)
+#11 106.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.9/66.9 kB 4.1 MB/s eta 0:00:00
+#11 106.8 Downloading mmh3-5.2.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (103 kB)
+#11 106.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.1/103.1 kB 6.9 MB/s eta 0:00:00
+#11 106.9 Downloading more_itertools-11.1.0-py3-none-any.whl (72 kB)
+#11 106.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.2/72.2 kB 4.3 MB/s eta 0:00:00
+#11 107.0 Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+#11 107.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 13.4 MB/s eta 0:00:00
+#11 107.2 Downloading msgspec-0.21.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (219 kB)
+#11 107.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 219.9/219.9 kB 9.9 MB/s eta 0:00:00
+#11 107.3 Downloading multidict-6.7.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (246 kB)
+#11 107.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 246.3/246.3 kB 6.0 MB/s eta 0:00:00
+#11 107.4 Downloading narwhals-2.24.0-py3-none-any.whl (461 kB)
+#11 107.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 461.0/461.0 kB 10.4 MB/s eta 0:00:00
+#11 107.6 Downloading natsort-8.4.0-py3-none-any.whl (38 kB)
+#11 107.7 Downloading networkx-3.6.1-py3-none-any.whl (2.1 MB)
+#11 107.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 13.5 MB/s eta 0:00:00
+#11 107.9 Downloading numpy-2.4.6-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.9 MB)
+#11 108.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.9/16.9 MB 25.2 MB/s eta 0:00:00
+#11 108.9 Downloading oauthlib-3.3.1-py3-none-any.whl (160 kB)
+#11 108.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 160.1/160.1 kB 10.1 MB/s eta 0:00:00
+#11 109.0 Downloading onnxruntime-1.29.0-cp311-cp311-manylinux_2_28_x86_64.whl (23.1 MB)
+#11 110.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.1/23.1 MB 23.8 MB/s eta 0:00:00
+#11 110.3 Downloading openlineage_integration_common-1.52.0-py3-none-any.whl (67 kB)
+#11 110.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 67.5/67.5 kB 11.6 MB/s eta 0:00:00
+#11 110.4 Downloading openlineage_python-1.52.0-py3-none-any.whl (116 kB)
+#11 110.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 116.4/116.4 kB 5.7 MB/s eta 0:00:00
+#11 110.5 Downloading openlineage_sql-1.52.0-cp310-abi3-manylinux_2_28_x86_64.whl (2.9 MB)
+#11 110.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.9/2.9 MB 16.1 MB/s eta 0:00:00
+#11 110.8 Downloading opentelemetry_api-1.44.0-py3-none-any.whl (60 kB)
+#11 110.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.0/60.0 kB 9.6 MB/s eta 0:00:00
+#11 110.9 Downloading opentelemetry_exporter_otlp-1.44.0-py3-none-any.whl (6.7 kB)
+#11 111.0 Downloading opentelemetry_exporter_otlp_proto_common-1.44.0-py3-none-any.whl (17 kB)
+#11 111.1 Downloading opentelemetry_exporter_otlp_proto_grpc-1.44.0-py3-none-any.whl (19 kB)
+#11 111.2 Downloading opentelemetry_exporter_otlp_proto_http-1.44.0-py3-none-any.whl (21 kB)
+#11 111.3 Downloading opentelemetry_proto-1.44.0-py3-none-any.whl (72 kB)
+#11 111.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 72.5/72.5 kB 4.5 MB/s eta 0:00:00
+#11 111.5 Downloading opentelemetry_sdk-1.44.0-py3-none-any.whl (137 kB)
+#11 111.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 137.2/137.2 kB 6.3 MB/s eta 0:00:00
+#11 111.6 Downloading opentelemetry_semantic_conventions-0.65b0-py3-none-any.whl (204 kB)
+#11 111.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 204.6/204.6 kB 6.0 MB/s eta 0:00:00
+#11 111.8 Downloading orjson-3.11.9-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (133 kB)
+#11 111.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.0/134.0 kB 4.4 MB/s eta 0:00:00
+#11 111.9 Downloading outcome-1.3.0.post0-py2.py3-none-any.whl (10 kB)
+#11 112.0 Downloading overrides-7.7.0-py3-none-any.whl (17 kB)
+#11 112.1 Downloading packaging-26.3-py3-none-any.whl (129 kB)
+#11 112.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 130.0/130.0 kB 7.4 MB/s eta 0:00:00
+#11 112.2 Downloading pandas-3.0.5-cp311-cp311-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.3 MB)
+#11 112.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.3/11.3 MB 22.3 MB/s eta 0:00:00
+#11 112.9 Downloading pathlib_abc-0.5.2-py3-none-any.whl (19 kB)
+#11 113.0 Downloading pathspec-1.1.1-py3-none-any.whl (57 kB)
+#11 113.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.3/57.3 kB 7.0 MB/s eta 0:00:00
+#11 113.1 Downloading pendulum-3.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (348 kB)
+#11 113.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.4/348.4 kB 11.0 MB/s eta 0:00:00
+#11 113.2 Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+#11 113.4 Downloading propcache-0.5.2-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (58 kB)
+#11 113.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.9/58.9 kB 4.2 MB/s eta 0:00:00
+#11 113.5 Downloading protobuf-6.33.6-cp39-abi3-manylinux2014_x86_64.whl (323 kB)
+#11 113.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 323.4/323.4 kB 10.5 MB/s eta 0:00:00
+#11 113.6 Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+#11 113.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 kB 6.1 MB/s eta 0:00:00
+#11 113.8 Downloading pyarrow-25.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (50.1 MB)
+#11 116.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.1/50.1 MB 21.8 MB/s eta 0:00:00
+#11 116.2 Downloading pyasn1-0.6.4-py3-none-any.whl (84 kB)
+#11 116.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 84.4/84.4 kB 7.3 MB/s eta 0:00:00
+#11 116.3 Downloading pyasn1_modules-0.4.2-py3-none-any.whl (181 kB)
+#11 116.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 181.3/181.3 kB 9.9 MB/s eta 0:00:00
+#11 116.5 Downloading pybase64-1.5.0-cp311-cp311-manylinux1_x86_64.manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_5_x86_64.whl (94 kB)
+#11 116.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.2/94.2 kB 6.5 MB/s eta 0:00:00
+#11 116.6 Downloading pycparser-3.0-py3-none-any.whl (48 kB)
+#11 116.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.2/48.2 kB 5.4 MB/s eta 0:00:00
+#11 116.7 Downloading pydantic-2.13.4-py3-none-any.whl (472 kB)
+#11 116.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 472.3/472.3 kB 10.6 MB/s eta 0:00:00
+#11 116.9 Downloading pydantic_core-2.46.4-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+#11 117.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 15.1 MB/s eta 0:00:00
+#11 117.1 Downloading pydantic_extra_types-2.11.1-py3-none-any.whl (79 kB)
+#11 117.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.5/79.5 kB 6.6 MB/s eta 0:00:00
+#11 117.2 Downloading pydantic_settings-2.15.0-py3-none-any.whl (69 kB)
+#11 117.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.4/69.4 kB 29.0 MB/s eta 0:00:00
+#11 117.3 Downloading pygments-2.20.0-py3-none-any.whl (1.2 MB)
+#11 117.5    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 8.3 MB/s eta 0:00:00
+#11 117.6 Downloading pygtrie-2.5.0-py3-none-any.whl (25 kB)
+#11 117.7 Downloading pyjwt-2.13.0-py3-none-any.whl (31 kB)
+#11 117.8 Downloading pyparsing-3.3.2-py3-none-any.whl (122 kB)
+#11 117.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.8/122.8 kB 10.3 MB/s eta 0:00:00
+#11 117.9 Downloading pypika-0.51.1-py2.py3-none-any.whl (60 kB)
+#11 117.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 60.6/60.6 kB 5.1 MB/s eta 0:00:00
+#11 118.0 Downloading pyproject_hooks-1.2.0-py3-none-any.whl (10 kB)
+#11 118.1 Downloading python_daemon-3.1.2-py3-none-any.whl (30 kB)
+#11 118.3 Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+#11 118.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 229.9/229.9 kB 23.4 MB/s eta 0:00:00
+#11 118.4 Downloading python_dotenv-1.2.2-py3-none-any.whl (22 kB)
+#11 118.5 Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+#11 118.6 Downloading python_slugify-8.0.4-py2.py3-none-any.whl (10 kB)
+#11 118.7 Downloading pyyaml-6.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (806 kB)
+#11 118.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 806.6/806.6 kB 10.4 MB/s eta 0:00:00
+#11 119.0 Downloading rank_bm25-0.2.2-py3-none-any.whl (8.6 kB)
+#11 119.1 Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+#11 119.2 Downloading regex-2026.7.19-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+#11 119.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.4/801.4 kB 11.6 MB/s eta 0:00:00
+#11 119.4 Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+#11 119.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.1/73.1 kB 7.9 MB/s eta 0:00:00
+#11 119.5 Downloading requests_oauthlib-2.0.0-py2.py3-none-any.whl (24 kB)
+#11 119.6 Downloading rich-14.3.4-py3-none-any.whl (310 kB)
+#11 119.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 310.5/310.5 kB 4.6 MB/s eta 0:00:00
+#11 119.8 Downloading rich_argparse-1.8.0-py3-none-any.whl (25 kB)
+#11 119.9 Downloading rich_toolkit-0.20.3-py3-none-any.whl (36 kB)
+#11 120.0 Downloading rpds_py-2026.6.3-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+#11 120.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 371.3/371.3 kB 11.4 MB/s eta 0:00:00
+#11 120.2 Downloading ruamel_yaml-0.19.1-py3-none-any.whl (118 kB)
+#11 120.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 2.1 MB/s eta 0:00:00
+#11 120.3 Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+#11 120.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 516.0/516.0 kB 7.4 MB/s eta 0:00:00
+#11 120.5 Downloading scikit_learn-1.9.0-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.3 MB)
+#11 121.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.3/9.3 MB 10.5 MB/s eta 0:00:00
+#11 121.5 Downloading scipy-1.17.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+#11 123.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 17.3 MB/s eta 0:00:00
+#11 123.8 Downloading sentence_transformers-6.0.1-py3-none-any.whl (739 kB)
+#11 123.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 739.8/739.8 kB 7.5 MB/s eta 0:00:00
+#11 124.0 Downloading sentencepiece-0.2.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+#11 124.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 11.9 MB/s eta 0:00:00
+#11 124.3 Downloading setproctitle-1.3.7-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (32 kB)
+#11 124.4 Downloading setuptools-84.0.0-py3-none-any.whl (818 kB)
+#11 124.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 10.1 MB/s eta 0:00:00
+#11 124.5 Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+#11 124.6 Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+#11 124.7 Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+#11 124.9 Downloading sqlalchemy-2.0.51-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.3 MB)
+#11 125.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 10.7 MB/s eta 0:00:00
+#11 125.3 Downloading sqlparse-0.5.5-py3-none-any.whl (46 kB)
+#11 125.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 46.1/46.1 kB 40.4 MB/s eta 0:00:00
+#11 125.4 Downloading starlette-1.5.0-py3-none-any.whl (74 kB)
+#11 125.4    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 74.3/74.3 kB 8.2 MB/s eta 0:00:00
+#11 125.5 Downloading structlog-26.1.0-py3-none-any.whl (73 kB)
+#11 125.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.8/73.8 kB 5.1 MB/s eta 0:00:00
+#11 125.7 Downloading svcs-26.1.0-py3-none-any.whl (23 kB)
+#11 125.8 Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+#11 126.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 11.9 MB/s eta 0:00:00
+#11 126.4 Downloading tabulate-0.10.0-py3-none-any.whl (39 kB)
+#11 126.5 Downloading tenacity-9.1.4-py3-none-any.whl (28 kB)
+#11 126.6 Downloading termcolor-3.3.0-py3-none-any.whl (7.7 kB)
+#11 126.7 Downloading text_unidecode-1.3-py2.py3-none-any.whl (78 kB)
+#11 126.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.2/78.2 kB 7.7 MB/s eta 0:00:00
+#11 126.8 Downloading threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+#11 126.9 Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+#11 127.1    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 18.4 MB/s eta 0:00:00
+#11 127.2 Downloading tqdm-4.70.0-py3-none-any.whl (80 kB)
+#11 127.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 80.2/80.2 kB 14.4 MB/s eta 0:00:00
+#11 127.3 Downloading transformers-5.16.1-py3-none-any.whl (12.1 MB)
+#11 128.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 17.5 MB/s eta 0:00:00
+#11 128.1 Downloading typer-0.27.1-py3-none-any.whl (122 kB)
+#11 128.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 122.9/122.9 kB 8.2 MB/s eta 0:00:00
+#11 128.3 Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+#11 128.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 45.6/45.6 kB 33.1 MB/s eta 0:00:00
+#11 128.4 Downloading typing_inspection-0.4.2-py3-none-any.whl (14 kB)
+#11 128.5 Downloading tzdata-2026.3-py2.py3-none-any.whl (348 kB)
+#11 128.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 348.2/348.2 kB 11.8 MB/s eta 0:00:00
+#11 128.7 Downloading tzlocal-5.4.4-py3-none-any.whl (18 kB)
+#11 128.8 Downloading uc_micro_py-2.0.0-py3-none-any.whl (6.4 kB)
+#11 128.9 Downloading universal_pathlib-0.3.10-py3-none-any.whl (83 kB)
+#11 128.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.5/83.5 kB 13.7 MB/s eta 0:00:00
+#11 129.0 Downloading urllib3-2.7.0-py3-none-any.whl (131 kB)
+#11 129.0    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.1/131.1 kB 11.6 MB/s eta 0:00:00
+#11 129.1 Downloading uuid6-2025.0.1-py3-none-any.whl (7.0 kB)
+#11 129.2 Downloading uvicorn-0.52.1-py3-none-any.whl (79 kB)
+#11 129.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 79.9/79.9 kB 17.3 MB/s eta 0:00:00
+#11 129.3 Downloading uvloop-0.22.1-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (3.8 MB)
+#11 129.6    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.8/3.8 MB 14.4 MB/s eta 0:00:00
+#11 129.7 Downloading watchfiles-1.2.0-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (456 kB)
+#11 129.7    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 456.9/456.9 kB 13.8 MB/s eta 0:00:00
+#11 129.8 Downloading websocket_client-1.8.0-py3-none-any.whl (58 kB)
+#11 129.8    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 58.8/58.8 kB 24.1 MB/s eta 0:00:00
+#11 129.9 Downloading websockets-16.1.1-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (186 kB)
+#11 129.9    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 186.9/186.9 kB 8.9 MB/s eta 0:00:00
+#11 130.0 Downloading wirerope-1.0.0-py2.py3-none-any.whl (9.2 kB)
+#11 130.1 Downloading wrapt-2.3.0-cp311-cp311-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (161 kB)
+#11 130.2    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 161.7/161.7 kB 15.7 MB/s eta 0:00:00
+#11 130.2 Downloading yarl-1.24.5-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (111 kB)
+#11 130.3    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 111.9/111.9 kB 8.0 MB/s eta 0:00:00
+#11 130.4 Downloading zipp-4.1.0-py3-none-any.whl (10 kB)
+#11 134.4 Installing collected packages: text-unidecode, pypika, pygtrie, mpmath, lockfile, flatbuffers, durationpy, zipp, wrapt, websockets, websocket-client, uvloop, uuid6, urllib3, uc-micro-py, tzlocal, tzdata, typing-extensions, tqdm, threadpoolctl, termcolor, tenacity, tabulate, sympy, structlog, sqlparse, sniffio, six, shellingham, setuptools, setproctitle, sentencepiece, safetensors, ruamel-yaml, rpds-py, regex, pyyaml, python-slugify, python-multipart, python-dotenv, python-daemon, pyproject-hooks, pyparsing, pyjwt, pygments, pycparser, pybase64, pyasn1, pyarrow, psutil, protobuf, propcache, pluggy, pathspec, pathlib-abc, packaging, overrides, orjson, openlineage-sql, oauthlib, numpy, networkx, natsort, narwhals, multidict, msgspec, more-itertools, mmh3, mistune, mdurl, marshmallow, markupsafe, lazy-object-proxy, joblib, itsdangerous, importlib-resources, idna, httptools, hf-xet, h11, greenlet, fsspec, frozenlist, filelock, dnspython, distro, dill, confluent-kafka, colorlog, click, charset-normalizer, certifi, cachetools, bcrypt, babel, attrs, asgiref, argcomplete, annotated-types, annotated-doc, aiosqlite, aiosmtplib, aiohappyeyeballs, a2wsgi, yarl, wirerope, uvicorn, universal-pathlib, typing-inspection, svcs, sqlalchemy, scipy, requests, referencing, rank-bm25, python-dateutil, pydantic-core, pyasn1-modules, outcome, opentelemetry-proto, opentelemetry-api, onnxruntime, markdown-it-py, mako, linkify-it-py, libcst, jinja2, importlib-metadata, httpcore, grpcio, googleapis-common-protos, email-validator, deprecated, cron-descriptor, cffi, build, arro3-core, anyio, aiosignal, watchfiles, starlette, scikit-learn, rich, requests-oauthlib, pydantic, pendulum, pandas, opentelemetry-semantic-conventions, opentelemetry-exporter-otlp-proto-common, methodtools, jsonschema-specifications, httpx, greenback, deltalake, cryptography, croniter, arrow, alembic, aiohttp, typer, rich-toolkit, rich-argparse, pydantic-settings, pydantic-extra-types, opentelemetry-sdk, openlineage-python, kubernetes, jsonschema, isoduration, huggingface-hub, google-auth, fastapi, tokenizers, opentelemetry-exporter-otlp-proto-http, opentelemetry-exporter-otlp-proto-grpc, openlineage-integration-common, fastapi-cli, cadwyn, altair, transformers, opentelemetry-exporter-otlp, great-expectations, google-genai, chromadb, sentence-transformers, apache-airflow-providers-standard, apache-airflow-providers-smtp, apache-airflow-providers-common-io, apache-airflow-providers-common-compat, apache-airflow-task-sdk, apache-airflow-providers-common-sql, apache-airflow-core, apache-airflow, apache-airflow-providers-openlineage
+#11 154.0   Attempting uninstall: setuptools
+#11 154.0     Found existing installation: setuptools 79.0.1
+#11 154.1     Uninstalling setuptools-79.0.1:
+#11 154.8       Successfully uninstalled setuptools-79.0.1
+#11 235.3 Successfully installed a2wsgi-1.10.10 aiohappyeyeballs-2.7.1 aiohttp-3.14.3 aiosignal-1.4.0 aiosmtplib-5.1.2 aiosqlite-0.22.1 alembic-1.19.0 altair-6.2.2 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.14.2 apache-airflow-3.3.1 apache-airflow-core-3.3.1 apache-airflow-providers-common-compat-1.18.0 apache-airflow-providers-common-io-1.8.0 apache-airflow-providers-common-sql-2.1.0 apache-airflow-providers-openlineage-2.20.0 apache-airflow-providers-smtp-3.0.3 apache-airflow-providers-standard-1.17.0 apache-airflow-task-sdk-1.3.1 argcomplete-3.7.2 arro3-core-0.8.2 arrow-1.4.0 asgiref-3.12.1 attrs-26.1.0 babel-2.18.0 bcrypt-5.0.0 build-1.6.0 cachetools-6.2.6 cadwyn-7.0.0 certifi-2026.7.22 cffi-2.1.1 charset-normalizer-3.4.9 chromadb-1.5.9 click-8.4.2 colorlog-6.12.0 confluent-kafka-2.15.0 cron-descriptor-2.1.0 croniter-6.2.4 cryptography-50.0.0 deltalake-1.6.3 deprecated-1.3.1 dill-0.4.1 distro-1.9.0 dnspython-2.8.0 durationpy-0.10 email-validator-2.3.0 fastapi-0.136.3 fastapi-cli-0.0.32 filelock-3.32.2 flatbuffers-25.12.19 frozenlist-1.8.0 fsspec-2026.7.0 google-auth-2.56.3 google-genai-2.17.0 googleapis-common-protos-1.75.1 great-expectations-1.22.0 greenback-1.3.0 greenlet-3.5.4 grpcio-1.83.0 h11-0.16.0 hf-xet-1.6.0 httpcore-1.0.9 httptools-0.8.0 httpx-0.28.1 huggingface-hub-1.27.0 idna-3.18 importlib-metadata-8.9.0 importlib-resources-7.1.0 isoduration-20.11.0 itsdangerous-2.2.0 jinja2-3.1.6 joblib-1.5.3 jsonschema-4.26.0 jsonschema-specifications-2025.9.1 kubernetes-36.0.3 lazy-object-proxy-1.12.0 libcst-1.9.0 linkify-it-py-2.1.0 lockfile-0.12.2 mako-1.4.1 markdown-it-py-4.2.0 markupsafe-3.0.3 marshmallow-4.3.0 mdurl-0.1.2 methodtools-0.4.7 mistune-3.3.4 mmh3-5.2.1 more-itertools-11.1.0 mpmath-1.3.0 msgspec-0.21.1 multidict-6.7.1 narwhals-2.24.0 natsort-8.4.0 networkx-3.6.1 numpy-2.4.6 oauthlib-3.3.1 onnxruntime-1.29.0 openlineage-integration-common-1.52.0 openlineage-python-1.52.0 openlineage-sql-1.52.0 opentelemetry-api-1.44.0 opentelemetry-exporter-otlp-1.44.0 opentelemetry-exporter-otlp-proto-common-1.44.0 opentelemetry-exporter-otlp-proto-grpc-1.44.0 opentelemetry-exporter-otlp-proto-http-1.44.0 opentelemetry-proto-1.44.0 opentelemetry-sdk-1.44.0 opentelemetry-semantic-conventions-0.65b0 orjson-3.11.9 outcome-1.3.0.post0 overrides-7.7.0 packaging-26.3 pandas-3.0.5 pathlib-abc-0.5.2 pathspec-1.1.1 pendulum-3.2.0 pluggy-1.6.0 propcache-0.5.2 protobuf-6.33.6 psutil-7.2.2 pyarrow-25.0.0 pyasn1-0.6.4 pyasn1-modules-0.4.2 pybase64-1.5.0 pycparser-3.0 pydantic-2.13.4 pydantic-core-2.46.4 pydantic-extra-types-2.11.1 pydantic-settings-2.15.0 pygments-2.20.0 pygtrie-2.5.0 pyjwt-2.13.0 pyparsing-3.3.2 pypika-0.51.1 pyproject-hooks-1.2.0 python-daemon-3.1.2 python-dateutil-2.9.0.post0 python-dotenv-1.2.2 python-multipart-0.0.32 python-slugify-8.0.4 pyyaml-6.0.3 rank-bm25-0.2.2 referencing-0.37.0 regex-2026.7.19 requests-2.34.2 requests-oauthlib-2.0.0 rich-14.3.4 rich-argparse-1.8.0 rich-toolkit-0.20.3 rpds-py-2026.6.3 ruamel-yaml-0.19.1 safetensors-0.8.0 scikit-learn-1.9.0 scipy-1.17.1 sentence-transformers-6.0.1 sentencepiece-0.2.1 setproctitle-1.3.7 setuptools-84.0.0 shellingham-1.5.4 six-1.17.0 sniffio-1.3.1 sqlalchemy-2.0.51 sqlparse-0.5.5 starlette-1.5.0 structlog-26.1.0 svcs-26.1.0 sympy-1.14.0 tabulate-0.10.0 tenacity-9.1.4 termcolor-3.3.0 text-unidecode-1.3 threadpoolctl-3.6.0 tokenizers-0.23.1 tqdm-4.70.0 transformers-5.16.1 typer-0.27.1 typing-extensions-4.16.0 typing-inspection-0.4.2 tzdata-2026.3 tzlocal-5.4.4 uc-micro-py-2.0.0 universal-pathlib-0.3.10 urllib3-2.7.0 uuid6-2025.0.1 uvicorn-0.52.1 uvloop-0.22.1 watchfiles-1.2.0 websocket-client-1.8.0 websockets-16.1.1 wirerope-1.0.0 wrapt-2.3.0 yarl-1.24.5 zipp-4.1.0
+#11 242.1 No broken requirements found.
+#11 DONE 242.4s
+
+#12 [7/7] WORKDIR /opt/airflow
+#12 DONE 0.6s
+
+#13 exporting to image
+#13 exporting layers
+#13 exporting layers 80.3s done
+#13 exporting manifest sha256:98bae31d07170172261b8c2ee55a7538da7d05b22fedd3c73cee26c014df9b3d 0.1s done
+#13 exporting config sha256:0c1a5e0ebd3eb60397f27781e5ad6de5e3aa7b6b99f983ac5db3952b151c7af5 0.1s done
+#13 exporting attestation manifest sha256:f74a48e05bea43dc781b3e36b483f69a63395b21d20712bfb21f2e073f880ccb 0.1s done
+#13 exporting manifest list sha256:3e014ff11a48fd94913dfd818fba480b665f2211a3d23c06286f24df0c702391
+#13 exporting manifest list sha256:3e014ff11a48fd94913dfd818fba480b665f2211a3d23c06286f24df0c702391 0.1s done
+#13 naming to docker.io/library/aqualens2030-airflow:phase-a 0.0s done
+#13 unpacking to docker.io/library/aqualens2030-airflow:phase-a
+#13 unpacking to docker.io/library/aqualens2030-airflow:phase-a 35.0s done
+#13 DONE 115.7s
+
+#14 resolving provenance for metadata file
+#14 DONE 0.1s
+ Image aqualens2030-airflow:phase-a Built 

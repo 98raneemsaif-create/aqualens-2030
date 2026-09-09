@@ -1,0 +1,5 @@
+Started UTC: 2026-09-08T17:19:29.982985+00:00
+Command argv: ["docker", "compose", "version"]
+Docker Compose version v5.5.1
+Exit code: 0
+Finished UTC: 2026-09-08T17:19:30.161759+00:00

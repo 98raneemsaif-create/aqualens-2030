@@ -1,0 +1,18 @@
+Started UTC: 2026-09-08T17:17:18.899727+00:00
+Command argv: ["docker", "compose", "up", "-d", "--wait", "--wait-timeout", "180", "kafka"]
+ Network aqualens2030_default Creating 
+ Volume aqualens2030_kafka_data Creating 
+ Volume aqualens2030_kafka_data Creating 
+ Network aqualens2030_default Creating 
+ Volume aqualens2030_kafka_data Created 
+ Volume aqualens2030_kafka_data Created 
+ Network aqualens2030_default Created 
+ Network aqualens2030_default Created 
+ Container aqualens2030-kafka-1 Creating 
+ Container aqualens2030-kafka-1 Created 
+ Container aqualens2030-kafka-1 Starting 
+ Container aqualens2030-kafka-1 Started 
+ Container aqualens2030-kafka-1 Waiting 
+ Container aqualens2030-kafka-1 Healthy 
+Exit code: 0
+Finished UTC: 2026-09-08T17:17:34.384946+00:00

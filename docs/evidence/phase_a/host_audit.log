@@ -1,0 +1,148 @@
+Started UTC: 2026-09-09T05:11:21.150659+00:00
+Command argv: ["python", "tests/phase_a_host_audit.py"]
+Exactly two Compose services: ['kafka', 'airflow']
+{
+  "name": "/aqualens2030-airflow-1",
+  "image": "aqualens2030-airflow:phase-a",
+  "image_id": "sha256:3e014ff11a48fd94913dfd818fba480b665f2211a3d23c06286f24df0c702391",
+  "image_size_bytes": 1336067502,
+  "platform": "linux/amd64",
+  "health": "healthy",
+  "running": true,
+  "restart_count": 0,
+  "oom_killed": false,
+  "memory_limit_bytes": 5368709120,
+  "nano_cpus": 2000000000,
+  "mounts": [
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/tests",
+      "Destination": "/opt/airflow/tests",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "volume",
+      "Name": "aqualens2030_airflow_runtime",
+      "Source": "/var/lib/docker/volumes/aqualens2030_airflow_runtime/_data",
+      "Destination": "/opt/airflow/runtime",
+      "Driver": "local",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": ""
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/src",
+      "Destination": "/opt/airflow/src",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/requirements",
+      "Destination": "/opt/airflow/requirements",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/dags",
+      "Destination": "/opt/airflow/dags",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/docs/evidence",
+      "Destination": "/opt/airflow/docs/evidence",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/rag/sources",
+      "Destination": "/opt/airflow/rag/sources",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/storage",
+      "Destination": "/opt/airflow/storage",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": "rprivate"
+    },
+    {
+      "Type": "bind",
+      "Source": "/run/desktop/mnt/host/d/Projects/aqualens-2030/data/source",
+      "Destination": "/opt/airflow/data/source",
+      "Mode": "ro",
+      "RW": false,
+      "Propagation": "rprivate"
+    }
+  ]
+}
+{
+  "name": "/aqualens2030-kafka-1",
+  "image": "apache/kafka:4.2.1@sha256:2d2f77837385f202b1947fc3ed62421de344f0ced47dde360ca5afdad11b51fa",
+  "image_id": "sha256:2d2f77837385f202b1947fc3ed62421de344f0ced47dde360ca5afdad11b51fa",
+  "image_size_bytes": 235604557,
+  "platform": "linux/amd64",
+  "health": "healthy",
+  "running": true,
+  "restart_count": 0,
+  "oom_killed": false,
+  "memory_limit_bytes": 1073741824,
+  "nano_cpus": 1000000000,
+  "mounts": [
+    {
+      "Type": "volume",
+      "Name": "61aa2b85b1386b8990a8756de0384ea0b2dbe8157188ec2ca9fbcab03aaabe5a",
+      "Source": "/var/lib/docker/volumes/61aa2b85b1386b8990a8756de0384ea0b2dbe8157188ec2ca9fbcab03aaabe5a/_data",
+[REDACTED credential-related log line]
+      "Driver": "local",
+      "Mode": "",
+      "RW": true,
+      "Propagation": ""
+    },
+    {
+      "Type": "volume",
+      "Name": "98147065dde4f7dc79d779e821e28da8b8394201adb6773eea1e39a028e8ce3b",
+      "Source": "/var/lib/docker/volumes/98147065dde4f7dc79d779e821e28da8b8394201adb6773eea1e39a028e8ce3b/_data",
+      "Destination": "/mnt/shared/config",
+      "Driver": "local",
+      "Mode": "",
+      "RW": true,
+      "Propagation": ""
+    },
+    {
+      "Type": "volume",
+      "Name": "aqualens2030_kafka_data",
+      "Source": "/var/lib/docker/volumes/aqualens2030_kafka_data/_data",
+      "Destination": "/var/lib/kafka/data",
+      "Driver": "local",
+      "Mode": "rw",
+      "RW": true,
+      "Propagation": ""
+    }
+  ]
+}
+Host HTTP: / 200
+Host HTTP: /api/v2/monitor/health 200
+{"metadatabase":{"status":"healthy"},"scheduler":{"status":"healthy","latest_scheduler_heartbeat":"2026-09-09T05:11:12.550056+00:00"},"triggerer":{"status":"healthy","latest_triggerer_heartbeat":"2026-09-09T05:11:18.203509+00:00"},"dag_processor":{"status":"healthy","latest_dag_processor_heartbeat":"2026-09-09T05:11:17.360020+00:00"}}
+All running containers:
+aqualens2030-airflow-1 aqualens2030-airflow:phase-a
+aqualens2030-kafka-1 apache/kafka:4.2.1
+
+Host source SHA-256: 4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c
+PASS: host service/mount/HTTP audit. No pipeline implementation tested.
+Exit code: 0
+Finished UTC: 2026-09-09T05:11:23.465466+00:00

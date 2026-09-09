@@ -1,0 +1,5 @@
+Started UTC: 2026-09-08T17:18:38.268961+00:00
+Command argv: ["docker", "compose", "exec", "-T", "kafka", "/opt/kafka/bin/kafka-topics.sh", "--version"]
+4.2.1
+Exit code: 0
+Finished UTC: 2026-09-08T17:18:47.311806+00:00

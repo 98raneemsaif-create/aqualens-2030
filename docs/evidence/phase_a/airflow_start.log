@@ -1,0 +1,19 @@
+Started UTC: 2026-09-08T17:20:40.326796+00:00
+Command argv: ["docker", "compose", "up", "-d", "--wait", "--wait-timeout", "300"]
+ Container aqualens2030-kafka-1 Running 
+ Volume aqualens2030_airflow_runtime Creating 
+ Volume aqualens2030_airflow_runtime Creating 
+ Volume aqualens2030_airflow_runtime Created 
+ Volume aqualens2030_airflow_runtime Created 
+ Container aqualens2030-airflow-1 Creating 
+ Container aqualens2030-airflow-1 Created 
+ Container aqualens2030-kafka-1 Waiting 
+ Container aqualens2030-kafka-1 Healthy 
+ Container aqualens2030-airflow-1 Starting 
+ Container aqualens2030-airflow-1 Started 
+ Container aqualens2030-airflow-1 Waiting 
+ Container aqualens2030-kafka-1 Waiting 
+ Container aqualens2030-kafka-1 Healthy 
+ Container aqualens2030-airflow-1 Healthy 
+Exit code: 0
+Finished UTC: 2026-09-08T17:21:23.407155+00:00

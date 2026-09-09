@@ -1,0 +1,57 @@
+Province ID,Province,Source ID,Source,Year,Value
+1,Al-Riyadh,1,Desalinated water (SWCC),2024,825980625.0
+1,Al-Riyadh,2,Groundwater,2024,343497834.0
+1,Al-Riyadh,3,Surface water,2024,0.0
+1,Al-Riyadh,4,Other sources,2024,0.0
+2,Makkah Al-Mokarramah,1,Desalinated water (SWCC),2024,865255663.0
+2,Makkah Al-Mokarramah,2,Groundwater,2024,10411682.0
+2,Makkah Al-Mokarramah,3,Surface water,2024,1618359.0
+2,Makkah Al-Mokarramah,4,Other sources,2024,0.0
+3,Al-Madinah Al-Monawarah,1,Desalinated water (SWCC),2024,278721828.0
+3,Al-Madinah Al-Monawarah,2,Groundwater,2024,6411854.0
+3,Al-Madinah Al-Monawarah,3,Surface water,2024,0.0
+3,Al-Madinah Al-Monawarah,4,Other sources,2024,321711.0
+4,Al-Qaseem,1,Desalinated water (SWCC),2024,13588721.0
+4,Al-Qaseem,2,Groundwater,2024,145933558.0
+4,Al-Qaseem,3,Surface water,2024,0.0
+4,Al-Qaseem,4,Other sources,2024,0.0
+5,Eastern Region,1,Desalinated water (SWCC),2024,513525536.0
+5,Eastern Region,2,Groundwater,2024,154180255.0
+5,Eastern Region,3,Surface water,2024,0.0
+5,Eastern Region,4,Other sources,2024,0.0
+6,Aseer,1,Desalinated water (SWCC),2024,128335876.0
+6,Aseer,2,Groundwater,2024,16187926.0
+6,Aseer,3,Surface water,2024,492992.0
+6,Aseer,4,Other sources,2024,4639646.0
+7,Tabouk,1,Desalinated water (SWCC),2024,20877674.0
+7,Tabouk,2,Groundwater,2024,53710118.0
+7,Tabouk,3,Surface water,2024,0.0
+7,Tabouk,4,Other sources,2024,184.0
+8,Hail,1,Desalinated water (SWCC),2024,0.0
+8,Hail,2,Groundwater,2024,58727534.0
+8,Hail,3,Surface water,2024,0.0
+8,Hail,4,Other sources,2024,0.0
+9,Northern Borders,1,Desalinated water (SWCC),2024,0.0
+9,Northern Borders,2,Groundwater,2024,23785843.0
+9,Northern Borders,3,Surface water,2024,0.0
+9,Northern Borders,4,Other sources,2024,4977224.0
+10,Jazan,1,Desalinated water (SWCC),2024,97367587.0
+10,Jazan,2,Groundwater,2024,16095624.0
+10,Jazan,3,Surface water,2024,10181412.0
+10,Jazan,4,Other sources,2024,0.0
+11,Najran,1,Desalinated water (SWCC),2024,0.0
+11,Najran,2,Groundwater,2024,28207497.0
+11,Najran,3,Surface water,2024,8808203.0
+11,Najran,4,Other sources,2024,1043000.0
+12,Al-Baha,1,Desalinated water (SWCC),2024,23729501.0
+12,Al-Baha,2,Groundwater,2024,645141.0
+12,Al-Baha,3,Surface water,2024,11708833.0
+12,Al-Baha,4,Other sources,2024,0.0
+13,Al-Jouf,1,Desalinated water (SWCC),2024,0.0
+13,Al-Jouf,2,Groundwater,2024,49568883.0
+13,Al-Jouf,3,Surface water,2024,0.0
+13,Al-Jouf,4,Other sources,2024,0.0
+15,Grand Total,1,Desalinated water (SWCC),2024,2767383012.0
+15,Grand Total,2,Groundwater,2024,907363749.0
+15,Grand Total,3,Surface water,2024,32809800.0
+15,Grand Total,4,Other sources,2024,10981765.0

@@ -1,0 +1,154 @@
+Started UTC: 2026-09-08T17:18:47.486815+00:00
+Command argv: ["docker", "compose", "logs", "--no-color", "--tail", "150", "kafka"]
+kafka-1  | 	remote.log.metadata.manager.impl.prefix = rlmm.config.
+kafka-1  | 	remote.log.metadata.manager.listener.name = null
+kafka-1  | 	remote.log.reader.max.pending.tasks = 100
+kafka-1  | 	remote.log.reader.threads = 10
+kafka-1  | 	remote.log.storage.manager.class.name = null
+kafka-1  | 	remote.log.storage.manager.class.path = null
+kafka-1  | 	remote.log.storage.manager.impl.prefix = rsm.config.
+kafka-1  | 	remote.log.storage.system.enable = false
+kafka-1  | 	replica.fetch.backoff.ms = 1000
+kafka-1  | 	replica.fetch.max.bytes = 1048576
+kafka-1  | 	replica.fetch.min.bytes = 1
+kafka-1  | 	replica.fetch.response.max.bytes = 10485760
+kafka-1  | 	replica.fetch.wait.max.ms = 500
+kafka-1  | 	replica.high.watermark.checkpoint.interval.ms = 5000
+kafka-1  | 	replica.lag.time.max.ms = 30000
+kafka-1  | 	replica.selector.class = null
+kafka-1  | 	replica.socket.receive.buffer.bytes = 65536
+kafka-1  | 	replica.socket.timeout.ms = 30000
+kafka-1  | 	replication.quota.window.num = 11
+kafka-1  | 	replication.quota.window.size.seconds = 1
+kafka-1  | 	request.timeout.ms = 30000
+kafka-1  | 	sasl.client.callback.handler.class = null
+kafka-1  | 	sasl.enabled.mechanisms = [GSSAPI]
+kafka-1  | 	sasl.jaas.config = null
+kafka-1  | 	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+kafka-1  | 	sasl.kerberos.min.time.before.relogin = 60000
+kafka-1  | 	sasl.kerberos.principal.to.local.rules = [DEFAULT]
+kafka-1  | 	sasl.kerberos.service.name = null
+kafka-1  | 	sasl.kerberos.ticket.renew.jitter = 0.05
+kafka-1  | 	sasl.kerberos.ticket.renew.window.factor = 0.8
+kafka-1  | 	sasl.login.callback.handler.class = null
+kafka-1  | 	sasl.login.class = null
+kafka-1  | 	sasl.login.connect.timeout.ms = null
+kafka-1  | 	sasl.login.read.timeout.ms = null
+kafka-1  | 	sasl.login.refresh.buffer.seconds = 300
+kafka-1  | 	sasl.login.refresh.min.period.seconds = 60
+kafka-1  | 	sasl.login.refresh.window.factor = 0.8
+kafka-1  | 	sasl.login.refresh.window.jitter = 0.05
+kafka-1  | 	sasl.login.retry.backoff.max.ms = 10000
+kafka-1  | 	sasl.login.retry.backoff.ms = 100
+kafka-1  | 	sasl.mechanism.controller.protocol = GSSAPI
+kafka-1  | 	sasl.mechanism.inter.broker.protocol = GSSAPI
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+[REDACTED credential-related log line]
+kafka-1  | 	sasl.server.callback.handler.class = null
+kafka-1  | 	sasl.server.max.receive.size = 524288
+kafka-1  | 	security.inter.broker.protocol = PLAINTEXT
+kafka-1  | 	security.providers = null
+kafka-1  | 	server.max.startup.time.ms = 9223372036854775807
+kafka-1  | 	share.coordinator.append.linger.ms = -1
+kafka-1  | 	share.coordinator.cold.partition.snapshot.interval.ms = 300000
+kafka-1  | 	share.coordinator.load.buffer.size = 5242880
+kafka-1  | 	share.coordinator.snapshot.update.records.per.snapshot = 500
+kafka-1  | 	share.coordinator.state.topic.compression.codec = 0
+kafka-1  | 	share.coordinator.state.topic.min.isr = 2
+kafka-1  | 	share.coordinator.state.topic.num.partitions = 50
+kafka-1  | 	share.coordinator.state.topic.prune.interval.ms = 300000
+kafka-1  | 	share.coordinator.state.topic.replication.factor = 3
+kafka-1  | 	share.coordinator.state.topic.segment.bytes = 104857600
+kafka-1  | 	share.coordinator.threads = 1
+kafka-1  | 	share.coordinator.write.timeout.ms = 5000
+kafka-1  | 	share.fetch.purgatory.purge.interval.requests = 1000
+kafka-1  | 	socket.connection.setup.timeout.max.ms = 30000
+kafka-1  | 	socket.connection.setup.timeout.ms = 10000
+kafka-1  | 	socket.listen.backlog.size = 50
+kafka-1  | 	socket.receive.buffer.bytes = 102400
+kafka-1  | 	socket.request.max.bytes = 104857600
+kafka-1  | 	socket.send.buffer.bytes = 102400
+kafka-1  | 	ssl.allow.dn.changes = false
+kafka-1  | 	ssl.allow.san.changes = false
+kafka-1  | 	ssl.cipher.suites = []
+kafka-1  | 	ssl.client.auth = none
+kafka-1  | 	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+kafka-1  | 	ssl.endpoint.identification.algorithm = https
+kafka-1  | 	ssl.engine.factory.class = null
+[REDACTED credential-related log line]
+kafka-1  | 	ssl.keymanager.algorithm = SunX509
+kafka-1  | 	ssl.keystore.certificate.chain = null
+kafka-1  | 	ssl.keystore.key = null
+kafka-1  | 	ssl.keystore.location = null
+[REDACTED credential-related log line]
+kafka-1  | 	ssl.keystore.type = JKS
+kafka-1  | 	ssl.principal.mapping.rules = DEFAULT
+kafka-1  | 	ssl.protocol = TLSv1.3
+kafka-1  | 	ssl.provider = null
+kafka-1  | 	ssl.secure.random.implementation = null
+kafka-1  | 	ssl.trustmanager.algorithm = PKIX
+kafka-1  | 	ssl.truststore.certificates = null
+kafka-1  | 	ssl.truststore.location = null
+[REDACTED credential-related log line]
+kafka-1  | 	ssl.truststore.type = JKS
+kafka-1  | 	telemetry.max.bytes = 1048576
+kafka-1  | 	transaction.abort.timed.out.transaction.cleanup.interval.ms = 10000
+kafka-1  | 	transaction.max.timeout.ms = 900000
+kafka-1  | 	transaction.partition.verification.enable = true
+kafka-1  | 	transaction.remove.expired.transaction.cleanup.interval.ms = 3600000
+kafka-1  | 	transaction.state.log.load.buffer.size = 5242880
+kafka-1  | 	transaction.state.log.min.isr = 1
+kafka-1  | 	transaction.state.log.num.partitions = 50
+kafka-1  | 	transaction.state.log.replication.factor = 1
+kafka-1  | 	transaction.state.log.segment.bytes = 104857600
+kafka-1  | 	transaction.two.phase.commit.enable = false
+kafka-1  | 	transactional.id.expiration.ms = 604800000
+kafka-1  | 	unclean.leader.election.enable = false
+kafka-1  | 	unclean.leader.election.interval.ms = 300000
+kafka-1  | 	unstable.api.versions.enable = false
+kafka-1  | 	unstable.feature.versions.enable = false
+kafka-1  |  (org.apache.kafka.common.config.AbstractConfig)
+kafka-1  | [2026-09-08 17:17:32,086] INFO [BrokerServer id=1] Waiting for the broker to be unfenced (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,086] INFO [BrokerLifecycleManager id=1] The broker is in RECOVERY. (kafka.server.BrokerLifecycleManager)
+kafka-1  | [2026-09-08 17:17:32,177] INFO [BrokerLifecycleManager id=1] The broker has been unfenced. Transitioning from RECOVERY to RUNNING. (kafka.server.BrokerLifecycleManager)
+kafka-1  | [2026-09-08 17:17:32,177] INFO [BrokerServer id=1] Finished waiting for the broker to be unfenced (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,179] INFO authorizerStart completed for endpoint INTERNAL. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+kafka-1  | [2026-09-08 17:17:32,179] INFO authorizerStart completed for endpoint HOST. Endpoint is now READY. (org.apache.kafka.server.network.EndpointReadyFutures)
+kafka-1  | [2026-09-08 17:17:32,179] INFO [SocketServer listenerType=BROKER, nodeId=1] Enabling request processing. (kafka.network.SocketServer)
+kafka-1  | [2026-09-08 17:17:32,180] INFO Awaiting socket connections on 0.0.0.0:29092. (kafka.network.DataPlaneAcceptor)
+kafka-1  | [2026-09-08 17:17:32,268] INFO Awaiting socket connections on 0.0.0.0:9092. (kafka.network.DataPlaneAcceptor)
+kafka-1  | [2026-09-08 17:17:32,277] INFO [BrokerServer id=1] Waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,277] INFO [BrokerServer id=1] Finished waiting for all of the authorizer futures to be completed (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,277] INFO [BrokerServer id=1] Waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,278] INFO [BrokerServer id=1] Finished waiting for all of the SocketServer Acceptors to be started (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,278] INFO [BrokerServer id=1] Transition from STARTING to STARTED (kafka.server.BrokerServer)
+kafka-1  | [2026-09-08 17:17:32,279] INFO Kafka version: 4.2.1 (org.apache.kafka.common.utils.AppInfoParser)
+kafka-1  | [2026-09-08 17:17:32,280] INFO Kafka commitId: 18d5ecd939c8d510 (org.apache.kafka.common.utils.AppInfoParser)
+kafka-1  | [2026-09-08 17:17:32,280] INFO Kafka startTimeMs: 1788887852279 (org.apache.kafka.common.utils.AppInfoParser)
+kafka-1  | [2026-09-08 17:17:32,282] INFO [KafkaRaftServer nodeId=1] Kafka Server started (kafka.server.KafkaRaftServer)
+Exit code: 0
+Finished UTC: 2026-09-08T17:18:47.783715+00:00

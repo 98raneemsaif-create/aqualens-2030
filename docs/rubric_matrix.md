@@ -1,0 +1,136 @@
+# AquaLens 2030 Rubric Matrix
+
+## Authority and status
+
+Source: [Capstone Rubric - Modern Data Engineering for AI Systems](reference/Capstone%20Rubric%20-%20Modern%20Data%20Engineering%20for%20AI%20Systems.pdf), pages 1–2, read alongside [AGENTS.md](../AGENTS.md).
+
+This is a pre-implementation plan. All component paths, tests, and evidence paths below are planned, not claims that files or working components exist. Every tracked requirement starts at **NOT IMPLEMENTED**, including documentation and submission requirements. This matrix itself does not establish implementation or verification of any requirement.
+
+The rubric assigns category totals, not points to individual components. Repeated category points below identify the parent category and must not be summed by row. The five category totals are Ingestion 20, Delta Lakehouse 25, RAG Pipeline 25, Orchestration 15, and Quality Gate + Lineage 15: **100 points total**. The rubric pass mark is 60; AquaLens targets all 100 points.
+
+Only change a requirement's status after successful execution of its proof and inspection of captured evidence. For failure demonstrations, success means observing the intended rejection or blocking behavior. Code existence, mocked services, and planned evidence paths are not execution proof.
+
+## Scored Requirements
+
+| Category | Rubric requirement | Category points | Planned implementation | Test / proof method | Planned evidence location | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Ingestion | Real Kafka producer | 20 | `src/ingestion/producer.py`: publish the immutable GASTAT via DataSaudi CSV to Kafka using `confluent-kafka` | Run against a real broker; capture acknowledged deliveries and topic/partition/offset metadata | `docs/evidence/ingestion/producer.log` | NOT IMPLEMENTED |
+| Ingestion | Real Kafka consumer | 20 | `src/ingestion/consumer.py`: consume actual Kafka records for validated ingestion | Consume producer records from the broker and reconcile record identifiers/counts | `docs/evidence/ingestion/consumer.log` | NOT IMPLEMENTED |
+| Ingestion | Schema validation at ingestion boundary | 20 | `src/ingestion/schema.py`: Pydantic contract invoked by the consumer before accepted records enter Bronze | `tests/test_ingestion.py`: valid records pass; malformed records fail boundary validation | `docs/evidence/ingestion/validation.log` | NOT IMPLEMENTED |
+| Ingestion | Malformed records routed to quarantine or dead-letter destination | 20 | `src/ingestion/quarantine.py`: publish rejected payloads to a Kafka dead-letter topic | `tests/test_quarantine.py`: inject failure fixtures and consume rejected messages from the real dead-letter topic; confirm they do not enter accepted data | `docs/evidence/ingestion/quarantine.jsonl` | NOT IMPLEMENTED |
+| Ingestion | Rejection reason recorded | 20 | `src/ingestion/quarantine.py`: include validation reason and record identity with every rejected payload | Assert every captured dead-letter record has a nonempty reason corresponding to its validation failure | `docs/evidence/ingestion/quarantine.jsonl` | NOT IMPLEMENTED |
+| Delta Lakehouse | Bronze layer using real Delta Lake | 25 | `src/lakehouse/bronze.py`: append accepted records to `storage/delta/bronze/` with `deltalake` | `tests/test_lakehouse.py`: open with `DeltaTable`, inspect transaction history, and confirm a second append preserves previous rows | `docs/evidence/lakehouse/bronze.log` | NOT IMPLEMENTED |
+| Delta Lakehouse | Silver layer using real Delta Lake | 25 | `src/lakehouse/silver.py`: normalized water-source records at `storage/delta/silver/` | Open with `DeltaTable`; inspect schema, records, and table version | `docs/evidence/lakehouse/silver.log` | NOT IMPLEMENTED |
+| Delta Lakehouse | Gold layer using real Delta Lake | 25 | `src/lakehouse/gold.py`: persist regional composition profiles at `storage/delta/gold/` | Open with `DeltaTable`; inspect schema, records, and transaction history | `docs/evidence/lakehouse/gold.log` | NOT IMPLEMENTED |
+| Delta Lakehouse | Real MERGE/upsert keyed on a business key | 25 | `src/lakehouse/silver.py`: real Delta MERGE on `year + region + source` | `tests/test_delta_merge.py`: demonstrate an update and insert, before/after values, merge metrics, unique keys, and stable results on replay using isolated fixtures | `docs/evidence/lakehouse/merge.log` | NOT IMPLEMENTED |
+| Delta Lakehouse | Demonstrated schema enforcement | 25 | `src/lakehouse/schema_proof.py`: attempt an incompatible write to an isolated Delta test table without enabling schema evolution | `tests/test_schema_enforcement.py`: capture the actual Delta rejection and verify the failed write did not change the table | `docs/evidence/lakehouse/schema_rejection.log` | NOT IMPLEMENTED |
+| Delta Lakehouse | Gold is a genuine aggregate, not a Silver copy | 25 | `src/lakehouse/gold.py`: aggregate by year and region to total volume, dominant source/volume/share, and active source count | Reconcile results against independently calculated source-group totals; demonstrate multiple source rows combined into regional profiles | `docs/evidence/lakehouse/gold_aggregate.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Document chunking | 25 | `src/rag/chunking.py`: split the two approved official snapshots while retaining document and page/section identity | `tests/test_rag_chunking.py`: inspect nonempty chunks, boundaries, counts, and source metadata | `docs/evidence/rag/chunks.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Embeddings | 25 | `src/rag/embeddings.py`: multilingual sentence-transformer embeddings for documents and queries | Run the actual model on Arabic and English samples; record model identity, dimensions, and embedding counts | `docs/evidence/rag/embeddings.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Real vector store | 25 | `src/rag/indexing.py`: ChromaDB `PersistentClient` at `storage/chroma/` with chunk metadata | `tests/test_rag_index.py`: index chunks, reopen the persistent collection, and retrieve stored records | `docs/evidence/rag/vector_store.log` | NOT IMPLEMENTED |
+| RAG Pipeline | Dense/vector retrieval | 25 | `src/rag/retrieval.py`: query Chroma using embedded queries | `tests/test_hybrid_retrieval.py`: capture dense-ranked chunk IDs and distances for actual queries | `docs/evidence/rag/dense.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Keyword/BM25 retrieval | 25 | `src/rag/retrieval.py`: `BM25Okapi` over the same chunk corpus | Capture keyword-ranked chunk IDs and scores for queries with relevant terms | `docs/evidence/rag/bm25.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Fusion of dense and keyword search | 25 | `src/rag/fusion.py`: Reciprocal Rank Fusion over both ranked lists | Check combined scores against input ranks; capture both inputs and fused order, including duplicate chunk handling | `docs/evidence/rag/rrf.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Cross-encoder reranking | 25 | `src/rag/reranking.py`: multilingual cross-encoder scores query/chunk pairs from fused candidates | Execute the real model and capture model identity, candidate IDs, scores, and resulting order | `docs/evidence/rag/reranking.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Answers grounded in retrieved context | 25 | `src/rag/generation.py`: Gemini 2.5 Flash receives reranked official context and instructions to avoid unsupported claims | `tests/test_rag_generation.py` plus real-model run: compare answer claims with supplied passages; demonstrate insufficient-context handling | `docs/evidence/rag/grounded_answer.json` | NOT IMPLEMENTED |
+| RAG Pipeline | Citations in answers | 25 | `src/rag/generation.py` and `src/app/cli.py`: present citations resolving to retrieved official document/page or section/chunk | Resolve each emitted citation to a retrieved passage and inspect whether it supports the associated claim | `docs/evidence/rag/citations.json` | NOT IMPLEMENTED |
+| Orchestration | Real Airflow DAG | 15 | `dags/aqualens_pipeline.py`: Apache Airflow 3.3.1 DAG | Load and execute the DAG in actual Airflow; capture DAG identity and task instances | `docs/evidence/airflow/happy_run.log` | NOT IMPLEMENTED |
+| Orchestration | Every stage wired together with correct dependencies | 15 | `dags/aqualens_pipeline.py`: source publication → consumption/validation/quarantine → Bronze → Silver → quality gate → Gold → RAG chunking/indexing/retrieval/reranking/generation; include schema proof and failure-demo tasks in the DAG flow | Inspect DAG graph and run task timestamps; confirm all required stages are scheduled by Airflow, and failure-demo mode uses the same guarded dependencies | `docs/evidence/airflow/dag_graph.md` | NOT IMPLEMENTED |
+| Orchestration | Quality failure prevents downstream execution | 15 | `dags/aqualens_pipeline.py`: require successful quality validation before Gold and RAG stages | Deliberately fail quality; capture actual downstream task states and verify no downstream outputs or task execution occurred | `docs/evidence/airflow/quality_failure.json` | NOT IMPLEMENTED |
+| Quality Gate + Lineage | Real Great Expectations checks | 15 | `src/quality/gate.py`: Great Expectations validation of required fields, valid volumes, and business-key uniqueness in Silver | `tests/test_quality.py`: execute real Great Expectations against passing and failing isolated data | `docs/evidence/quality/success.json`; `docs/evidence/quality/failure.json` | NOT IMPLEMENTED |
+| Quality Gate + Lineage | Checks actually gate the pipeline | 15 | `src/quality/gate.py`: propagate unsuccessful validation as an exception to the Airflow quality task | Confirm a passing result allows continuation and a failing result fails the task; correlate with downstream blocking | `docs/evidence/quality/gate.log`; `docs/evidence/airflow/quality_failure.json` | NOT IMPLEMENTED |
+| Quality Gate + Lineage | OpenLineage START events per stage | 15 | OpenLineage Airflow Provider in `dags/aqualens_pipeline.py`, configured through `src/common/config.py` to capture real client events | Correlate captured START events with each started stage and its run ID | `docs/evidence/lineage/start.jsonl` | NOT IMPLEMENTED |
+| Quality Gate + Lineage | OpenLineage COMPLETE events per stage | 15 | Same provider/client integration: successful stage completion events | Correlate COMPLETE with START for each successful stage in the happy run | `docs/evidence/lineage/complete.jsonl` | NOT IMPLEMENTED |
+| Quality Gate + Lineage | OpenLineage FAIL events per stage | 15 | Same provider/client integration: failure events when stage execution fails | Controlled stage-failure runs demonstrate FAIL correlated with START; do not fabricate failures for tasks blocked before execution | `docs/evidence/lineage/fail.jsonl` | NOT IMPLEMENTED |
+
+The named libraries, models, paths, append-only behavior, and particular business key are AquaLens implementation choices under AGENTS.md. The rubric allows alternatives for some of these; the planned implementation follows the stricter project guide. Cross-cutting evaluation requires real libraries, actual execution output, and failure demonstrations for all relevant rows.
+
+## Mandatory Submission & Documentation Requirements
+
+These requirements are mandatory under rubric sections 2.1–2.2 but have no separate allocation within the 100 scored points. Paths and proof remain planned. No publication or account action is performed by creating this matrix.
+
+| Category | Rubric requirement | Category points | Planned implementation | Test / proof method | Planned evidence location | Status |
+| --- | --- | --- | --- | --- | --- | --- |
+| Submission | Each trainee has an activated GitHub account | Not scored | Trainee GitHub account associated with the submission | Confirm accessible account and repository ownership/access without collecting credentials | `docs/evidence/submission/github.md` | NOT IMPLEMENTED |
+| Submission | Project published to GitHub | Not scored | AquaLens GitHub repository containing the project | Record repository URL and submitted commit; verify the remote contains the submission | `docs/evidence/submission/github.md` | NOT IMPLEMENTED |
+| Submission | Project kept documented and continuously updated | Not scored | Maintain README, technical docs, matrix, and evidence alongside incremental work | Inspect successive commits for corresponding documentation updates | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
+| Documentation | Clear comprehensive project description on repository landing page | Not scored | `README.md`: Saudi water-source intelligence problem, purpose, and constrained scope | Review rendered landing page for what the project does and why | `docs/evidence/submission/readme_review.md` | NOT IMPLEMENTED |
+| Documentation | Professional README | Not scored | `README.md`: coherent project idea, prerequisites, setup, use, and expected output | Review completeness and follow documented workflow | `docs/evidence/submission/readme_review.md` | NOT IMPLEMENTED |
+| Documentation | Prerequisites | Not scored | `README.md`: runtime, tools, service access, and required credentials described without secrets | Compare prerequisites with the actual runtime needs | `docs/evidence/submission/setup.log` | NOT IMPLEMENTED |
+| Documentation | Installation/setup instructions | Not scored | `README.md`: reproducible environment and service setup | Follow instructions in a clean environment and capture results | `docs/evidence/submission/setup.log` | NOT IMPLEMENTED |
+| Documentation | Execution/usage instructions | Not scored | `README.md`: pipeline run, CLI query, and failure-demo commands | Execute documented commands and capture outputs | `docs/evidence/submission/usage.log` | NOT IMPLEMENTED |
+| Documentation | Expected outputs | Not scored | `README.md`: example regional aggregates, cited answers, and expected failure behavior | Compare documented examples with actual run output | `docs/evidence/submission/outputs.md` | NOT IMPLEMENTED |
+| Documentation | Architecture/pipeline overview | Not scored | `docs/architecture.md`: services, data flow, stages, and quality-gate dependencies | Compare documented flow with actual DAG and runtime | `docs/evidence/submission/architecture_review.md` | NOT IMPLEMENTED |
+| Documentation | Key components/modules | Not scored | `docs/architecture.md`: responsibilities of approved `src/` modules and DAG tasks | Cross-check module descriptions against implemented components | `docs/evidence/submission/architecture_review.md` | NOT IMPLEMENTED |
+| Documentation | Configuration/environment variables | Not scored | `docs/configuration.md`: required/optional variables, defaults, and secret handling | Compare with `src/common/config.py` and run using documented configuration | `docs/evidence/submission/configuration_review.md` | NOT IMPLEMENTED |
+| Git practices | Meaningful commit messages | Not scored | Incremental Git commits with descriptive purpose | Review commit subjects and associated changes | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
+| Git practices | Incremental history, not a single bulk upload | Not scored | Commit completed, reviewable project increments over implementation phases | Capture history demonstrating progression | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
+| Git practices | Sensible repository structure | Not scored | Follow the directory responsibilities in AGENTS.md | Inspect repository tree and placement of code, sources, documentation, and generated data | `docs/evidence/submission/structure.txt` | NOT IMPLEMENTED |
+| Git practices | .gitignore excludes secrets and generated files | Not scored | `.gitignore`: exclude `.env`, keys, `storage/`, caches, and runtime artifacts | Use `git check-ignore` on representative paths and inspect tracked files for accidental inclusion | `docs/evidence/submission/gitignore.log` | NOT IMPLEMENTED |
+| Attribution | Training-program name | Not scored | `README.md`: Program: Modern Data Engineering for AI Systems; Provider: SDAIA Academy; Delivery: Learning Space | Inspect rendered attribution | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
+| Attribution | Cohort/session dates | Not scored | `README.md`: 06 September 2026 – 10 September 2026 | Inspect rendered dates against the fixed project decision | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
+| Attribution | Link to SDAIA Academy on GitHub | Not scored | `README.md`: link to `https://github.com/SDAIAAcademy` | Inspect link text and target | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
+
+The rubric's publication instruction applies to all AI-related training projects; this matrix tracks its application to AquaLens. Saudi community engagement in section 2.3 is encouraged, not mandatory and not scored.
+
+## Execution Evidence Requirements
+
+Capture actual outputs, not example or fabricated logs. Each evidence bundle must identify the command or reproducible steps, source/fixture, code revision, relevant library/model versions, non-secret configuration, run/task IDs where applicable, expected result, and observed result. Preserve complete enough context to reproduce and assess the claim. Keep generated Delta/Chroma runtime files in gitignored `storage/`; commit curated proofs under `docs/evidence/`.
+
+| Required proof | Capture during implementation | Planned evidence location | Status |
+| --- | --- | --- | --- |
+| Real Kafka producer execution | Broker delivery acknowledgements and published record counts | `docs/evidence/ingestion/producer.log` | NOT IMPLEMENTED |
+| Real Kafka consumer execution | Broker reads and consumed record identifiers/counts | `docs/evidence/ingestion/consumer.log` | NOT IMPLEMENTED |
+| Malformed-record rejection | Actual Pydantic failure and exclusion from accepted ingestion | `docs/evidence/ingestion/validation.log` | NOT IMPLEMENTED |
+| Quarantine/dead-letter record with rejection reason | Message read back from the Kafka dead-letter topic, including rejected payload identity and reason | `docs/evidence/ingestion/quarantine.jsonl` | NOT IMPLEMENTED |
+| Bronze Delta table | Delta metadata/history and append-only before/after records | `docs/evidence/lakehouse/bronze.log` | NOT IMPLEMENTED |
+| Silver Delta MERGE/upsert | Real table metadata, merge metrics, updated/inserted keys, and replay outcome | `docs/evidence/lakehouse/silver.log`; `docs/evidence/lakehouse/merge.log` | NOT IMPLEMENTED |
+| Demonstrated Delta schema rejection | Actual incompatible-write exception and unchanged table state | `docs/evidence/lakehouse/schema_rejection.log` | NOT IMPLEMENTED |
+| Genuine Gold aggregate | Real Delta table metadata and regional aggregate reconciliation against Silver | `docs/evidence/lakehouse/gold.log`; `docs/evidence/lakehouse/gold_aggregate.json` | NOT IMPLEMENTED |
+| Great Expectations successful validation | Real validation result showing passed expectations | `docs/evidence/quality/success.json` | NOT IMPLEMENTED |
+| Great Expectations failed validation | Real validation result showing failures and propagated task failure | `docs/evidence/quality/failure.json`; `docs/evidence/quality/gate.log` | NOT IMPLEMENTED |
+| Airflow downstream blocking after quality failure | Failed gate, actual downstream states (including `upstream_failed` where applicable), and no downstream execution/output | `docs/evidence/airflow/quality_failure.json` | NOT IMPLEMENTED |
+| OpenLineage START events | Captured event payloads correlated to each started stage | `docs/evidence/lineage/start.jsonl` | NOT IMPLEMENTED |
+| OpenLineage COMPLETE events | Captured completion payloads correlated to successful stages | `docs/evidence/lineage/complete.jsonl` | NOT IMPLEMENTED |
+| OpenLineage FAIL events | Captured failure payloads from controlled stage failures | `docs/evidence/lineage/fail.jsonl` | NOT IMPLEMENTED |
+| Dense retrieval results | Query, model/collection identity, ranked chunk IDs, and distances | `docs/evidence/rag/dense.json` | NOT IMPLEMENTED |
+| BM25 retrieval results | Query, ranked chunk IDs, and keyword scores | `docs/evidence/rag/bm25.json` | NOT IMPLEMENTED |
+| RRF fusion | Both input rankings, fusion parameters, combined scores, and output ranks | `docs/evidence/rag/rrf.json` | NOT IMPLEMENTED |
+| Cross-encoder reranking | Actual model identity, query/candidate pairs, scores, and final ordering | `docs/evidence/rag/reranking.json` | NOT IMPLEMENTED |
+| Grounded RAG answer with citations | Prompt/context, generated answer, resolved citations, and claim-support review | `docs/evidence/rag/grounded_answer.json`; `docs/evidence/rag/citations.json` | NOT IMPLEMENTED |
+
+Also retain chunking, embeddings, persistent-store reopen proof, complete Airflow happy-run logs and DAG graph, automated test output at `docs/evidence/tests/results.log`, and submission checks above. Failure fixtures must be isolated from immutable source data and must not become a synthetic analytical dataset. A caught, deliberately rejected schema write proves schema enforcement; it does not alone prove a failed Airflow task or OpenLineage FAIL event. Those require their own actual failure runs.
+
+## AGENTS.md Comparison Against the Capstone Rubric
+
+### Contradictions
+
+No contradictions were found. AGENTS.md explicitly gives the rubric precedence. Its 1–2 day delivery target is a project scope constraint; the rubric's five-day capstone description does not prescribe a minimum implementation duration. Recording actual blocked Airflow states rather than insisting on a literal `skipped` state is consistent with the rubric's requirement that downstream stages do not run.
+
+### Missing rubric requirements
+
+No scored or mandatory submission requirements are missing from AGENTS.md. It covers all five categories, actual-library execution, success/failure evidence, account activation, GitHub publication and ongoing documentation, README contents, technical documentation, Git practices, attribution/dates, and the Academy link. Community engagement is correctly identified as optional and unscored. These are coverage findings, not evidence that requirements have been fulfilled.
+
+### Project requirements stricter than the rubric
+
+- **Ingestion:** the rubric permits `kafka-python` or `confluent-kafka`, offers Pydantic as an example, and permits a quarantine zone or dead-letter topic. AquaLens fixes `confluent-kafka`, Pydantic, and a Kafka dead-letter topic.
+- **Lakehouse:** the rubric permits Spark/Delta or `deltalake` and requires a business key without prescribing it. AquaLens fixes `deltalake`, append-only Bronze, a Silver MERGE, and `year + region + source`.
+- **RAG:** the rubric requires embeddings, a real vector store, hybrid fusion, and a cross-encoder, without prescribing multilingual models, Chroma, BM25Okapi, RRF specifically, or an LLM vendor/model. AquaLens fixes these choices, including Gemini 2.5 Flash and ChromaDB `PersistentClient`.
+- **Runtime and lineage:** Python 3.11, Docker Compose, Airflow 3.3.1, and the OpenLineage Airflow Provider are project choices. The rubric names real Airflow and OpenLineage client usage without pinning those runtime versions or requiring that provider. AquaLens additionally requires captured lineage payloads and explicit test/failure-demo paths.
+- **Domain and sources:** the immutable GASTAT/DataSaudi dataset, two official RAG sources, exclusion of unofficial sources, approved analytical metrics, separation of observation from strategy, and prohibition on invented risk labels/thresholds are project constraints absent from the rubric.
+- **Scope and workflow:** the 1–2 day target, prescribed directories, rubric matrix, detailed tests/evidence paths, small-module conventions, phase boundaries, and restrictions on extra technologies are stricter project rules. Provider/delivery attribution and the exact cohort dates supply details beyond the rubric's generic program/date requirement.
+
+### Architecture credit assessment and unresolved pre-implementation checks
+
+**The approved architecture can satisfy all 100 scored points in design.** No approved technology choice inherently forfeits a deliverable: the rubric explicitly accepts `confluent-kafka` and `deltalake`, accepts a real vector store, and requires the Airflow, Great Expectations, and OpenLineage capabilities represented here. Persistent local vector storage does not imply a simulation. Spark, Marquez, and a Chroma server are not rubric requirements.
+
+This is a comparison of the supplied documents, not a dependency compatibility or runtime certification. Before application implementation begins, resolve these planning checks:
+
+1. **Dependency compatibility:** confirm the availability and mutual compatibility of Python 3.11, the fixed Airflow 3.3.1 release, a selected OpenLineage Airflow Provider/client version, Great Expectations, and the remaining libraries. Versions beyond the supplied decisions are not selected or verified in this task. Do not silently replace required libraries or pins if a conflict appears.
+2. **Lineage transport and coverage:** select a real provider/client-supported capture transport and map every stage to START and the appropriate terminal event. Installing the provider alone is insufficient. Confirm a supported way to persist captured payloads without adding Marquez; define controlled stage failures rather than assuming one quality failure demonstrates every stage's failure lifecycle.
+3. **DAG and gate contract:** finalize the exact task graph with quality validation before Gold and RAG, bounded ingestion completion, and failure propagation. No dependent output-producing stage may run around a failed gate. Observability must still capture failure events when downstream processing is blocked.
+4. **Source and model readiness:** confirm that both approved official snapshots are available with citation metadata, the real CSV fields/units can map to the business key, and the selected multilingual models and Gemini 2.5 Flash are accessible. Do not infer undocumented unit conversions or substitute unofficial/synthetic analytical sources. These checks do not permit changing the source file.
+
+There is **no identified rubric contradiction requiring an architectural change**. The checks above remain unresolved because this task intentionally performs no installation, application implementation, or pipeline execution. Any compatibility problem discovered during the pre-implementation check must be resolved under rubric precedence before coding against that stack.
+
+**Every mandatory submission requirement is covered by the plan**, including account activation, publication, ongoing updates, prerequisites, module documentation, and sensible repository structure in addition to the requested README and attribution details. None is marked complete. Implementation and execution evidence are still required before any claim of earned points or complete submission.

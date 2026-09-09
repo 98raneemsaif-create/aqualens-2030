@@ -1,0 +1,11 @@
+{
+  "source_sha256": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c",
+  "matrix_not_implemented_rows": 66,
+  "dag_python_files": 0,
+  "src_python_files": "empty package markers only",
+  "env_file_exists": false,
+  "lineage_raw_files": [
+    "docs\\evidence\\lineage\\raw\\.gitkeep"
+  ],
+  "constraints_sha256": "9fe2d4a54b8ac8450f63ffce0b195de8d9027ddc21bc40653b62be91a63fa366"
+}

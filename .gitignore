@@ -1,0 +1,52 @@
+# Credentials and local configuration
+.env
+.env.*
+!.env.example
+secrets/
+credentials*.json
+*api_key*
+*api-key*
+*service-account*.json
+*.key
+*.pem
+*.p12
+*.pfx
+
+# Generated data, models, and local environments
+/storage/
+.venv/
+venv/
+.cache/
+.huggingface/
+models/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Airflow and data-engine runtime artifacts
+airflow.cfg
+airflow.db*
+*.db
+*.db-shm
+*.db-wal
+*.sqlite*
+*.pid
+simple_auth_manager_passwords.json*
+/logs/
+_delta_log/
+*.parquet
+chroma.sqlite3*
+/chroma/
+/chroma_data/
+/delta/
+
+# Editor and operating-system caches
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store

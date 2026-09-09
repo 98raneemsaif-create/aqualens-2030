@@ -1,0 +1,9 @@
+Started UTC: 2026-09-08T17:20:30.357250+00:00
+Command argv: ["docker", "system", "df"]
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          4         2         6.97GB    3.064GB (43%)
+Containers      2         1         213kB     4.096kB (1%)
+Local Volumes   3         3         21MB      0B (0%)
+Build Cache     29        0         3.738GB   53.25kB
+Exit code: 0
+Finished UTC: 2026-09-08T17:20:30.752136+00:00
