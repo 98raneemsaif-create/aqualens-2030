@@ -441,6 +441,18 @@ The repository preserves both successful and intentionally failing execution pat
 
 ---
 
+## Final verification evidence
+
+The repository includes explicit execution evidence for the final review:
+
+- **Executed notebook with captured outputs:** [`notebooks/aqualens_2030_colab_demo.ipynb`](notebooks/aqualens_2030_colab_demo.ipynb)
+- **Delta schema-enforcement proof:** [`docs/evidence/phase_c/schema_enforcement_proof_final.json`](docs/evidence/phase_c/schema_enforcement_proof_final.json)
+- **Final Airflow success + OpenLineage retry timeline:** [`docs/evidence/phase_e/final_success_verification.json`](docs/evidence/phase_e/final_success_verification.json)
+
+The final Airflow success run completed all **9/9 tasks successfully**. The grounded-answer task experienced three transient Gemini failures before a successful fourth attempt; the retained OpenLineage history records the earlier `FAIL` events and the final `COMPLETE` event.
+
+---
+
 ## Scope and limitations
 
 AquaLens is a capstone / production-simulated local data platform, not a production Saudi water-management service.
