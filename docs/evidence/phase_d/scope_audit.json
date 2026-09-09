@@ -1,0 +1,39 @@
+{
+  "protected_files_unchanged": [
+    "AGENTS.md",
+    "docs/rubric_matrix.md",
+    "data/source/water_distribution_urban_saudi.csv",
+    "docker-compose.yml",
+    "docs/evidence/phase_b/commands.json",
+    "docs/evidence/phase_b/isolation_audit.json",
+    "docs/evidence/phase_b/kafka_logs.log",
+    "docs/evidence/phase_b/quarantine_verification_final.log",
+    "docs/evidence/phase_b/scope_audit.json",
+    "docs/evidence/phase_b/service_status.log",
+    "docs/evidence/phase_b/topic_details.log",
+    "docs/evidence/phase_b/topic_list.log",
+    "docs/evidence/phase_b/unit_tests.log",
+    "docs/evidence/phase_b/unit_tests_final.log",
+    "docs/evidence/phase_b/isolation/consumer.log",
+    "docs/evidence/phase_b/isolation/producer.log",
+    "docs/evidence/phase_b/isolation/quarantine_verification.log",
+    "docs/evidence/phase_b/isolation/summary.json",
+    "docs/evidence/phase_b/proof/consumer.log",
+    "docs/evidence/phase_b/proof/producer.log",
+    "docs/evidence/phase_b/proof/quarantine_verification.log",
+    "docs/evidence/phase_b/proof/summary.json",
+    "docs/evidence/phase_c/execution.log",
+    "docs/evidence/phase_c/execution_final.log",
+    "docs/evidence/phase_c/scope_audit.json",
+    "docs/evidence/phase_c/service_status.log",
+    "docs/evidence/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/results.json",
+    "docs/evidence/phase_c/ccf12138-71d7-4352-b417-42891742af09/results.json"
+  ],
+  "only_added_pin": "pypdf==6.17.0",
+  "pdf_hashes": {
+    "rag/sources/gastat_methodology.pdf": "1ccafbd53efac42a1f8e116b4e46e848c7791a67051c547df69b63cf13b8867a",
+    "rag/sources/mewa_strategy.pdf": "4abe289ef6c5053d0d819c33e89f3af82f81356e241ec893b20bfc95e31db71c"
+  },
+  "rubric_rows_advanced": 0,
+  "git_revision": "6f089e940f9af225b6e6a49d6b85588a03545ac4"
+}

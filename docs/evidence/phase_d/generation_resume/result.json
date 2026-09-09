@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "queries": 3,
+  "model": "gemini-3.5-flash",
+  "corpus_unchanged": true,
+  "corpus_before_sha256": "4cebeddc22c3aa2d8c1d6359b5dfc381658ed123587ab42d9a8e6d804611357a",
+  "corpus_after_sha256": "4cebeddc22c3aa2d8c1d6359b5dfc381658ed123587ab42d9a8e6d804611357a"
+}

@@ -1,0 +1,5 @@
+Started UTC: 2026-09-09T11:41:21.772320+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "tests/verify_phase_d_retrieval.py", "docs/evidence/phase_d/402947a2-1f21-445a-82a0-e0e3e4be3b70"]
+{"result": "PASS", "separate_process_persistence": true, "stored_chunks": 445, "embedding_shape": [445, 384], "unit_norm": true, "metadata_matches": true, "dense_results": 8, "bm25_results": 8, "rrf_independently_recomputed": true, "cross_encoder_order_verified": true, "final_evidence_chunks": 4, "grounded_answer_verified": false, "citations_verified": false}
+Exit code: 0
+Finished UTC: 2026-09-09T11:41:24.345613+00:00

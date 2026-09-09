@@ -1,0 +1,5 @@
+Started UTC: 2026-09-09T07:37:18.161414+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-c", "import os,importlib.util,shutil,json; print(json.dumps({'gemini_key_present':bool(os.environ.get('GEMINI_API_KEY','').strip()),'pdf_modules':{n:importlib.util.find_spec(n) is not None for n in ['pypdf','PyPDF2','pdfplumber','fitz','pdfminer','pypdfium2','pikepdf']},'pdf_tools':{n:shutil.which(n) for n in ['pdftotext','mutool','gs']}}))"]
+{"gemini_key_present": true, "pdf_modules": {"pypdf": false, "PyPDF2": false, "pdfplumber": false, "fitz": false, "pdfminer": false, "pypdfium2": false, "pikepdf": false}, "pdf_tools": {"pdftotext": null, "mutool": null, "gs": null}}
+Exit code: 0
+Finished UTC: 2026-09-09T07:37:18.661330+00:00

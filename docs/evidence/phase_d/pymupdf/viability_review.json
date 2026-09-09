@@ -1,0 +1,65 @@
+{
+  "decision": "PASS for narrative strategic context only",
+  "selected_mode": "page.get_text(\"text\"), sort=False",
+  "source_identity": "Physical PDF page index; original SHA-256 verified",
+  "normalization": "NFKC, tatweel removal and whitespace only; no reversal, OCR, AI reconstruction, or merged parser outputs",
+  "exclusions": "Numeric-bearing, short/non-prose, replacement/question-mark, and Latin-contaminated MEWA lines split contiguous runs; runs under 100 characters excluded. No quantitative claims from MEWA. All raw pages preserved.",
+  "reviewed_pages": [
+    6,
+    14,
+    15,
+    16,
+    17,
+    30,
+    50,
+    70,
+    90,
+    110,
+    124
+  ],
+  "modes": [
+    {
+      "mode": "text",
+      "nonempty_pages": 122,
+      "characters": 202944,
+      "errors": [],
+      "narrative_readability": "Readable sentence/argument order; minor ligature artifacts and moved diacritics remain but strategic meaning recoverable without reconstructing prose.",
+      "numeric_table_readability": "Not reliable for quantitative retrieval; excluded rather than repaired.",
+      "page_identity_traceable": true
+    },
+    {
+      "mode": "sorted",
+      "nonempty_pages": 122,
+      "characters": 405497,
+      "errors": [],
+      "narrative_readability": "FAIL: fragmented/reversed Arabic word or character ordering.",
+      "numeric_table_readability": "Not reliable for quantitative retrieval; excluded rather than repaired.",
+      "page_identity_traceable": true
+    },
+    {
+      "mode": "layout",
+      "nonempty_pages": 119,
+      "characters": 443782,
+      "errors": [
+        {
+          "page": 11,
+          "exit_code": 1,
+          "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1153, in <module>\n    main()\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1149, in main\n    args.func(args)  # execute requested command\n    ^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 828, in gettext\n    func[args.mode](\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 799, in page_layout\n    text = make_textline(left, slot, minslots[k], lines[k])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 703, in make_textline\n    raise RuntimeError(f\"program error: minslot too small = {minslot:g}\")\nRuntimeError: program error: minslot too small = 0\n"
+        },
+        {
+          "page": 19,
+          "exit_code": 1,
+          "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1153, in <module>\n    main()\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1149, in main\n    args.func(args)  # execute requested command\n    ^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 828, in gettext\n    func[args.mode](\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 799, in page_layout\n    text = make_textline(left, slot, minslots[k], lines[k])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 703, in make_textline\n    raise RuntimeError(f\"program error: minslot too small = {minslot:g}\")\nRuntimeError: program error: minslot too small = 0\n"
+        },
+        {
+          "page": 56,
+          "exit_code": 1,
+          "stderr": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1153, in <module>\n    main()\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 1149, in main\n    args.func(args)  # execute requested command\n    ^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 828, in gettext\n    func[args.mode](\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 799, in page_layout\n    text = make_textline(left, slot, minslots[k], lines[k])\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/opt/aqualens/venv/lib/python3.11/site-packages/pymupdf/__main__.py\", line 703, in make_textline\n    raise RuntimeError(f\"program error: minslot too small = {minslot:g}\")\nRuntimeError: program error: minslot too small = 0\n"
+        }
+      ],
+      "narrative_readability": "FAIL: fragmented/reversed Arabic word or character ordering.",
+      "numeric_table_readability": "Not reliable for quantitative retrieval; excluded rather than repaired.",
+      "page_identity_traceable": true
+    }
+  ]
+}

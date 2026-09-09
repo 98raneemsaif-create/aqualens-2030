@@ -1,0 +1,11 @@
+Started UTC: 2026-09-09T11:52:19.638726+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "tests/test_rag.py", "RagTests.test_citations_reject_unknown_and_missing", "RagTests.test_grounding_and_empty_context", "-v"]
+test_citations_reject_unknown_and_missing (__main__.RagTests.test_citations_reject_unknown_and_missing) ... ok
+test_grounding_and_empty_context (__main__.RagTests.test_grounding_and_empty_context) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.000s
+
+OK
+Exit code: 0
+Finished UTC: 2026-09-09T11:52:33.683180+00:00

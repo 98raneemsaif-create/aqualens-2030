@@ -1,6 +1,6 @@
 # Frozen runtime installation
 
-`runtime.in` records direct project pins. `runtime.lock` is the complete 195-package Linux/Python 3.11 inventory from the approved preflight. `airflow-3.3.1-python3.11.constraints.txt` is the unmodified official Airflow constraints snapshot from:
+`runtime.in` records direct project pins. `runtime.lock` is the complete 197-package Linux/Python 3.11 inventory: the original 195-package preflight plus the explicitly approved Phase D amendments `pypdf==6.17.0` and `PyMuPDF==1.28.2` for deterministic official PDF extraction only. All previous pins remain unchanged. PyMuPDF is the second narrowly approved extraction remedy for the preserved MEWA PDF. No OCR, fontTools, pymupdf-layout, or further parser is approved. `airflow-3.3.1-python3.11.constraints.txt` is the unmodified official Airflow constraints snapshot from:
 
 https://raw.githubusercontent.com/apache/airflow/constraints-3.3.1/constraints-3.11.txt
 

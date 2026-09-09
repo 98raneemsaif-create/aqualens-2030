@@ -1,0 +1,41 @@
+Started UTC: 2026-09-09T07:40:50.782365+00:00
+Command argv: ["docker", "compose", "--progress", "plain", "build", "airflow"]
+ Image aqualens2030-airflow:phase-a Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 581B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile: 1.12kB 0.1s done
+#2 DONE 0.1s
+
+#3 [internal] load metadata for docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#3 DONE 2.1s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 171B 0.0s done
+#4 DONE 0.1s
+
+#5 [1/7] FROM docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f
+#5 resolve docker.io/apache/airflow:3.3.1-python3.11@sha256:efff0a36fb367437fb45ae61f1139fce2a0df255ca9d4ef357e02783e845170f 0.0s done
+#5 DONE 0.1s
+
+#6 [internal] load build context
+#6 transferring context: 6.92kB done
+#6 DONE 0.0s
+
+#7 [2/7] RUN mkdir -p /opt/aqualens /opt/airflow/runtime     && chown airflow:root /opt/aqualens /opt/airflow/runtime
+#7 CACHED
+
+#8 [3/7] RUN python -m venv /opt/aqualens/venv
+#8 CACHED
+
+#9 [4/7] COPY --chown=airflow:root requirements/ /opt/aqualens/requirements/
+#9 DONE 0.2s
+
+#10 [5/7] RUN python -m pip install --no-cache-dir --no-deps     --index-url https://download.pytorch.org/whl/cpu 'torch==2.14.0+cpu'
+#10 1.664 Looking in indexes: https://download.pytorch.org/whl/cpu
+#10 2.711 Collecting torch==2.14.0+cpu
+#10 3.754   Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (37 kB)
+#10 4.002 Downloading https://download-r2.pytorch.org/whl/cpu/torch-2.14.0%2Bcpu-cp311-cp311-manylinux_2_28_x86_64.whl (196.2 MB)
+#10 26.36    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.2/196.2 MB 8.6 MB/s eta 0:00:00

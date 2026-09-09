@@ -1,0 +1,252 @@
+{
+  "query": "What is the approved water tariff for a permanent colony on Mars in 2045?",
+  "dense": [
+    {
+      "chunk_id": "642d25b1f2d61309c86c8a670c737cd484b130e6394fe00d80cd3a5373d576b3",
+      "distance": 0.20780152082443237,
+      "rank": 1
+    },
+    {
+      "chunk_id": "5e32f2b1de835a81e39fffed4ba602b51d0048aaf8458aeefe0fc5a4ebd8ac40",
+      "distance": 0.20836520195007324,
+      "rank": 2
+    },
+    {
+      "chunk_id": "4555ce49b5aa9a40f333d78810d49db669a8395cdfa2169f52d0df388e7475c1",
+      "distance": 0.20853042602539062,
+      "rank": 3
+    },
+    {
+      "chunk_id": "1ecc4e95a06f06bd2c8387d33e8e33fb91317147adcdb6f08eebdb4eb609cc99",
+      "distance": 0.20903289318084717,
+      "rank": 4
+    },
+    {
+      "chunk_id": "0db3193aa8c3f1fd5b34e2854ade2008ac9c1e4e39bdacaca99cca7dd34dc00a",
+      "distance": 0.2107892632484436,
+      "rank": 5
+    },
+    {
+      "chunk_id": "dee13963234bb5f6a469137b79909ef5fc6b0f8fe506102dd92f93e962b989a4",
+      "distance": 0.21123039722442627,
+      "rank": 6
+    },
+    {
+      "chunk_id": "8472500f192c941b3de11fb6ed3b2716e214b68359e6eefee4efc7ba294951f0",
+      "distance": 0.2113623023033142,
+      "rank": 7
+    },
+    {
+      "chunk_id": "5d2c112ff81d36636298ac5d9a01d2760a295a89d999f641cf0acc7b12cbff58",
+      "distance": 0.21282148361206055,
+      "rank": 8
+    }
+  ],
+  "bm25": [
+    {
+      "chunk_id": "670ab239f9e5df4b53bf3a6bb7a1956850132de95d57db6a97101e1e8280e83a",
+      "score": 19.408794245016804,
+      "rank": 1
+    },
+    {
+      "chunk_id": "b648e24728a9c873ffad62d113eaaf42e3902b42aa89e401fc2288c21be89675",
+      "score": 19.117419764729224,
+      "rank": 2
+    },
+    {
+      "chunk_id": "fa3d13034d6c4783634b31c0fe151cd99a86f5ac2accc8c8b8039563744f3ba1",
+      "score": 18.94946125036055,
+      "rank": 3
+    },
+    {
+      "chunk_id": "507e1a14aaf1b9fe546c1a28d80a815bcf2d93ec4d5ed0394874feb7139f58a5",
+      "score": 17.289185949802675,
+      "rank": 4
+    },
+    {
+      "chunk_id": "afddbb1ec9018e4440d2bdbc9174c6d32068bc5729c2eb85dcb96bfc78c6ce77",
+      "score": 17.164663951570073,
+      "rank": 5
+    },
+    {
+      "chunk_id": "682b17db18570f381ea9f8afbccac9c8537f3dbfd6d15dd6e0984b4eb507bca0",
+      "score": 17.136747255211457,
+      "rank": 6
+    },
+    {
+      "chunk_id": "e78b50451cf98005544d96089eb08ffdae55771b2adc1ad5f8d07e551f134c04",
+      "score": 17.022223747412653,
+      "rank": 7
+    },
+    {
+      "chunk_id": "e866c643a799bc7d4a94daa31b6896a0846844e0d49e1f400b852ddfae7000dc",
+      "score": 16.976662303822646,
+      "rank": 8
+    }
+  ],
+  "rrf_k": 60,
+  "fused": [
+    {
+      "chunk_id": "642d25b1f2d61309c86c8a670c737cd484b130e6394fe00d80cd3a5373d576b3",
+      "rrf_score": 0.01639344262295082
+    },
+    {
+      "chunk_id": "670ab239f9e5df4b53bf3a6bb7a1956850132de95d57db6a97101e1e8280e83a",
+      "rrf_score": 0.01639344262295082
+    },
+    {
+      "chunk_id": "5e32f2b1de835a81e39fffed4ba602b51d0048aaf8458aeefe0fc5a4ebd8ac40",
+      "rrf_score": 0.016129032258064516
+    },
+    {
+      "chunk_id": "b648e24728a9c873ffad62d113eaaf42e3902b42aa89e401fc2288c21be89675",
+      "rrf_score": 0.016129032258064516
+    },
+    {
+      "chunk_id": "4555ce49b5aa9a40f333d78810d49db669a8395cdfa2169f52d0df388e7475c1",
+      "rrf_score": 0.015873015873015872
+    },
+    {
+      "chunk_id": "fa3d13034d6c4783634b31c0fe151cd99a86f5ac2accc8c8b8039563744f3ba1",
+      "rrf_score": 0.015873015873015872
+    },
+    {
+      "chunk_id": "1ecc4e95a06f06bd2c8387d33e8e33fb91317147adcdb6f08eebdb4eb609cc99",
+      "rrf_score": 0.015625
+    },
+    {
+      "chunk_id": "507e1a14aaf1b9fe546c1a28d80a815bcf2d93ec4d5ed0394874feb7139f58a5",
+      "rrf_score": 0.015625
+    },
+    {
+      "chunk_id": "0db3193aa8c3f1fd5b34e2854ade2008ac9c1e4e39bdacaca99cca7dd34dc00a",
+      "rrf_score": 0.015384615384615385
+    },
+    {
+      "chunk_id": "afddbb1ec9018e4440d2bdbc9174c6d32068bc5729c2eb85dcb96bfc78c6ce77",
+      "rrf_score": 0.015384615384615385
+    }
+  ],
+  "reranked": [
+    {
+      "chunk_id": "1ecc4e95a06f06bd2c8387d33e8e33fb91317147adcdb6f08eebdb4eb609cc99",
+      "rrf_score": 0.015625,
+      "cross_encoder_score": -5.813050746917725
+    },
+    {
+      "chunk_id": "4555ce49b5aa9a40f333d78810d49db669a8395cdfa2169f52d0df388e7475c1",
+      "rrf_score": 0.015873015873015872,
+      "cross_encoder_score": -8.085416793823242
+    },
+    {
+      "chunk_id": "642d25b1f2d61309c86c8a670c737cd484b130e6394fe00d80cd3a5373d576b3",
+      "rrf_score": 0.01639344262295082,
+      "cross_encoder_score": -8.728267669677734
+    },
+    {
+      "chunk_id": "0db3193aa8c3f1fd5b34e2854ade2008ac9c1e4e39bdacaca99cca7dd34dc00a",
+      "rrf_score": 0.015384615384615385,
+      "cross_encoder_score": -8.84856128692627
+    },
+    {
+      "chunk_id": "5e32f2b1de835a81e39fffed4ba602b51d0048aaf8458aeefe0fc5a4ebd8ac40",
+      "rrf_score": 0.016129032258064516,
+      "cross_encoder_score": -9.010456085205078
+    },
+    {
+      "chunk_id": "670ab239f9e5df4b53bf3a6bb7a1956850132de95d57db6a97101e1e8280e83a",
+      "rrf_score": 0.01639344262295082,
+      "cross_encoder_score": -9.120369911193848
+    },
+    {
+      "chunk_id": "507e1a14aaf1b9fe546c1a28d80a815bcf2d93ec4d5ed0394874feb7139f58a5",
+      "rrf_score": 0.015625,
+      "cross_encoder_score": -9.166682243347168
+    },
+    {
+      "chunk_id": "afddbb1ec9018e4440d2bdbc9174c6d32068bc5729c2eb85dcb96bfc78c6ce77",
+      "rrf_score": 0.015384615384615385,
+      "cross_encoder_score": -9.535579681396484
+    },
+    {
+      "chunk_id": "b648e24728a9c873ffad62d113eaaf42e3902b42aa89e401fc2288c21be89675",
+      "rrf_score": 0.016129032258064516,
+      "cross_encoder_score": -9.553192138671875
+    },
+    {
+      "chunk_id": "fa3d13034d6c4783634b31c0fe151cd99a86f5ac2accc8c8b8039563744f3ba1",
+      "rrf_score": 0.015873015873015872,
+      "cross_encoder_score": -9.728065490722656
+    }
+  ],
+  "final_chunks": [
+    {
+      "chunk_id": "1ecc4e95a06f06bd2c8387d33e8e33fb91317147adcdb6f08eebdb4eb609cc99",
+      "text": ".(الحصول على تأييد وموافقة كافة الجهات المعنية في إصدار الأنظمة والتراخيص والقوانني )إدارة الموارد المائية",
+      "metadata": {
+        "title": "National Water Strategy 2030",
+        "organization": "MEWA",
+        "page": 103,
+        "canonical_url": "https://www.mewa.gov.sa/ar/Ministry/Agencies/TheWaterAgency/Topics/PublishingImages/Pages/Strategy/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9%20%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D9%8A%D8%A7%D9%87%20%D9%A2%D9%A0%D9%A3%D9%A0.pdf",
+        "language": "ar",
+        "source_sha256": "4abe289ef6c5053d0d819c33e89f3af82f81356e241ec893b20bfc95e31db71c",
+        "source_id": "mewa_strategy",
+        "extraction_method": "PyMuPDF-1.28.2/text-unsorted/narrative-only",
+        "first_line": 27,
+        "last_line": 27,
+        "run_offset": 0
+      }
+    },
+    {
+      "chunk_id": "4555ce49b5aa9a40f333d78810d49db669a8395cdfa2169f52d0df388e7475c1",
+      "text": "9 include all natural biological resources (including timber and aquatic resources), mineral and energy resources, soil resources and water resources. • Non-renewable groundwater: aquifers and springs that are not recharged. • Physical flows: Are reflected in the movement and use of materials, water and energy. • Renewable groundwater: water removed by economic units from aquifers and springs that are naturally recharged. • Return flows of water: comprise water that is returned to the environment. • Reused water: is wastewater supplied to a user for further use with or without prior treatment, excluding the reuse (or recycling) of water within economic units. • Soil water: consists of water suspended in the uppermost belt of soil, or in the zone of aeration near the ground surface. •",
+      "metadata": {
+        "title": "Methodology and Quality Report of Water Accounts",
+        "organization": "GASTAT",
+        "page": 9,
+        "canonical_url": "https://www.stats.gov.sa/documents/20117/2435133/Methodology%2Band%2BQuality%2BReport%2Bof%2BWater%2BAccounts_EN.pdf/223b46cb-b870-b8dd-0c0d-a732f295f600",
+        "language": "en",
+        "source_sha256": "1ccafbd53efac42a1f8e116b4e46e848c7791a67051c547df69b63cf13b8867a",
+        "source_id": "gastat_methodology",
+        "extraction_method": "pypdf-6.17.0/plain",
+        "first_line": 1,
+        "last_line": 32,
+        "run_offset": 0
+      }
+    },
+    {
+      "chunk_id": "642d25b1f2d61309c86c8a670c737cd484b130e6394fe00d80cd3a5373d576b3",
+      "text": "20 − (How much economic activity spends on water use/total expenditure of economic activities and households) * Government expenditure • The amount of water used in the industrial sector outside urban areas was distributed among economic activities (minerals and quarrying, manufacturing industries, construction, electricity, gas and steam supply) using a factor that was calculated from the monetary use tables and applied to distribute the physical water use as follows: − Example: monetary factor for minerals and quarrying = (monetary use of minerals and quarrying/Sum of monetary use of minerals and quarrying, manufacturing, construction, electricity, gas and steam supply). − Then, the distribution of physical used water for minerals and quarrying sector = monetary factor * total water",
+      "metadata": {
+        "title": "Methodology and Quality Report of Water Accounts",
+        "organization": "GASTAT",
+        "page": 20,
+        "canonical_url": "https://www.stats.gov.sa/documents/20117/2435133/Methodology%2Band%2BQuality%2BReport%2Bof%2BWater%2BAccounts_EN.pdf/223b46cb-b870-b8dd-0c0d-a732f295f600",
+        "language": "en",
+        "source_sha256": "1ccafbd53efac42a1f8e116b4e46e848c7791a67051c547df69b63cf13b8867a",
+        "source_id": "gastat_methodology",
+        "extraction_method": "pypdf-6.17.0/plain",
+        "first_line": 1,
+        "last_line": 34,
+        "run_offset": 0
+      }
+    },
+    {
+      "chunk_id": "0db3193aa8c3f1fd5b34e2854ade2008ac9c1e4e39bdacaca99cca7dd34dc00a",
+      "text": ".تحديد المستخدمني المحتملني لمياه الصرف الصحي المعالجة في القطاعات الزراعية والصناعية، وسقي المساحات الخضراء",
+      "metadata": {
+        "title": "National Water Strategy 2030",
+        "organization": "MEWA",
+        "page": 88,
+        "canonical_url": "https://www.mewa.gov.sa/ar/Ministry/Agencies/TheWaterAgency/Topics/PublishingImages/Pages/Strategy/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9%20%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D9%8A%D8%A7%D9%87%20%D9%A2%D9%A0%D9%A3%D9%A0.pdf",
+        "language": "ar",
+        "source_sha256": "4abe289ef6c5053d0d819c33e89f3af82f81356e241ec893b20bfc95e31db71c",
+        "source_id": "mewa_strategy",
+        "extraction_method": "PyMuPDF-1.28.2/text-unsorted/narrative-only",
+        "first_line": 44,
+        "last_line": 44,
+        "run_offset": 0
+      }
+    }
+  ]
+}

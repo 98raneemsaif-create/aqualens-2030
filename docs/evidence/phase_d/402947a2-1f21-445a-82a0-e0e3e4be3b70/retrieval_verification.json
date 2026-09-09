@@ -1,0 +1,18 @@
+{
+  "result": "PASS",
+  "separate_process_persistence": true,
+  "stored_chunks": 445,
+  "embedding_shape": [
+    445,
+    384
+  ],
+  "unit_norm": true,
+  "metadata_matches": true,
+  "dense_results": 8,
+  "bm25_results": 8,
+  "rrf_independently_recomputed": true,
+  "cross_encoder_order_verified": true,
+  "final_evidence_chunks": 4,
+  "grounded_answer_verified": false,
+  "citations_verified": false
+}

@@ -1,0 +1,7 @@
+Started UTC: 2026-09-09T11:50:13.413756+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "tests/diagnose_gemini.py"]
+{"GEMINI_API_KEY_present": true, "GOOGLE_API_KEY_present": false, "GOOGLE_GENAI_USE_VERTEXAI_present": false, "GOOGLE_GENAI_USE_ENTERPRISE_present": false, "GOOGLE_GEMINI_BASE_URL_present": false, "GOOGLE_VERTEX_BASE_URL_present": false, "GOOGLE_GENAI_USE_VERTEXAI_enabled": false, "GOOGLE_GENAI_USE_ENTERPRISE_enabled": false}
+{"model": "gemini-2.5-flash", "success": false, "http_status": 404, "error_class": "ClientError"}
+{"model": "gemini-3.5-flash", "success": true, "http_status": 200, "response_is_ok": true}
+Exit code: 0
+Finished UTC: 2026-09-09T11:50:27.076604+00:00

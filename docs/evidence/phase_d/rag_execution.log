@@ -1,0 +1,29 @@
+Started UTC: 2026-09-09T11:38:23.705152+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "src.rag.pipeline"]
+Phase D proof: 402947a2-1f21-445a-82a0-e0e3e4be3b70
+[{"source_id": "mewa_strategy", "total_pages": 125, "nonempty_pages": 122, "chunks": 391, "method": "PyMuPDF-1.28.2/text-unsorted/narrative-only"}, {"source_id": "gastat_methodology", "total_pages": 20, "nonempty_pages": 20, "chunks": 54, "method": "pypdf-6.17.0/plain"}]
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  35%|███▍      | 69/199 [00:00<00:00, 683.57it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 1176.40it/s]
+The Transformer `cache_dir` argument is deprecated. Please pass `cache_dir` via `model_kwargs`, `processor_kwargs`, and/or `config_kwargs` instead.
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]
+Loading weights:  13%|█▎        | 26/201 [00:00<00:00, 259.16it/s]
+Loading weights:  42%|████▏     | 84/201 [00:00<00:00, 378.10it/s]
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 638.87it/s]
+Real Chroma collection indexed: 445 normalized 384-dimensional vectors
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "/opt/airflow/src/rag/pipeline.py", line 60, in <module>
+    main()
+  File "/opt/airflow/src/rag/pipeline.py", line 49, in main
+    answer = generate(query,result['final_chunks'])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/rag/generation.py", line 67, in generate
+    raise RuntimeError(f"Gemini execution failed; HTTP status {code if isinstance(code,int) else 'unknown'}") from None
+RuntimeError: Gemini execution failed; HTTP status 404
+Exit code: 1
+Finished UTC: 2026-09-09T11:40:33.141201+00:00

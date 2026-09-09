@@ -1,0 +1,42 @@
+{
+  "embedding_model": "intfloat/multilingual-e5-small",
+  "embedding_revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+  "reranker_model": "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1",
+  "reranker_revision": "1427fd652930e4ba29e8149678df786c240d8825",
+  "device": "cpu",
+  "dimension": 384,
+  "normalized": true,
+  "collection": "aqualens_official_docs",
+  "count": 445,
+  "path": "storage/rag/402947a2-1f21-445a-82a0-e0e3e4be3b70/chroma",
+  "sample": {
+    "ids": [
+      "d13614b84e630a0b78e2fb68107d82beaf9f71ef5949ba27e20c35be17432000"
+    ],
+    "embeddings": null,
+    "documents": [
+      "أن أعبر عن بالغ شكري وامتناين لخادم الحرمني الشريفني الملك سلامن- بادئ ذي بدء- يطيب لي بن عبد العزيز آل سعود، ولصاحب السمو المليك الأمري محمد بن سلامن بن عبد العزيز ولي العهد نائب رئيس مجلس الوزراء وزير الدفاع ورئيس مجلس الشؤون الاقتصادية والتنمية، يحفظهام الله؛"
+    ],
+    "uris": null,
+    "included": [
+      "metadatas",
+      "documents"
+    ],
+    "data": null,
+    "metadatas": [
+      {
+        "canonical_url": "https://www.mewa.gov.sa/ar/Ministry/Agencies/TheWaterAgency/Topics/PublishingImages/Pages/Strategy/%D8%A7%D9%84%D8%A7%D8%B3%D8%AA%D8%B1%D8%A7%D8%AA%D9%8A%D8%AC%D9%8A%D8%A9%20%D8%A7%D9%84%D9%88%D8%B7%D9%86%D9%8A%D8%A9%20%D9%84%D9%84%D9%85%D9%8A%D8%A7%D9%87%20%D9%A2%D9%A0%D9%A3%D9%A0.pdf",
+        "source_sha256": "4abe289ef6c5053d0d819c33e89f3af82f81356e241ec893b20bfc95e31db71c",
+        "organization": "MEWA",
+        "last_line": 3,
+        "extraction_method": "PyMuPDF-1.28.2/text-unsorted/narrative-only",
+        "page": 6,
+        "language": "ar",
+        "run_offset": 0,
+        "title": "National Water Strategy 2030",
+        "source_id": "mewa_strategy",
+        "first_line": 1
+      }
+    ]
+  }
+}

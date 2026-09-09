@@ -1,0 +1,14 @@
+Started UTC: 2026-09-09T11:30:26.237732+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "tests/phase_d_pymupdf_gate.py"]
+{"mode": "text", "total_pages": 125, "nonempty_pages": 122, "characters": 202944}
+{"mode": "sorted", "total_pages": 125, "nonempty_pages": 122, "characters": 405497}
+Traceback (most recent call last):
+  File "/opt/airflow/tests/phase_d_pymupdf_gate.py", line 47, in <module>
+    main()
+  File "/opt/airflow/tests/phase_d_pymupdf_gate.py", line 27, in main
+    subprocess.run([sys.executable, "-m", "pymupdf", "gettext", str(pdf),
+  File "/usr/python/lib/python3.11/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/opt/aqualens/venv/bin/python', '-m', 'pymupdf', 'gettext', 'rag/sources/mewa_strategy.pdf', '-mode', 'layout', '-pages', '11', '-output', 'docs/evidence/phase_d/pymupdf/layout_page.txt']' returned non-zero exit status 1.
+Exit code: 1
+Finished UTC: 2026-09-09T11:30:43.137310+00:00

@@ -1,0 +1,6 @@
+Started UTC: 2026-09-09T11:40:02.311966+00:00
+Command argv: ["docker", "stats", "--no-stream"]
+CONTAINER ID   NAME                     CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O        PIDS
+deb10cf6602e   aqualens2030-airflow-1   95.65%    2.39GiB / 5GiB      47.80%    857MB / 19.7MB   129MB / 4.91MB   39
+Exit code: 0
+Finished UTC: 2026-09-09T11:40:03.454444+00:00

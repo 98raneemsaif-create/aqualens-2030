@@ -1,0 +1,8 @@
+Started UTC: 2026-09-09T10:16:52.795049+00:00
+Command argv: ["docker", "compose", "up", "-d", "--no-deps", "--no-build", "airflow"]
+ Container aqualens2030-airflow-1 Recreate 
+ Container aqualens2030-airflow-1 Recreated 
+ Container aqualens2030-airflow-1 Starting 
+ Container aqualens2030-airflow-1 Started 
+Exit code: 0
+Finished UTC: 2026-09-09T10:16:59.123540+00:00

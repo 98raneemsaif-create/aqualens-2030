@@ -1,0 +1,20 @@
+Started UTC: 2026-09-09T11:51:38.680146+00:00
+Command argv: ["docker", "compose", "exec", "-T", "-e", "HF_HUB_OFFLINE=1", "airflow", "python", "tests/resume_rag_generation.py"]
+
+Loading weights:   0%|          | 0/199 [00:00<?, ?it/s]
+Loading weights:  24%|██▎       | 47/199 [00:00<00:00, 458.56it/s]
+Loading weights:  47%|████▋     | 93/199 [00:00<00:00, 412.12it/s]
+Loading weights:  68%|██████▊   | 135/199 [00:00<00:00, 356.73it/s]
+Loading weights: 100%|██████████| 199/199 [00:00<00:00, 488.63it/s]
+The Transformer `cache_dir` argument is deprecated. Please pass `cache_dir` via `model_kwargs`, `processor_kwargs`, and/or `config_kwargs` instead.
+
+Loading weights:   0%|          | 0/201 [00:00<?, ?it/s]
+Loading weights:  26%|██▌       | 52/201 [00:00<00:00, 515.33it/s]
+Loading weights:  53%|█████▎    | 107/201 [00:00<00:00, 525.52it/s]
+Loading weights: 100%|██████████| 201/201 [00:00<00:00, 678.97it/s]
+Query 1: generation succeeded; citations=3; insufficient=False
+Query 2: generation succeeded; citations=4; insufficient=False
+Query 3: generation succeeded; citations=0; insufficient=True
+Generation and citation execution PASS; manual claim-support review still required.
+Exit code: 0
+Finished UTC: 2026-09-09T11:53:19.510246+00:00

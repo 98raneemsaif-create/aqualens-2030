@@ -1,0 +1,9 @@
+{
+  "previous_proof": "docs/evidence/phase_d/402947a2-1f21-445a-82a0-e0e3e4be3b70",
+  "collection_path": "storage/rag/402947a2-1f21-445a-82a0-e0e3e4be3b70/chroma",
+  "chunk_count": 445,
+  "model": "gemini-3.5-flash",
+  "corpus_before_sha256": "4cebeddc22c3aa2d8c1d6359b5dfc381658ed123587ab42d9a8e6d804611357a",
+  "cached_models_only": true,
+  "reindexed": false
+}

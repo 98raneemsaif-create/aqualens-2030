@@ -1,0 +1,99 @@
+{
+  "review_method": "Manual comparison of every generated statement with the exact supplied final chunks",
+  "result": "PASS",
+  "queries": [
+    {
+      "query": 1,
+      "language": "Arabic",
+      "language_matches": true,
+      "citations_resolve": true,
+      "unsupported_claims_found": false,
+      "concentration_risk_inference": false,
+      "review": "Four statements supported by MEWA pages 13 (five dimensions and demand assessment), 63 (sustainable resources/environment vision), and 69 (legislation and conservation).",
+      "statements": [
+        {
+          "text": "تتم صياغة أهداف قطاع المياه والصرف الصحي في خمسة أبعاد رئيسة تشمل الاستدامة البيئية، وأمن الإمداد، والجودة والتميز في خدمة العملاء، والاستدامة الاقتصادية، وإدارة التكاليف.",
+          "chunk_ids": [
+            "72b76f4e405dff91b7a2c6a424692127c14ce1e88a697976e92803b8ee388015"
+          ]
+        },
+        {
+          "text": "تتضمن مقومات إعداد الاستراتيجية تقييم الطلب على المياه ووضع مقاييس إدارة الطلب المحتملة.",
+          "chunk_ids": [
+            "72b76f4e405dff91b7a2c6a424692127c14ce1e88a697976e92803b8ee388015"
+          ]
+        },
+        {
+          "text": "ينص بيان الرؤية لقطاع المياه على تحقيق قطاع مياه مستدام ينمي الموارد المائية ويحافظ عليها ويصون البيئة.",
+          "chunk_ids": [
+            "f5b5a91a545d0a39604bf8da2ae9651fff986938baafb1496fc2c5e5596ddd4f"
+          ]
+        },
+        {
+          "text": "تهدف مبادرات تطوير اللوائح والتراخيص إلى إعداد التشريعات والقوانين الضرورية للمحافظة على الموارد المائية وتحقيق أكبر استفادة منها.",
+          "chunk_ids": [
+            "11ddccca3e8c20d224bbcc3e6bec994a086b5b585f1a66d0dba5f61881a4bda4"
+          ]
+        }
+      ]
+    },
+    {
+      "query": 2,
+      "language": "English",
+      "language_matches": true,
+      "citations_resolve": true,
+      "unsupported_claims_found": false,
+      "concentration_risk_inference": false,
+      "review": "Five statements supported by GASTAT pages 18 (data sources and named entities/surveys), 5 and 15 (administrative/survey basis), and 10 (publication reference area, 2021-2023 coverage, unit/population not applicable). These dates describe this publication, not the analytical 2024 CSV.",
+      "statements": [
+        {
+          "text": "The data sources for Saudi Arabia's water accounts include administrative records from government entities as well as censuses and statistical surveys conducted by the General Authority for Statistics.",
+          "chunk_ids": [
+            "27cde924a2226822308a5458d5b0ee4e3dd9387e850162d93cdd1f68cf3abdcc",
+            "8d97ce0361426301528117d7f17b0bdaa2f4151aa0c9e4a94214247139d7c9c3",
+            "90aaf196991098c9697608a7a07aa9959ac73ac296bcb1158fa60f719da286a3"
+          ]
+        },
+        {
+          "text": "Specific government data sources include the Ministry of Environment, Water and Agriculture, Saudi Water Authority, National Water Company, National Center for Meteorology, Marafiq Company, MODON, and the Saudi Water Partnership Company.",
+          "chunk_ids": [
+            "27cde924a2226822308a5458d5b0ee4e3dd9387e850162d93cdd1f68cf3abdcc"
+          ]
+        },
+        {
+          "text": "Specific surveys and censuses utilized are the General census of Population and Housing, National Accounts, Agricultural census, Waste and Water Economic Industrial Survey, and the Environment Household Survey.",
+          "chunk_ids": [
+            "27cde924a2226822308a5458d5b0ee4e3dd9387e850162d93cdd1f68cf3abdcc"
+          ]
+        },
+        {
+          "text": "In terms of statistical scope, the reference area is a representative sample for Saudi Arabia, with time coverage spanning the years 2021, 2022, and 2023.",
+          "chunk_ids": [
+            "5d2c112ff81d36636298ac5d9a01d2760a295a89d999f641cf0acc7b12cbff58"
+          ]
+        },
+        {
+          "text": "The statistical unit and statistical population are both classified as not applicable for the water accounts.",
+          "chunk_ids": [
+            "5d2c112ff81d36636298ac5d9a01d2760a295a89d999f641cf0acc7b12cbff58"
+          ]
+        }
+      ]
+    },
+    {
+      "query": 3,
+      "language": "English",
+      "language_matches": true,
+      "citations_resolve": true,
+      "unsupported_claims_found": false,
+      "concentration_risk_inference": false,
+      "review": "Model explicitly states context lacks Mars, space-colony and 2045 tariff information; no invented tariff and no citations.",
+      "statements": [
+        {
+          "text": "The provided context contains no information about Mars, space colonies, or water tariffs for the year 2045.",
+          "chunk_ids": []
+        }
+      ]
+    }
+  ]
+}

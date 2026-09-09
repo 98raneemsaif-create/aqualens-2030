@@ -1,0 +1,16 @@
+Started UTC: 2026-09-09T11:39:15.659086+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_rag.py", "-v"]
+test_chunk_determinism_and_metadata (test_rag.RagTests.test_chunk_determinism_and_metadata) ... ok
+test_citations_reject_unknown_and_missing (test_rag.RagTests.test_citations_reject_unknown_and_missing) ... ok
+test_grounding_and_empty_context (test_rag.RagTests.test_grounding_and_empty_context) ... ok
+test_numeric_lines_are_not_stitched (test_rag.RagTests.test_numeric_lines_are_not_stitched) ... ok
+test_overlap (test_rag.RagTests.test_overlap) ... ok
+test_prefixes_and_arabic_tokens (test_rag.RagTests.test_prefixes_and_arabic_tokens) ... ok
+test_rrf (test_rag.RagTests.test_rrf) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 9.461s
+
+OK
+Exit code: 0
+Finished UTC: 2026-09-09T11:39:43.768291+00:00
