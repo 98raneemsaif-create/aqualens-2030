@@ -464,7 +464,7 @@ This capstone was completed under:
 
 - **Program:** Modern Data Engineering for AI Systems
 - **Provider:** [SDAIA Academy](https://github.com/SDAIAAcademy)
-- **Delivery:** Learning Space
+- **Delivery:** In-person, Riyadh
 - **Cohort/session dates:** 06 September 2026 – 10 September 2026
 
 ---
