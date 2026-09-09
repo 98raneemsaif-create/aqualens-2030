@@ -1,0 +1,27 @@
+aqualens-2030/
+├── dags/                         Airflow orchestration
+├── data/source/                  immutable analytical CSV
+├── docs/
+│   ├── evidence/                 curated real execution/submission evidence
+│   ├── architecture.md           final architecture documentation
+│   ├── configuration.md          final runtime/config documentation
+│   ├── rubric_matrix.md          requirement-to-evidence matrix
+│   └── phase_*_report.md         phase completion reports
+├── notebooks/                    Colab technical walkthrough
+├── rag/sources/                  official RAG source snapshots + metadata
+├── requirements/                 frozen Python runtime dependencies
+├── src/
+│   ├── common/
+│   ├── ingestion/
+│   ├── lakehouse/
+│   ├── quality/
+│   └── rag/
+├── tests/                        unit/integration/failure-proof code
+├── .env.example                  non-secret environment example
+├── .gitignore                    secrets/generated runtime exclusions
+├── Dockerfile
+├── docker-compose.yml
+└── README.md
+
+Assessment:
+PASS — repository responsibilities are separated coherently; generated runtime state is not mixed with committed source/evidence artifacts.

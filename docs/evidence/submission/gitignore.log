@@ -1,0 +1,21 @@
+AquaLens 2030 — Git ignore / secret-safety audit, 2026-09-09
+
+Command:
+git check-ignore .env storage\test.txt __pycache__\test.py
+
+Observed:
+.env
+storage\test.txt
+__pycache__\test.py
+
+Interpretation:
+PASS — local `.env`, generated `storage/`, and Python cache content are ignored.
+
+A local filesystem secret scan found:
+- the real Gemini key in local `.env` (expected local secret; ignored by Git);
+- `GEMINI_API_KEY=your_private_key_here` in README (documentation placeholder only).
+
+No actual Gemini API token or private-key block was found in the candidate documentation changes.
+
+Important:
+The local `.env` must remain untracked and unstaged. The final commit must not use `git add -f .env`.

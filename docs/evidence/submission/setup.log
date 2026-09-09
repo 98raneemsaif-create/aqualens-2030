@@ -1,0 +1,32 @@
+AquaLens 2030 — documentation/setup review, 2026-09-09
+
+Reviewed documented setup against the implemented runtime.
+
+Documented prerequisites:
+- Git
+- Docker Desktop / compatible Docker Engine
+- Docker Compose
+- internet access for initial image/model downloads
+- Gemini API key only for live grounded generation
+
+Documented runtime:
+- Kafka 4.2.1 KRaft service
+- Airflow 3.3.1 on Python 3.11
+- LocalExecutor
+- host Airflow default port 8080
+- host Kafka default port 9092
+- internal Kafka endpoint kafka:29092
+
+Documented commands:
+- git clone
+- optional .env creation
+- docker compose build airflow
+- docker compose up -d --wait --wait-timeout 300
+- docker compose ps
+- Airflow DAG unpause/trigger/state inspection
+- controlled quality-failure trigger via Airflow UI configuration
+- docker compose stop/down
+
+Runtime functionality was already proven in Phases A–E. Phase F does not rerun the full pipeline solely to rewrite documentation.
+
+Result: PASS — documented setup is aligned to the verified project runtime.

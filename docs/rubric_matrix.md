@@ -47,7 +47,7 @@ The named libraries, models, paths, append-only behavior, and particular busines
 
 ## Mandatory Submission & Documentation Requirements
 
-These requirements are mandatory under rubric sections 2.1–2.2 but have no separate allocation within the 100 scored points. Paths and proof remain planned. No publication or account action is performed by creating this matrix.
+These requirements are mandatory under rubric sections 2.1–2.2 but have no separate allocation within the 100 scored points. Phase F final submission evidence is captured under `docs/evidence/submission/`, and the statuses below reflect the completed verification.
 
 | Category | Rubric requirement | Category points | Planned implementation | Test / proof method | Planned evidence location | Status |
 | --- | --- | --- | --- | --- | --- | --- |

@@ -1,0 +1,32 @@
+AquaLens 2030 — usage documentation review, 2026-09-09
+
+Primary review paths documented in README:
+1. Full local Docker runtime.
+2. Google Colab portable technical walkthrough.
+
+Full pipeline DAG:
+aqualens_2030_pipeline
+
+Task order:
+produce_events
+consume_and_validate
+bronze_load
+silver_merge
+schema_enforcement_proof
+quality_gate
+gold_build
+rag_chunk_and_index
+rag_grounded_answer_smoke_test
+
+Controlled failure input:
+{"quality_failure_demo": true}
+
+Verified expected controlled result:
+quality_gate = failed
+gold_build = upstream_failed
+rag_chunk_and_index = upstream_failed
+rag_grounded_answer_smoke_test = upstream_failed
+
+The final Colab notebook was run successfully in Google Colab by the project author before Phase F finalization.
+
+Result: PASS — README explains how to execute and use both review paths.
