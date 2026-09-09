@@ -1,0 +1,978 @@
+{
+  "proof_id": "5f9e3c82-8804-4488-b183-f885a650c017",
+  "deltalake_version": "1.6.3",
+  "input": {
+    "run_id": "ea8464c0-722b-4c8a-a83c-252fff68ee33",
+    "path": "storage/ingestion/ea8464c0-722b-4c8a-a83c-252fff68ee33/accepted.jsonl",
+    "expected_count": 56,
+    "sha256": "4f3889080602b4616e2dfc61e5f92ce58f358033e051982570a98e905720d29a"
+  },
+  "bronze": {
+    "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/bronze/water_events",
+    "version": 0,
+    "count": 56,
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "year",
+          "type": "long",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "volume_m3",
+          "type": "double",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "run_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "event_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "record_kind",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    },
+    "history": [
+      {
+        "timestamp": 1788936949387,
+        "operation": "WRITE",
+        "operationParameters": {
+          "mode": "Append"
+        },
+        "engineInfo": "delta-rs:py-1.6.3",
+        "operationMetrics": {
+          "num_added_files": 1,
+          "num_removed_files": 0,
+          "num_partitions": 0,
+          "num_added_rows": 56,
+          "execution_time_ms": 27
+        },
+        "clientVersion": "delta-rs.py-1.6.3",
+        "version": 0
+      }
+    ],
+    "configuration": {
+      "delta.appendOnly": "true"
+    },
+    "delta_log_files": [
+      "00000000000000000000.json"
+    ]
+  },
+  "append_proof": {
+    "before": {
+      "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/append_only_test",
+      "version": 0,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936950590,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "clientVersion": "delta-rs.py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 18
+          },
+          "version": 0
+        }
+      ],
+      "configuration": {
+        "delta.appendOnly": "true"
+      },
+      "delta_log_files": [
+        "00000000000000000000.json"
+      ]
+    },
+    "after": {
+      "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/append_only_test",
+      "version": 1,
+      "count": 112,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936951026,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "clientVersion": "delta-rs.py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 16
+          },
+          "version": 1
+        },
+        {
+          "timestamp": 1788936950590,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 18
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 0
+        }
+      ],
+      "configuration": {
+        "delta.appendOnly": "true"
+      },
+      "delta_log_files": [
+        "00000000000000000000.json",
+        "00000000000000000001.json"
+      ]
+    }
+  },
+  "silver": {
+    "first_metrics": {
+      "num_source_rows": 56,
+      "num_target_rows_inserted": 56,
+      "num_target_rows_updated": 0,
+      "num_target_rows_deleted": 0,
+      "num_target_rows_copied": 0,
+      "num_output_rows": 56,
+      "num_target_files_scanned": 0,
+      "num_target_files_skipped_during_scan": 0,
+      "num_target_files_added": 1,
+      "num_target_files_removed": 0,
+      "execution_time_ms": 424,
+      "scan_time_ms": 51,
+      "rewrite_time_ms": 1
+    },
+    "first_state": {
+      "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/silver/water_distribution",
+      "version": 1,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936952830,
+          "operation": "MERGE",
+          "operationParameters": {
+            "mergePredicate": "target.year = incoming.year AND target.region = incoming.region AND target.source = incoming.source",
+            "matchedPredicates": "[{\"actionType\":\"update\"}]",
+            "notMatchedBySourcePredicates": "[]",
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]"
+          },
+          "readVersion": 0,
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_source_rows": 56,
+            "num_target_rows_inserted": 56,
+            "num_target_rows_updated": 0,
+            "num_target_rows_deleted": 0,
+            "num_target_rows_copied": 0,
+            "num_output_rows": 56,
+            "num_target_files_scanned": 0,
+            "num_target_files_skipped_during_scan": 0,
+            "num_target_files_added": 1,
+            "num_target_files_removed": 0,
+            "execution_time_ms": 424,
+            "scan_time_ms": 51,
+            "rewrite_time_ms": 1
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 1
+        },
+        {
+          "timestamp": 1788936952165,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "ErrorIfExists"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 0,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 0,
+            "execution_time_ms": 1
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 0
+        }
+      ],
+      "configuration": {},
+      "delta_log_files": [
+        "00000000000000000000.json",
+        "00000000000000000001.json"
+      ]
+    },
+    "replay_metrics": {
+      "num_source_rows": 56,
+      "num_target_rows_inserted": 0,
+      "num_target_rows_updated": 56,
+      "num_target_rows_deleted": 0,
+      "num_target_rows_copied": 0,
+      "num_output_rows": 56,
+      "num_target_files_scanned": 1,
+      "num_target_files_skipped_during_scan": 0,
+      "num_target_files_added": 1,
+      "num_target_files_removed": 1,
+      "execution_time_ms": 349,
+      "scan_time_ms": 138,
+      "rewrite_time_ms": 0
+    },
+    "replay_state": {
+      "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/silver/water_distribution",
+      "version": 2,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936953931,
+          "operation": "MERGE",
+          "operationParameters": {
+            "mergePredicate": "target.year = incoming.year AND target.region = incoming.region AND target.source = incoming.source",
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]",
+            "matchedPredicates": "[{\"actionType\":\"update\"}]",
+            "notMatchedBySourcePredicates": "[]"
+          },
+          "readVersion": 1,
+          "engineInfo": "delta-rs:py-1.6.3",
+          "clientVersion": "delta-rs.py-1.6.3",
+          "operationMetrics": {
+            "num_source_rows": 56,
+            "num_target_rows_inserted": 0,
+            "num_target_rows_updated": 56,
+            "num_target_rows_deleted": 0,
+            "num_target_rows_copied": 0,
+            "num_output_rows": 56,
+            "num_target_files_scanned": 1,
+            "num_target_files_skipped_during_scan": 0,
+            "num_target_files_added": 1,
+            "num_target_files_removed": 1,
+            "execution_time_ms": 349,
+            "scan_time_ms": 138,
+            "rewrite_time_ms": 0
+          },
+          "version": 2
+        },
+        {
+          "timestamp": 1788936952830,
+          "operation": "MERGE",
+          "operationParameters": {
+            "notMatchedPredicates": "[{\"actionType\":\"insert\"}]",
+            "matchedPredicates": "[{\"actionType\":\"update\"}]",
+            "mergePredicate": "target.year = incoming.year AND target.region = incoming.region AND target.source = incoming.source",
+            "notMatchedBySourcePredicates": "[]"
+          },
+          "readVersion": 0,
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_source_rows": 56,
+            "num_target_rows_inserted": 56,
+            "num_target_rows_updated": 0,
+            "num_target_rows_deleted": 0,
+            "num_target_rows_copied": 0,
+            "num_output_rows": 56,
+            "num_target_files_scanned": 0,
+            "num_target_files_skipped_during_scan": 0,
+            "num_target_files_added": 1,
+            "num_target_files_removed": 0,
+            "execution_time_ms": 424,
+            "scan_time_ms": 51,
+            "rewrite_time_ms": 1
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 1
+        },
+        {
+          "timestamp": 1788936952165,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "ErrorIfExists"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 0,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 0,
+            "execution_time_ms": 1
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 0
+        }
+      ],
+      "configuration": {},
+      "delta_log_files": [
+        "00000000000000000000.json",
+        "00000000000000000001.json",
+        "00000000000000000002.json"
+      ]
+    },
+    "unique_keys": 56,
+    "grand_total_rows": 4,
+    "zero_rows": 20,
+    "accepted_analytical_tuples_match": true
+  },
+  "schema_rejection": {
+    "before": {
+      "version": 0,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      }
+    },
+    "rejection": {
+      "type": "Exception",
+      "message": "Cast error: Cannot cast string 'not-a-number' to value of Float64 type"
+    },
+    "after": {
+      "version": 0,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      }
+    },
+    "unchanged": true
+  },
+  "gold": {
+    "table": {
+      "path": "storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/gold/gold_regional_water_profile",
+      "version": 0,
+      "count": 13,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "total_water_volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "dominant_source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "dominant_source_volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "dominant_source_share_pct",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "active_source_count",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936955350,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Overwrite"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 13,
+            "execution_time_ms": 23
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 0
+        }
+      ],
+      "configuration": {},
+      "delta_log_files": [
+        "00000000000000000000.json"
+      ]
+    },
+    "profiles": [
+      {
+        "year": 2024,
+        "region": "Al-Baha",
+        "total_water_volume_m3": 36083475.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 23729501.0,
+        "dominant_source_share_pct": 65.76279307910339,
+        "active_source_count": 3
+      },
+      {
+        "year": 2024,
+        "region": "Al-Jouf",
+        "total_water_volume_m3": 49568883.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 49568883.0,
+        "dominant_source_share_pct": 100.0,
+        "active_source_count": 1
+      },
+      {
+        "year": 2024,
+        "region": "Al-Madinah Al-Monawarah",
+        "total_water_volume_m3": 285455393.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 278721828.0,
+        "dominant_source_share_pct": 97.64111480633333,
+        "active_source_count": 3
+      },
+      {
+        "year": 2024,
+        "region": "Al-Qaseem",
+        "total_water_volume_m3": 159522279.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 145933558.0,
+        "dominant_source_share_pct": 91.48161555540464,
+        "active_source_count": 2
+      },
+      {
+        "year": 2024,
+        "region": "Al-Riyadh",
+        "total_water_volume_m3": 1169478459.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 825980625.0,
+        "dominant_source_share_pct": 70.62811791388455,
+        "active_source_count": 2
+      },
+      {
+        "year": 2024,
+        "region": "Aseer",
+        "total_water_volume_m3": 149656440.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 128335876.0,
+        "dominant_source_share_pct": 85.7536608514809,
+        "active_source_count": 4
+      },
+      {
+        "year": 2024,
+        "region": "Eastern Region",
+        "total_water_volume_m3": 667705791.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 513525536.0,
+        "dominant_source_share_pct": 76.90895345252441,
+        "active_source_count": 2
+      },
+      {
+        "year": 2024,
+        "region": "Hail",
+        "total_water_volume_m3": 58727534.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 58727534.0,
+        "dominant_source_share_pct": 100.0,
+        "active_source_count": 1
+      },
+      {
+        "year": 2024,
+        "region": "Jazan",
+        "total_water_volume_m3": 123644623.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 97367587.0,
+        "dominant_source_share_pct": 78.74793471609355,
+        "active_source_count": 3
+      },
+      {
+        "year": 2024,
+        "region": "Makkah Al-Mokarramah",
+        "total_water_volume_m3": 877285704.0,
+        "dominant_source": "Desalinated water (SWCC)",
+        "dominant_source_volume_m3": 865255663.0,
+        "dominant_source_share_pct": 98.62872027377753,
+        "active_source_count": 3
+      },
+      {
+        "year": 2024,
+        "region": "Najran",
+        "total_water_volume_m3": 38058700.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 28207497.0,
+        "dominant_source_share_pct": 74.11576590897745,
+        "active_source_count": 3
+      },
+      {
+        "year": 2024,
+        "region": "Northern Borders",
+        "total_water_volume_m3": 28763067.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 23785843.0,
+        "dominant_source_share_pct": 82.69578136434477,
+        "active_source_count": 2
+      },
+      {
+        "year": 2024,
+        "region": "Tabouk",
+        "total_water_volume_m3": 74587976.0,
+        "dominant_source": "Groundwater",
+        "dominant_source_volume_m3": 53710118.0,
+        "dominant_source_share_pct": 72.00908360886478,
+        "active_source_count": 3
+      }
+    ],
+    "independently_recomputed_profiles": 13,
+    "grand_total_rows": 0
+  },
+  "provenance": {
+    "source_sha256": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c",
+    "source_matches_silver": true,
+    "observations": [
+      {
+        "source": "Desalinated water (SWCC)",
+        "regional_sum_m3": 2767383011.0,
+        "supplied_grand_total_m3": 2767383012.0,
+        "difference_m3": -1.0
+      },
+      {
+        "source": "Groundwater",
+        "regional_sum_m3": 907363749.0,
+        "supplied_grand_total_m3": 907363749.0,
+        "difference_m3": 0.0
+      },
+      {
+        "source": "Other sources",
+        "regional_sum_m3": 10981765.0,
+        "supplied_grand_total_m3": 10981765.0,
+        "difference_m3": 0.0
+      },
+      {
+        "source": "Surface water",
+        "regional_sum_m3": 32809799.0,
+        "supplied_grand_total_m3": 32809800.0,
+        "difference_m3": -1.0
+      }
+    ]
+  },
+  "isolated_fixtures": {
+    "initial": [
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "B",
+        "volume_m3": 1.0,
+        "run_id": "test",
+        "event_id": "1",
+        "record_kind": "test_fixture"
+      }
+    ],
+    "batch": [
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "B",
+        "volume_m3": 2.0,
+        "run_id": "test",
+        "event_id": "1",
+        "record_kind": "test_fixture"
+      },
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "A",
+        "volume_m3": 2.0,
+        "run_id": "test",
+        "event_id": "2",
+        "record_kind": "test_fixture"
+      },
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "C",
+        "volume_m3": 0.0,
+        "run_id": "test",
+        "event_id": "3",
+        "record_kind": "test_fixture"
+      },
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "A",
+        "volume_m3": 2.0,
+        "run_id": "test",
+        "event_id": "2",
+        "record_kind": "test_fixture"
+      }
+    ],
+    "merge_metrics": {
+      "num_source_rows": 3,
+      "num_target_rows_inserted": 2,
+      "num_target_rows_updated": 1,
+      "num_target_rows_deleted": 0,
+      "num_target_rows_copied": 0,
+      "num_output_rows": 3,
+      "num_target_files_scanned": 1,
+      "num_target_files_skipped_during_scan": 0,
+      "num_target_files_added": 1,
+      "num_target_files_removed": 1,
+      "execution_time_ms": 126,
+      "scan_time_ms": 39,
+      "rewrite_time_ms": 0
+    },
+    "silver": [
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "B",
+        "volume_m3": 2.0,
+        "run_id": "test",
+        "event_id": "1",
+        "record_kind": "test_fixture"
+      },
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "A",
+        "volume_m3": 2.0,
+        "run_id": "test",
+        "event_id": "2",
+        "record_kind": "test_fixture"
+      },
+      {
+        "year": 2024,
+        "region": "TEST FIXTURE ONLY",
+        "source": "C",
+        "volume_m3": 0.0,
+        "run_id": "test",
+        "event_id": "3",
+        "record_kind": "test_fixture"
+      }
+    ],
+    "gold": {
+      "year": 2024,
+      "region": "TEST FIXTURE ONLY",
+      "total_water_volume_m3": 4.0,
+      "dominant_source": "A",
+      "dominant_source_volume_m3": 2.0,
+      "dominant_source_share_pct": 50.0,
+      "active_source_count": 2
+    }
+  }
+}

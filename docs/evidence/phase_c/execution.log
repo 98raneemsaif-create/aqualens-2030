@@ -1,0 +1,95 @@
+Started UTC: 2026-09-09T06:55:11.381102+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_lakehouse.py", "-v"]
+test_01_input_and_bronze (test_lakehouse.LakehouseProof.test_01_input_and_bronze) ... Fresh proof root: storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09; evidence: docs/evidence/phase_c/ccf12138-71d7-4352-b417-42891742af09
+/opt/airflow/tests/test_lakehouse.py:36: DeprecationWarning: Schema.json() is deprecated. Use json.loads(Schema.to_json()) instead.
+  return dict(path=str(path), **snapshot(path), history=table.history(),
+ok
+test_02_silver_merge_and_replay (test_lakehouse.LakehouseProof.test_02_silver_merge_and_replay) ... ERROR
+test_03_schema_rejection (test_lakehouse.LakehouseProof.test_03_schema_rejection) ... /opt/airflow/src/lakehouse/schema_proof.py:17: DeprecationWarning: Schema.json() is deprecated. Use json.loads(Schema.to_json()) instead.
+  before = snapshot(path)
+ERROR
+test_04_gold_independent_recomputation (test_lakehouse.LakehouseProof.test_04_gold_independent_recomputation) ... ERROR
+test_05_source_provenance (test_lakehouse.LakehouseProof.test_05_source_provenance) ... ERROR
+test_06_isolated_update_insert_and_tie (test_lakehouse.LakehouseProof.test_06_isolated_update_insert_and_tie) ... ERROR
+
+======================================================================
+ERROR: test_02_silver_merge_and_replay (test_lakehouse.LakehouseProof.test_02_silver_merge_and_replay)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/airflow/tests/test_lakehouse.py", line 84, in test_02_silver_merge_and_replay
+    first = merge_silver(self.bronze, self.silver)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/lakehouse/silver.py", line 23, in merge_silver
+    if not DeltaTable.is_deltatable(silver_path):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/aqualens/venv/lib/python3.11/site-packages/deltalake/table.py", line 219, in is_deltatable
+    return RawDeltaTable.is_deltatable(table_uri, storage_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'PosixPath' object is not an instance of 'str'
+while processing 'table_uri'
+
+======================================================================
+ERROR: test_03_schema_rejection (test_lakehouse.LakehouseProof.test_03_schema_rejection)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/airflow/tests/test_lakehouse.py", line 103, in test_03_schema_rejection
+    proof = prove_schema_rejection(self.root / "schema_rejection", self.accepted)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/src/lakehouse/schema_proof.py", line 21, in prove_schema_rejection
+    write_deltalake(path, invalid, mode="append")
+  File "/opt/aqualens/venv/lib/python3.11/site-packages/deltalake/writer/writer.py", line 133, in write_deltalake
+    table._table.write(
+Exception: Cast error: Cannot cast string 'not-a-number' to value of Float64 type
+
+======================================================================
+ERROR: test_04_gold_independent_recomputation (test_lakehouse.LakehouseProof.test_04_gold_independent_recomputation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/airflow/tests/test_lakehouse.py", line 109, in test_04_gold_independent_recomputation
+    build_gold(self.silver, self.gold)
+  File "/opt/airflow/src/lakehouse/gold.py", line 19, in build_gold
+    for row in DeltaTable(silver_path).to_pyarrow_table().to_pylist():
+               ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/aqualens/venv/lib/python3.11/site-packages/deltalake/table.py", line 193, in __init__
+    self._table = RawDeltaTable(
+                  ^^^^^^^^^^^^^^
+_internal.TableNotFoundError: Local path "storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09/silver/water_distribution" does not exist or you don't have access!
+Error: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+======================================================================
+ERROR: test_05_source_provenance (test_lakehouse.LakehouseProof.test_05_source_provenance)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/airflow/tests/test_lakehouse.py", line 133, in test_05_source_provenance
+    self.assertEqual(official, analytical(rows(self.silver)))
+                                          ^^^^^^^^^^^^^^^^^
+  File "/opt/airflow/tests/test_lakehouse.py", line 27, in rows
+    return DeltaTable(path).to_pyarrow_table().to_pylist()
+           ^^^^^^^^^^^^^^^^
+  File "/opt/aqualens/venv/lib/python3.11/site-packages/deltalake/table.py", line 193, in __init__
+    self._table = RawDeltaTable(
+                  ^^^^^^^^^^^^^^
+_internal.TableNotFoundError: Local path "storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09/silver/water_distribution" does not exist or you don't have access!
+Error: Os { code: 2, kind: NotFound, message: "No such file or directory" }
+
+======================================================================
+ERROR: test_06_isolated_update_insert_and_tie (test_lakehouse.LakehouseProof.test_06_isolated_update_insert_and_tie)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/opt/airflow/tests/test_lakehouse.py", line 148, in test_06_isolated_update_insert_and_tie
+    merge_silver(first, silver)
+  File "/opt/airflow/src/lakehouse/silver.py", line 23, in merge_silver
+    if not DeltaTable.is_deltatable(silver_path):
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/aqualens/venv/lib/python3.11/site-packages/deltalake/table.py", line 219, in is_deltatable
+    return RawDeltaTable.is_deltatable(table_uri, storage_options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'PosixPath' object is not an instance of 'str'
+while processing 'table_uri'
+
+----------------------------------------------------------------------
+Ran 6 tests in 6.433s
+
+FAILED (errors=5)
+Exit code: 1
+Finished UTC: 2026-09-09T06:55:19.552296+00:00

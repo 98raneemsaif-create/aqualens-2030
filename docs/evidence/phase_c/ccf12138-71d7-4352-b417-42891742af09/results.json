@@ -1,0 +1,261 @@
+{
+  "proof_id": "ccf12138-71d7-4352-b417-42891742af09",
+  "deltalake_version": "1.6.3",
+  "input": {
+    "run_id": "ea8464c0-722b-4c8a-a83c-252fff68ee33",
+    "path": "storage/ingestion/ea8464c0-722b-4c8a-a83c-252fff68ee33/accepted.jsonl",
+    "expected_count": 56,
+    "sha256": "4f3889080602b4616e2dfc61e5f92ce58f358033e051982570a98e905720d29a"
+  },
+  "bronze": {
+    "path": "storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09/bronze/water_events",
+    "version": 0,
+    "count": 56,
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "year",
+          "type": "long",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "volume_m3",
+          "type": "double",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "run_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "event_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "record_kind",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    },
+    "history": [
+      {
+        "timestamp": 1788936915029,
+        "operation": "WRITE",
+        "operationParameters": {
+          "mode": "Append"
+        },
+        "engineInfo": "delta-rs:py-1.6.3",
+        "operationMetrics": {
+          "num_added_files": 1,
+          "num_removed_files": 0,
+          "num_partitions": 0,
+          "num_added_rows": 56,
+          "execution_time_ms": 671
+        },
+        "clientVersion": "delta-rs.py-1.6.3",
+        "version": 0
+      }
+    ],
+    "configuration": {
+      "delta.appendOnly": "true"
+    },
+    "delta_log_files": [
+      "00000000000000000000.json"
+    ]
+  },
+  "append_proof": {
+    "before": {
+      "path": "storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09/append_only_test",
+      "version": 0,
+      "count": 56,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936917010,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 18
+          },
+          "clientVersion": "delta-rs.py-1.6.3",
+          "version": 0
+        }
+      ],
+      "configuration": {
+        "delta.appendOnly": "true"
+      },
+      "delta_log_files": [
+        "00000000000000000000.json"
+      ]
+    },
+    "after": {
+      "path": "storage/delta/proofs/phase_c/ccf12138-71d7-4352-b417-42891742af09/append_only_test",
+      "version": 1,
+      "count": 112,
+      "schema": {
+        "type": "struct",
+        "fields": [
+          {
+            "name": "year",
+            "type": "long",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "region",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "source",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "volume_m3",
+            "type": "double",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "run_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "event_id",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          },
+          {
+            "name": "record_kind",
+            "type": "string",
+            "nullable": true,
+            "metadata": {}
+          }
+        ]
+      },
+      "history": [
+        {
+          "timestamp": 1788936917504,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "clientVersion": "delta-rs.py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 108
+          },
+          "version": 1
+        },
+        {
+          "timestamp": 1788936917010,
+          "operation": "WRITE",
+          "operationParameters": {
+            "mode": "Append"
+          },
+          "engineInfo": "delta-rs:py-1.6.3",
+          "clientVersion": "delta-rs.py-1.6.3",
+          "operationMetrics": {
+            "num_added_files": 1,
+            "num_removed_files": 0,
+            "num_partitions": 0,
+            "num_added_rows": 56,
+            "execution_time_ms": 18
+          },
+          "version": 0
+        }
+      ],
+      "configuration": {
+        "delta.appendOnly": "true"
+      },
+      "delta_log_files": [
+        "00000000000000000000.json",
+        "00000000000000000001.json"
+      ]
+    }
+  }
+}

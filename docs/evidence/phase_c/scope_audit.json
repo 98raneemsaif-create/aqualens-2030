@@ -1,0 +1,37 @@
+{
+  "git_revision": "ce1a4f87d8caebfe699348b2819772727e55b23d",
+  "protected_files_unchanged_git_diff": {
+    "AGENTS.md": true,
+    "data/source/water_distribution_urban_saudi.csv": true,
+    "docs/evidence/phase_b/commands.json": true,
+    "docs/evidence/phase_b/isolation_audit.json": true,
+    "docs/evidence/phase_b/kafka_logs.log": true,
+    "docs/evidence/phase_b/quarantine_verification_final.log": true,
+    "docs/evidence/phase_b/scope_audit.json": true,
+    "docs/evidence/phase_b/service_status.log": true,
+    "docs/evidence/phase_b/topic_details.log": true,
+    "docs/evidence/phase_b/topic_list.log": true,
+    "docs/evidence/phase_b/unit_tests.log": true,
+    "docs/evidence/phase_b/unit_tests_final.log": true,
+    "docs/evidence/phase_b/isolation/consumer.log": true,
+    "docs/evidence/phase_b/isolation/producer.log": true,
+    "docs/evidence/phase_b/isolation/quarantine_verification.log": true,
+    "docs/evidence/phase_b/isolation/summary.json": true,
+    "docs/evidence/phase_b/proof/consumer.log": true,
+    "docs/evidence/phase_b/proof/producer.log": true,
+    "docs/evidence/phase_b/proof/quarantine_verification.log": true,
+    "docs/evidence/phase_b/proof/summary.json": true
+  },
+  "source_sha256": "4df640b65d3341c1e42e64be7582434aa5e19ceabfa952feb35195f8350a849c",
+  "matrix_changed_rows": 10,
+  "code_sha256": {
+    "src/lakehouse/bronze.py": "95cdb9416465a0471969f15982ade1869d2c70fa6a0e7269331cb6a5db216a60",
+    "src/lakehouse/gold.py": "429328142a6c32c2d1685197f1b5d36829f0fb15e5549d91e3c66dc9f61912fc",
+    "src/lakehouse/schema_proof.py": "3060e9b9b187ac66bbe75ba75a4f31186336ca9950433eed80c847aae8391a6a",
+    "src/lakehouse/silver.py": "c14b959762fbd46e1c9c2172e4a6d9aed1655024d02e52d82b27a502e675ae12",
+    "src/lakehouse/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_lakehouse.py": "2a50a1fac1f1b91bce8d14c1430b81c963df2ef0c9814d29e1aca6e8f742f061"
+  },
+  "git_status": " M docs/rubric_matrix.md\n?? docs/evidence/phase_c/5f9e3c82-8804-4488-b183-f885a650c017/results.json\n?? docs/evidence/phase_c/ccf12138-71d7-4352-b417-42891742af09/results.json\n?? docs/evidence/phase_c/execution.log\n?? docs/evidence/phase_c/execution_final.log\n?? docs/evidence/phase_c/service_status.log\n?? docs/phase_c_report.md\n?? src/lakehouse/bronze.py\n?? src/lakehouse/gold.py\n?? src/lakehouse/schema_proof.py\n?? src/lakehouse/silver.py\n?? tests/test_lakehouse.py\n",
+  "generated_delta_ignored": "storage/delta/proofs/phase_c"
+}

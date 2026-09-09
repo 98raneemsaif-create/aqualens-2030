@@ -1,0 +1,17 @@
+Started UTC: 2026-09-09T06:55:47.686772+00:00
+Command argv: ["docker", "compose", "exec", "-T", "airflow", "python", "-m", "unittest", "discover", "-s", "tests", "-p", "test_lakehouse.py", "-v"]
+Fresh proof root: storage/delta/proofs/phase_c/5f9e3c82-8804-4488-b183-f885a650c017; evidence: docs/evidence/phase_c/5f9e3c82-8804-4488-b183-f885a650c017
+test_01_input_and_bronze (test_lakehouse.LakehouseProof.test_01_input_and_bronze) ... ok
+test_02_silver_merge_and_replay (test_lakehouse.LakehouseProof.test_02_silver_merge_and_replay) ... ok
+test_03_schema_rejection (test_lakehouse.LakehouseProof.test_03_schema_rejection) ... {"before": {"version": 0, "count": 56, "schema": {"type": "struct", "fields": [{"name": "year", "type": "long", "nullable": true, "metadata": {}}, {"name": "region", "type": "string", "nullable": true, "metadata": {}}, {"name": "source", "type": "string", "nullable": true, "metadata": {}}, {"name": "volume_m3", "type": "double", "nullable": true, "metadata": {}}, {"name": "run_id", "type": "string", "nullable": true, "metadata": {}}, {"name": "event_id", "type": "string", "nullable": true, "metadata": {}}, {"name": "record_kind", "type": "string", "nullable": true, "metadata": {}}]}}, "rejection": {"type": "Exception", "message": "Cast error: Cannot cast string 'not-a-number' to value of Float64 type"}, "after": {"version": 0, "count": 56, "schema": {"type": "struct", "fields": [{"name": "year", "type": "long", "nullable": true, "metadata": {}}, {"name": "region", "type": "string", "nullable": true, "metadata": {}}, {"name": "source", "type": "string", "nullable": true, "metadata": {}}, {"name": "volume_m3", "type": "double", "nullable": true, "metadata": {}}, {"name": "run_id", "type": "string", "nullable": true, "metadata": {}}, {"name": "event_id", "type": "string", "nullable": true, "metadata": {}}, {"name": "record_kind", "type": "string", "nullable": true, "metadata": {}}]}}, "unchanged": true}
+ok
+test_04_gold_independent_recomputation (test_lakehouse.LakehouseProof.test_04_gold_independent_recomputation) ... ok
+test_05_source_provenance (test_lakehouse.LakehouseProof.test_05_source_provenance) ... ok
+test_06_isolated_update_insert_and_tie (test_lakehouse.LakehouseProof.test_06_isolated_update_insert_and_tie) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 11.769s
+
+OK
+Exit code: 0
+Finished UTC: 2026-09-09T06:56:00.759324+00:00
