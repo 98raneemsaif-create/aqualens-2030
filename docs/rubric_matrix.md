@@ -4,7 +4,7 @@
 
 Source: [Capstone Rubric - Modern Data Engineering for AI Systems](reference/Capstone%20Rubric%20-%20Modern%20Data%20Engineering%20for%20AI%20Systems.pdf), pages 1–2, read alongside [AGENTS.md](../AGENTS.md).
 
-This is a pre-implementation plan. All component paths, tests, and evidence paths below are planned, not claims that files or working components exist. Every tracked requirement starts at **NOT IMPLEMENTED**, including documentation and submission requirements. This matrix itself does not establish implementation or verification of any requirement.
+This matrix began as a pre-implementation plan and now records the final implementation and verification status of AquaLens 2030. Component paths, tests, and evidence locations are retained as the project traceability map. A **VERIFIED** status indicates that supporting implementation, execution, or submission evidence is present in the repository.
 
 The rubric assigns category totals, not points to individual components. Repeated category points below identify the parent category and must not be summed by row. The five category totals are Ingestion 20, Delta Lakehouse 25, RAG Pipeline 25, Orchestration 15, and Quality Gate + Lineage 15: **100 points total**. The rubric pass mark is 60; AquaLens targets all 100 points.
 
@@ -12,7 +12,7 @@ Only change a requirement's status after successful execution of its proof and i
 
 ## Scored Requirements
 
-| Category | Rubric requirement | Category points | Planned implementation | Test / proof method | Planned evidence location | Status |
+| Category | Rubric requirement | Category points | Implementation | Test / proof method | Evidence location | Status |
 | --- | --- | --- | --- | --- | --- | --- |
 | Ingestion | Real Kafka producer | 20 | `src/ingestion/producer.py` and `kafka_io.py`: immutable CSV mapping, JSON publication, UUID run ID, real delivery acknowledgements | Executed two isolated 57-record runs; broker-acknowledged offsets and source hashes captured | `docs/evidence/phase_b/proof/producer.log`; `docs/evidence/phase_b/isolation/producer.log` | VERIFIED |
 | Ingestion | Real Kafka consumer | 20 | `src/ingestion/consumer.py` and `bounded.py`: real finite Kafka reads selected by acknowledged offsets and run ID | Both real runs consumed exactly 57 current-run records; accepted 56 and quarantined 1, without old-run contamination | `docs/evidence/phase_b/proof/consumer.log`; `docs/evidence/phase_b/isolation_audit.json` | VERIFIED |
@@ -43,41 +43,40 @@ Only change a requirement's status after successful execution of its proof and i
 | Quality Gate + Lineage | OpenLineage COMPLETE events per stage | 15 | Same provider/client integration: successful stage completion events | Inspect actual Airflow states/logs, GX results, accepted negative fixture, and run/stage-correlated emitted OpenLineage events | `docs/evidence/phase_e/final_verification.json`; `docs/evidence/phase_e/final_success/`; `docs/evidence/phase_e/final_quality_failure/`; `docs/evidence/phase_e/final_lineage_success/`; `docs/evidence/phase_e/final_lineage_failure/` | VERIFIED |
 | Quality Gate + Lineage | OpenLineage FAIL events per stage | 15 | Same provider/client integration: failure events when stage execution fails | Inspect actual Airflow states/logs, GX results, accepted negative fixture, and run/stage-correlated emitted OpenLineage events | `docs/evidence/phase_e/final_verification.json`; `docs/evidence/phase_e/final_success/`; `docs/evidence/phase_e/final_quality_failure/`; `docs/evidence/phase_e/final_lineage_success/`; `docs/evidence/phase_e/final_lineage_failure/` | VERIFIED |
 
-The named libraries, models, paths, append-only behavior, and particular business key are AquaLens implementation choices under AGENTS.md. The rubric allows alternatives for some of these; the planned implementation follows the stricter project guide. Cross-cutting evaluation requires real libraries, actual execution output, and failure demonstrations for all relevant rows.
+The named libraries, models, paths, append-only behavior, and particular business key are AquaLens implementation choices under AGENTS.md. The rubric allows alternatives for some of these; the implemented design follows the stricter project guide. Cross-cutting evaluation requires real libraries, actual execution output, and failure demonstrations for all relevant rows.
 
 ## Mandatory Submission & Documentation Requirements
 
 These requirements are mandatory under rubric sections 2.1–2.2 but have no separate allocation within the 100 scored points. Phase F final submission evidence is captured under `docs/evidence/submission/`, and the statuses below reflect the completed verification.
 
-| Category | Rubric requirement | Category points | Planned implementation | Test / proof method | Planned evidence location | Status |
+| Category | Rubric requirement | Category points | Implementation | Test / proof method | Evidence location | Status |
 | --- | --- | --- | --- | --- | --- | --- |
-| Submission | Each trainee has an activated GitHub account | Not scored | Trainee GitHub account associated with the submission | Confirm accessible account and repository ownership/access without collecting credentials | `docs/evidence/submission/github.md` | NOT IMPLEMENTED |
-| Submission | Project published to GitHub | Not scored | AquaLens GitHub repository containing the project | Record repository URL and submitted commit; verify the remote contains the submission | `docs/evidence/submission/github.md` | NOT IMPLEMENTED |
-| Submission | Project kept documented and continuously updated | Not scored | Maintain README, technical docs, matrix, and evidence alongside incremental work | Inspect successive commits for corresponding documentation updates | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
-| Documentation | Clear comprehensive project description on repository landing page | Not scored | `README.md`: Saudi water-source intelligence problem, purpose, and constrained scope | Review rendered landing page for what the project does and why | `docs/evidence/submission/readme_review.md` | NOT IMPLEMENTED |
-| Documentation | Professional README | Not scored | `README.md`: coherent project idea, prerequisites, setup, use, and expected output | Review completeness and follow documented workflow | `docs/evidence/submission/readme_review.md` | NOT IMPLEMENTED |
-| Documentation | Prerequisites | Not scored | `README.md`: runtime, tools, service access, and required credentials described without secrets | Compare prerequisites with the actual runtime needs | `docs/evidence/submission/setup.log` | NOT IMPLEMENTED |
-| Documentation | Installation/setup instructions | Not scored | `README.md`: reproducible environment and service setup | Follow instructions in a clean environment and capture results | `docs/evidence/submission/setup.log` | NOT IMPLEMENTED |
-| Documentation | Execution/usage instructions | Not scored | `README.md`: pipeline run, CLI query, and failure-demo commands | Execute documented commands and capture outputs | `docs/evidence/submission/usage.log` | NOT IMPLEMENTED |
-| Documentation | Expected outputs | Not scored | `README.md`: example regional aggregates, cited answers, and expected failure behavior | Compare documented examples with actual run output | `docs/evidence/submission/outputs.md` | NOT IMPLEMENTED |
-| Documentation | Architecture/pipeline overview | Not scored | `docs/architecture.md`: services, data flow, stages, and quality-gate dependencies | Compare documented flow with actual DAG and runtime | `docs/evidence/submission/architecture_review.md` | NOT IMPLEMENTED |
-| Documentation | Key components/modules | Not scored | `docs/architecture.md`: responsibilities of approved `src/` modules and DAG tasks | Cross-check module descriptions against implemented components | `docs/evidence/submission/architecture_review.md` | NOT IMPLEMENTED |
-| Documentation | Configuration/environment variables | Not scored | `docs/configuration.md`: required/optional variables, defaults, and secret handling | Compare with `src/common/config.py` and run using documented configuration | `docs/evidence/submission/configuration_review.md` | NOT IMPLEMENTED |
-| Git practices | Meaningful commit messages | Not scored | Incremental Git commits with descriptive purpose | Review commit subjects and associated changes | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
-| Git practices | Incremental history, not a single bulk upload | Not scored | Commit completed, reviewable project increments over implementation phases | Capture history demonstrating progression | `docs/evidence/submission/history.log` | NOT IMPLEMENTED |
-| Git practices | Sensible repository structure | Not scored | Follow the directory responsibilities in AGENTS.md | Inspect repository tree and placement of code, sources, documentation, and generated data | `docs/evidence/submission/structure.txt` | NOT IMPLEMENTED |
-| Git practices | .gitignore excludes secrets and generated files | Not scored | `.gitignore`: exclude `.env`, keys, `storage/`, caches, and runtime artifacts | Use `git check-ignore` on representative paths and inspect tracked files for accidental inclusion | `docs/evidence/submission/gitignore.log` | NOT IMPLEMENTED |
-| Attribution | Training-program name | Not scored | `README.md`: Program: Modern Data Engineering for AI Systems; Provider: SDAIA Academy; Delivery: Learning Space | Inspect rendered attribution | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
-| Attribution | Cohort/session dates | Not scored | `README.md`: 06 September 2026 – 10 September 2026 | Inspect rendered dates against the fixed project decision | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
-| Attribution | Link to SDAIA Academy on GitHub | Not scored | `README.md`: link to `https://github.com/SDAIAAcademy` | Inspect link text and target | `docs/evidence/submission/attribution.md` | NOT IMPLEMENTED |
-
+| Submission | Each trainee has an activated GitHub account | Not scored | Trainee GitHub account associated with the submission | Confirm accessible account and repository ownership/access without collecting credentials | `docs/evidence/submission/github.md` | VERIFIED |
+| Submission | Project published to GitHub | Not scored | AquaLens GitHub repository containing the project | Record repository URL and submitted commit; verify the remote contains the submission | `docs/evidence/submission/github.md` | VERIFIED |
+| Submission | Project kept documented and continuously updated | Not scored | Maintain README, technical docs, matrix, and evidence alongside incremental work | Inspect successive commits for corresponding documentation updates | `docs/evidence/submission/history.log` | VERIFIED |
+| Documentation | Clear comprehensive project description on repository landing page | Not scored | `README.md`: Saudi water-source intelligence problem, purpose, and constrained scope | Review rendered landing page for what the project does and why | `docs/evidence/submission/readme_review.md` | VERIFIED |
+| Documentation | Professional README | Not scored | `README.md`: coherent project idea, prerequisites, setup, use, and expected output | Review completeness and follow documented workflow | `docs/evidence/submission/readme_review.md` | VERIFIED |
+| Documentation | Prerequisites | Not scored | `README.md`: runtime, tools, service access, and required credentials described without secrets | Compare prerequisites with the actual runtime needs | `docs/evidence/submission/setup.log` | VERIFIED |
+| Documentation | Installation/setup instructions | Not scored | `README.md`: reproducible environment and service setup | Follow instructions in a clean environment and capture results | `docs/evidence/submission/setup.log` | VERIFIED |
+| Documentation | Execution/usage instructions | Not scored | `README.md`: pipeline run, CLI query, and failure-demo commands | Execute documented commands and capture outputs | `docs/evidence/submission/usage.log` | VERIFIED |
+| Documentation | Expected outputs | Not scored | `README.md`: example regional aggregates, cited answers, and expected failure behavior | Compare documented examples with actual run output | `docs/evidence/submission/outputs.md` | VERIFIED |
+| Documentation | Architecture/pipeline overview | Not scored | `docs/architecture.md`: services, data flow, stages, and quality-gate dependencies | Compare documented flow with actual DAG and runtime | `docs/evidence/submission/architecture_review.md` | VERIFIED |
+| Documentation | Key components/modules | Not scored | `docs/architecture.md`: responsibilities of approved `src/` modules and DAG tasks | Cross-check module descriptions against implemented components | `docs/evidence/submission/architecture_review.md` | VERIFIED |
+| Documentation | Configuration/environment variables | Not scored | `docs/configuration.md`: required/optional variables, defaults, and secret handling | Compare with `src/common/config.py` and run using documented configuration | `docs/evidence/submission/configuration_review.md` | VERIFIED |
+| Git practices | Meaningful commit messages | Not scored | Incremental Git commits with descriptive purpose | Review commit subjects and associated changes | `docs/evidence/submission/history.log` | VERIFIED |
+| Git practices | Incremental history, not a single bulk upload | Not scored | Commit completed, reviewable project increments over implementation phases | Capture history demonstrating progression | `docs/evidence/submission/history.log` | VERIFIED |
+| Git practices | Sensible repository structure | Not scored | Follow the directory responsibilities in AGENTS.md | Inspect repository tree and placement of code, sources, documentation, and generated data | `docs/evidence/submission/structure.txt` | VERIFIED |
+| Git practices | .gitignore excludes secrets and generated files | Not scored | `.gitignore`: exclude `.env`, keys, `storage/`, caches, and runtime artifacts | Use `git check-ignore` on representative paths and inspect tracked files for accidental inclusion | `docs/evidence/submission/gitignore.log` | VERIFIED |
+| Attribution | Training-program name | Not scored | `README.md`: Program: Modern Data Engineering for AI Systems; Provider: SDAIA Academy; Delivery: Learning Space | Inspect rendered attribution | `docs/evidence/submission/attribution.md` | VERIFIED |
+| Attribution | Cohort/session dates | Not scored | `README.md`: 06 September 2026 – 10 September 2026 | Inspect rendered dates against the fixed project decision | `docs/evidence/submission/attribution.md` | VERIFIED |
+| Attribution | Link to SDAIA Academy on GitHub | Not scored | `README.md`: link to `https://github.com/SDAIAAcademy` | Inspect link text and target | `docs/evidence/submission/attribution.md` | VERIFIED |
 The rubric's publication instruction applies to all AI-related training projects; this matrix tracks its application to AquaLens. Saudi community engagement in section 2.3 is encouraged, not mandatory and not scored.
 
 ## Execution Evidence Requirements
 
 Capture actual outputs, not example or fabricated logs. Each evidence bundle must identify the command or reproducible steps, source/fixture, code revision, relevant library/model versions, non-secret configuration, run/task IDs where applicable, expected result, and observed result. Preserve complete enough context to reproduce and assess the claim. Keep generated Delta/Chroma runtime files in gitignored `storage/`; commit curated proofs under `docs/evidence/`.
 
-| Required proof | Capture during implementation | Planned evidence location | Status |
+| Required proof | Captured evidence / verification | Evidence location | Status |
 | --- | --- | --- | --- |
 | Real Kafka producer execution | Broker delivery acknowledgements and published record counts | `docs/evidence/phase_b/proof/producer.log` | VERIFIED |
 | Real Kafka consumer execution | Broker reads and consumed record identifiers/counts | `docs/evidence/phase_b/proof/consumer.log` | VERIFIED |
@@ -109,7 +108,7 @@ No contradictions were found. AGENTS.md explicitly gives the rubric precedence. 
 
 ### Missing rubric requirements
 
-No scored or mandatory submission requirements are missing from AGENTS.md. It covers all five categories, actual-library execution, success/failure evidence, account activation, GitHub publication and ongoing documentation, README contents, technical documentation, Git practices, attribution/dates, and the Academy link. Community engagement is correctly identified as optional and unscored. These are coverage findings, not evidence that requirements have been fulfilled.
+No scored or mandatory submission requirements are missing from AGENTS.md. It covers all five categories, actual-library execution, success/failure evidence, account activation, GitHub publication and ongoing documentation, README contents, technical documentation, Git practices, attribution/dates, and the Academy link. Community engagement is correctly identified as optional and unscored. The implementation and submission evidence referenced in this matrix now verifies those covered requirements.
 
 ### Project requirements stricter than the rubric
 
@@ -120,17 +119,16 @@ No scored or mandatory submission requirements are missing from AGENTS.md. It co
 - **Domain and sources:** the immutable GASTAT/DataSaudi dataset, two official RAG sources, exclusion of unofficial sources, approved analytical metrics, separation of observation from strategy, and prohibition on invented risk labels/thresholds are project constraints absent from the rubric.
 - **Scope and workflow:** the 1–2 day target, prescribed directories, rubric matrix, detailed tests/evidence paths, small-module conventions, phase boundaries, and restrictions on extra technologies are stricter project rules. Provider/delivery attribution and the exact cohort dates supply details beyond the rubric's generic program/date requirement.
 
-### Architecture credit assessment and unresolved pre-implementation checks
+### Final architecture and implementation assessment
 
-**The approved architecture can satisfy all 100 scored points in design.** No approved technology choice inherently forfeits a deliverable: the rubric explicitly accepts `confluent-kafka` and `deltalake`, accepts a real vector store, and requires the Airflow, Great Expectations, and OpenLineage capabilities represented here. Persistent local vector storage does not imply a simulation. Spark, Marquez, and a Chroma server are not rubric requirements.
+The implemented AquaLens architecture covers all five scored rubric categories using the required real technologies and preserves execution evidence for both successful and controlled failure paths.
 
-This is a comparison of the supplied documents, not a dependency compatibility or runtime certification. Before application implementation begins, resolve these planning checks:
+Final implementation checks were resolved during Phases A–E:
 
-1. **Dependency compatibility:** confirm the availability and mutual compatibility of Python 3.11, the fixed Airflow 3.3.1 release, a selected OpenLineage Airflow Provider/client version, Great Expectations, and the remaining libraries. Versions beyond the supplied decisions are not selected or verified in this task. Do not silently replace required libraries or pins if a conflict appears.
-2. **Lineage transport and coverage:** select a real provider/client-supported capture transport and map every stage to START and the appropriate terminal event. Installing the provider alone is insufficient. Confirm a supported way to persist captured payloads without adding Marquez; define controlled stage failures rather than assuming one quality failure demonstrates every stage's failure lifecycle.
-3. **DAG and gate contract:** finalize the exact task graph with quality validation before Gold and RAG, bounded ingestion completion, and failure propagation. No dependent output-producing stage may run around a failed gate. Observability must still capture failure events when downstream processing is blocked.
-4. **Source and model readiness:** both approved official snapshots and multilingual retrieval models were demonstrated in Phase D. Gemini 2.5 Flash returned HTTP 404 through the explicit Developer API client, so the explicitly approved Gemini 3.5 Flash fallback was used and successfully demonstrated grounded generation and citations. Do not infer undocumented unit conversions or substitute unofficial/synthetic analytical sources. These checks do not permit changing the source file.
+1. **Dependency compatibility:** Python 3.11, Airflow 3.3.1, the OpenLineage Airflow Provider, Great Expectations, Delta Lake, Kafka, ChromaDB, and the RAG libraries were installed and exercised in the verified runtime.
+2. **Lineage transport and coverage:** OpenLineage FileTransport captured real START, COMPLETE, and FAIL stage events without introducing Marquez.
+3. **DAG and gate contract:** the complete Airflow DAG was executed successfully, and the controlled Great Expectations failure blocked Gold and RAG downstream tasks.
+4. **Source and model readiness:** the immutable official analytical CSV and both approved official RAG snapshots were verified; hybrid retrieval, reranking, grounded generation, and citations were executed and preserved as evidence.
 
-There is **no identified rubric contradiction requiring an architectural change**. The checks above remain unresolved because this task intentionally performs no installation, application implementation, or pipeline execution. Any compatibility problem discovered during the pre-implementation check must be resolved under rubric precedence before coding against that stack.
-
-**Every mandatory submission requirement is covered by the plan**, including account activation, publication, ongoing updates, prerequisites, module documentation, and sensible repository structure in addition to the requested README and attribution details. None is marked complete. Implementation and execution evidence are still required before any claim of earned points or complete submission.
+There is **no identified rubric contradiction requiring an architectural change**. The repository contains the implementation, tests, phase reports, and curated evidence used to support the VERIFIED statuses in this matrix. Final scoring remains the evaluator's determination.
+**Every mandatory submission requirement is covered and verified**, including GitHub publication, ongoing documentation, prerequisites, module documentation, repository structure, README content, and training attribution. Phase F submission evidence is retained under `docs/evidence/submission/`.
