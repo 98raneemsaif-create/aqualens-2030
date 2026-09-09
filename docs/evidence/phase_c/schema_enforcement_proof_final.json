@@ -1,0 +1,111 @@
+{
+  "result": "PASS",
+  "proof_path": "storage/final_schema_proof/0401e959-e736-462a-81d2-beec2679a258",
+  "before": {
+    "version": 0,
+    "count": 56,
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "year",
+          "type": "long",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "volume_m3",
+          "type": "double",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "run_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "event_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "record_kind",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "rejection": {
+    "type": "Exception",
+    "message": "Cast error: Cannot cast string 'not-a-number' to value of Float64 type"
+  },
+  "after": {
+    "version": 0,
+    "count": 56,
+    "schema": {
+      "type": "struct",
+      "fields": [
+        {
+          "name": "year",
+          "type": "long",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "region",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "source",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "volume_m3",
+          "type": "double",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "run_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "event_id",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        },
+        {
+          "name": "record_kind",
+          "type": "string",
+          "nullable": true,
+          "metadata": {}
+        }
+      ]
+    }
+  },
+  "unchanged": true
+}

@@ -1,0 +1,160 @@
+{
+  "result": "PASS",
+  "run_id": "phase_e_success",
+  "dag_state": "success",
+  "task_count": 9,
+  "all_tasks_success": true,
+  "tasks": [
+    {
+      "task_id": "produce_events",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:03:56.320848+00:00",
+      "end_date": "2026-09-09 14:04:05.271667+00:00"
+    },
+    {
+      "task_id": "consume_and_validate",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:05.767854+00:00",
+      "end_date": "2026-09-09 14:04:06.616150+00:00"
+    },
+    {
+      "task_id": "bronze_load",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:06.980626+00:00",
+      "end_date": "2026-09-09 14:04:08.804188+00:00"
+    },
+    {
+      "task_id": "silver_merge",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:09.582536+00:00",
+      "end_date": "2026-09-09 14:04:11.428783+00:00"
+    },
+    {
+      "task_id": "schema_enforcement_proof",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:11.683558+00:00",
+      "end_date": "2026-09-09 14:04:14.234325+00:00"
+    },
+    {
+      "task_id": "quality_gate",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:14.368131+00:00",
+      "end_date": "2026-09-09 14:04:18.416379+00:00"
+    },
+    {
+      "task_id": "gold_build",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:18.622421+00:00",
+      "end_date": "2026-09-09 14:04:20.930019+00:00"
+    },
+    {
+      "task_id": "rag_chunk_and_index",
+      "state": "success",
+      "try_number": 1,
+      "start_date": "2026-09-09 14:04:22.000510+00:00",
+      "end_date": "2026-09-09 14:05:39.422646+00:00"
+    },
+    {
+      "task_id": "rag_grounded_answer_smoke_test",
+      "state": "success",
+      "try_number": 4,
+      "start_date": "2026-09-09 15:36:14.818553+00:00",
+      "end_date": "2026-09-09 15:36:51.941746+00:00"
+    }
+  ],
+  "lineage_counts": {
+    "START": 12,
+    "COMPLETE": 9,
+    "FAIL": 3
+  },
+  "rag_grounded_answer_smoke_test_events": [
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140544.911990.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7efe-8ea3-f074fc1a517d",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:05:44.673863+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-140612.786660.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7efe-8ea3-f074fc1a517d",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 1,
+      "event_time": "2026-09-09T14:06:12.765524+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141818.757569.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7782-a495-8af1c038df33",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 2,
+      "event_time": "2026-09-09T14:18:18.601445+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-141858.041817.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7782-a495-8af1c038df33",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 2,
+      "event_time": "2026-09-09T14:18:58.023425+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-152831.660522.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-75d4-b839-75ab7a8eca7e",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 3,
+      "event_time": "2026-09-09T15:28:31.436890+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153030.433511.json",
+      "event_type": "FAIL",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-75d4-b839-75ab7a8eca7e",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 3,
+      "event_time": "2026-09-09T15:30:30.397929+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153614.983394.json",
+      "event_type": "START",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7394-875c-9a97fd25af28",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 4,
+      "event_time": "2026-09-09T15:36:14.854054+00:00"
+    },
+    {
+      "file": "docs/evidence/lineage/raw/event-20260909-153651.976081.json",
+      "event_type": "COMPLETE",
+      "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+      "lineage_run_id": "01a0867b-791f-7394-875c-9a97fd25af28",
+      "airflow_run_id": "phase_e_success",
+      "attempt": 4,
+      "event_time": "2026-09-09T15:36:51.964357+00:00"
+    }
+  ],
+  "rag_final_complete_event": {
+    "file": "docs/evidence/lineage/raw/event-20260909-153651.976081.json",
+    "event_type": "COMPLETE",
+    "job": "aqualens_2030_pipeline.rag_grounded_answer_smoke_test",
+    "lineage_run_id": "01a0867b-791f-7394-875c-9a97fd25af28",
+    "airflow_run_id": "phase_e_success",
+    "attempt": 4,
+    "event_time": "2026-09-09T15:36:51.964357+00:00"
+  }
+}
